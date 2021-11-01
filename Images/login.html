@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <style>
+      *{
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      /* .bor {
+        border: 1px solid red;
+      } */
+      #loContainer {
+        width: 80%;
+        height: 600px;
+        margin: auto;
+      }
+      #loContainer > div:nth-child(1) {
+        width: 20%;
+        margin-left: 40%;
+      }
+      #loContainer > div:nth-child(2) {
+        display: flex;
+        height: 75%;        
+      }
+      #lo2Left,
+      #lo2Right {
+        width: 50%;        
+      }
+      .lo1Choice{
+        display: flex; 
+        justify-content: space-evenly;       
+      }
+      .lo1Choice>h4{
+        margin-bottom: 15px;
+      }
+      .lo1Choice>h4:nth-child(1){        
+        margin-bottom: 15px;
+      }
+      .lo1underline{
+        text-decoration-line: underline;        
+        text-underline-offset: 8px;
+      }
+      #lo1ReqOtpBtn{
+        width: 100%;
+        background-color: black;
+        height: 50px;
+        color: white;
+        margin-top: 20px;
+        border: none;
+
+      }
+      #lo2Left{
+        border-right: 2px solid grey;        
+
+      }
+      #lo2Left>div{
+        text-align: center;
+        margin: 9%;
+        border: 1px solid black;
+
+      }
+      #lo2Left>div>p{        
+        /* border: 1px solid teal; */
+        font-weight: 600;                
+        width: 50%;                        
+        margin: auto;
+        margin-top: -10px;
+        background-color: white;
+        margin-bottom: 30px;    
+        font-size: 15px;    
+      }
+      /* #lo2Left>div>p:nth-child(1){
+        width: 55%;         
+      } */
+      #lo1Code,#lo1PhNo{
+        width: 15%;
+        height: 40px;
+        margin-right: 1%;
+        margin-bottom: 5%;
+        padding-left: 2%;
+        background-color: rgb(247, 245, 245);
+        border: none;
+      } 
+      #lo1PhNo{
+        width: 40%;
+      }
+       #lo1Out h4{
+         margin-top: 5%;
+         margin-bottom: 5%;
+       }
+       #lo1Email{
+         width:300px;
+         height: 40px;
+         padding-left: 25%;
+         background-color: rgb(247, 245, 245);
+         border: none;
+       }
+       #altOTP,#altPass{                 
+         display: flex;  
+         justify-content: space-between;
+         padding: 0px 20px 0px 120px;
+         height: 50px;       
+         align-items: center;
+       }
+       
+      
+    </style>
+  </head>
+  <body>
+    <div class="bor" id="loContainer">
+      <div class="bor">
+        <img width="100%" src="./Fastrack.PNG" alt="" />
+      </div>
+      <div>
+        <div class="bor" id="lo2Left">
+          <div id='altOTP'>
+            <h4>LOGIN VIA OTP</h4>
+            <h4>+</h4>
+          </div>
+          <div class="bor loOTP">
+            <p>LOGIN VIA OTP</p>
+            <div class="bor lo1Choice">
+              <h4>MOBILE</p>
+              <h4>E-MAIL</p> 
+              </div>
+              <div id="lo1Out">
+                <h4>LOGIN USING MOBILE NUMBER AND OTP</h4>
+
+                <select name="" id="lo1Code">
+                  <option value="91">91</option>
+                  <option value="61">61</option>
+                  <option value="1">1</option>                  
+                </select>
+                <input id='lo1PhNo' type="number" placeholder="PHONE NUMBER *">
+              </div>             
+            <button id="lo1ReqOtpBtn">
+              Request OTP
+            </button>
+          </div>       
+          <div id='altPass'>
+            <h4>LOGIN USING PASSWORD</h4>
+            <h4>+</h4>            
+          </div>   
+          <div class="bor loPass">
+            <p>LOGIN USING PASSWORD</p>            
+              <div> 
+                <input id='lo1PhNo' type='text' placeholder="MOBILE NUMBER/EMAIL *"><br>
+                <input id='lo1PhNo' type="password" placeholder="PASSWORD *">
+              </div>             
+            <button id="lo1ReqOtpBtn">
+              Request OTP
+            </button>
+          </div>
+        </div>
+        <div class="bor" id="lo2Right"></div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  var lo1Mobile=document.querySelector('.lo1Choice>h4:nth-child(1)');
+  var lo1Email=document.querySelector('.lo1Choice>h4:nth-child(2)');
+  var lo1OutHTML=document.getElementById('lo1Out').innerHTML;
+  
+  //By default mobile is underlined
+  lo1Mobile.setAttribute('class','lo1underline');
+
+  lo1Email.addEventListener('click',function(){    
+    lo1Mobile.removeAttribute('class','lo1underline');
+    lo1Email.setAttribute('class','lo1underline');
+    // lo1OutHTML=document.getElementById('lo1Out').innerHTML;
+    document.getElementById('lo1Out').innerHTML=`
+    <h4>LOGIN USING E-MAIL ID AND OTP</h4>
+    <input id='lo1Email' type="email" placeholder="E-MAIL ID*">    
+    `;
+    // document.getElementById('lo1Out').style.width='200px'
+  })
+  lo1Mobile.addEventListener('click',function(){
+    lo1Email.removeAttribute('class','lo1underline');
+    lo1Mobile.setAttribute('class','lo1underline');
+    document.getElementById('lo1Out').innerHTML=lo1OutHTML
+  })
+
+
+  var loAltOtpEl=document.getElementById('altOTP');
+  var loAltPassEl=document.getElementById('altPass');
+  var loPassEl=document.querySelector('.loPass');
+  var loOTPEl=document.querySelector('.loOTP');
+  var lo2Left=document.getElementById('lo2Left');
+  console.log(loAltOtpEl,loAltPassEl,loPassEl,loOTPEl)
+
+// by default alternate OTP and Password card are removed
+  loAltOtpEl.remove();
+  loPassEl.remove();
+
+  document.querySelector('#altPass>h4:nth-child(2)').addEventListener('click',function(){
+    loOTPEl.remove();
+    loAltPassEl.remove();
+    lo2Left.append(loAltOtpEl,loPassEl);    
+  })
+  // console.log(document.querySelector('#altOTP'))
+  loAltOtpEl.addEventListener('click',function(){    
+    loAltOtpEl.remove();
+    loPassEl.remove();
+    lo2Left.append(loOTPEl,loAltPassEl);    
+  })
+</script>
