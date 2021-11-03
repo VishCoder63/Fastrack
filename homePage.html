@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://kit.fontawesome.com/5f6f74ca0f.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/5f6f74ca0f.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Home Page</title>
     <style>
       * {
@@ -13,28 +16,32 @@
         padding: 0;
         box-sizing: border-box;
       }
-      .ho3BlackBox{
-        background-color: #222222;  
-        border-bottom: 1px solid #5c5b5b;      
+      .ho3BlackBox {
+        background-color: #222222;
+      } 
+      .ho3BottomBorder{
+        border-bottom: 1px solid #5c5b5b;
       }
-      .bor {
+      /* .bor {
         border: 1px solid red;
-      }
+      } */
       .ho1Container {
         width: 70%;
-        margin: auto;               
+        margin: auto;
       }
       #ho2TopBar {
         height: 30px;
         color: #aca8a8;
-        font-weight: 600;        
+        font-weight: 600;
       }
-      #ho2TopBar ul {
+      #ho2TopBar ul,#ho7TopBar ul {
         font-size: 11px;
         list-style: none;
         display: flex;
         padding-top: 6px;
         justify-content: space-between;
+        align-items: center;
+        height: 100%;
       }
 
       /* #ho2TopBar li{
@@ -54,43 +61,146 @@
         text-decoration: none;
         color: black;
       }
-      .ho4CurrBox{
+      .ho4CurrBox {
         padding-top: 20px;
         width: 100%;
         height: 100px;
         color: white;
         text-align: center;
       }
-      .ho4CurrBox>div{
+      .ho4CurrBox > div {
         display: flex;
       }
-      .ho4CurrBox p{
+      .ho4CurrBox p {
         font-size: 10px;
         margin: 10px;
       }
-      .ho4CurrBox>div>div{        
+      .ho4CurrBox > div > div {
         border: 1px solid #5c5b5b;
-        background-color: #181818;        
-        padding-top:12px;
+        background-color: #181818;
+        padding-top: 12px;
         font-size: 13px;
         font-weight: 600;
-        width:15%;
-        height:40px;
-        margin:0px 10px;
+        width: 15%;
+        height: 40px;
+        margin: 0px 10px;
       }
-      #ho4BoxesClicked{
+      #ho4BoxesClicked {
         border: 1px solid white;
-        background-color: black;        
+        background-color: black;
       }
+      #ho7TopBar{
+        color: white;        
+        font-weight: 700;
+        height: 60px;
+      }
+      /* img{
+       
+      } */
+
+      #ho7TopBar>ul>li:nth-child(5){        
+        text-align: center;                        
+      }
+      #ho7TopBar>ul>li:nth-child(1){  
+        /* border: 1px solid red; */
+        height:130%;
+        padding-top:3.2%;  
+        padding-left: .5%;           
+      }
+      /* #ho7TopBar>ul>li{
+        border: 1px solid teal;
+      } */
+
+    
+    #ho10Temp{
+      height: 450px;
+      width: 100%;
+      background-color: #222222;      
+    }
+    #ho10Temp{
+      display: flex;       
+    }
+    #ho9Left{
+      /* border: 1px solid red; */
+      width: 50%;
+      margin: auto;
+      margin-right: 10px;
+      height: 350px;
+      margin-top: 25px;
+    }
+    #ho9Right{
+      /* border: 1px solid red; */
+      width: 20%;
+      margin: auto;
+      height: 350px;
+      margin-top: 25px;
+    }
+    #ho11List1,#ho12List2,#ho13List3{
+      display: flex;                 
+    }
+    #ho9Left img{
+      border-radius: 50%;
+    }
+    /* #ho9Left img+div{
+      display:inline-block;           
+      border: 1px solid red;   
+       margin-bottom: -30px;  
+    } */   
+    #ho9Left td{
+      padding: 3px;   
+      padding-left: 40px;  
+
+    }
+    #ho9Left th{
+      padding-right: 50px;
+      
+    }
+    #ho9Left td>div{
+      display: flex;
+      
+    }
+    #ho9Left td>div>div{
+      margin-top: 30px;
+      margin-left: 10px;
+    }
+    
+    #ho9Left table{
+      height: 60%; 
+      width: 100%;
+      color: white;      
+    }
+    #ho9Left button{
+      width: 100%;
+      height: 30px;
+      border: none;
+      background-color: grey;      
+      color: white;
+      margin-top: 10px;
+    }
+
+    #ho9Right h5{
+      color: white;
+      text-align: center;
+      margin: 10px;
+
+    }
+    .ho8Temp{
+      /* border: 1px solid yellow; */
+      height: 450px;
+      width: 100%;
+      background-color: #222222; 
+    }
     </style>
   </head>
   <body>
-    <div class="ho3BlackBox">
+    <div class='ho3BlackBox ho3BottomBorder'>
       <div class="ho1Container bor">
         <div id="ho2TopBar">
           <ul>
             <li>BRANDS</li>
-            <li>CURRENCY SELECTOR &nbsp;&nbsp;<i class="fas fa-chevron-down"></i></li>
+            <li>
+              CURRENCY SELECTOR &nbsp;&nbsp;<i class="fas fa-chevron-down"></i>
+            </li>
             <li>LOGIN</li>
             <li>WISHLIST</li>
             <li>BOOK MY APPOINTMENT</li>
@@ -98,11 +208,32 @@
           </ul>
         </div>
       </div>
-    </div>    
+    </div>
+    <div class="ho3BlackBox">
+      <div class="ho1Container bor">
+        <div id="ho7TopBar">
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i></li>
+            <li>WATCHES</li>
+            <li>
+              SMART & AUDIO
+            </li>
+            <li>EYEWEAR</li>
+            <li><img width='70%' height='10%' src="./Images/Fast track Logo.PNG" alt=""></li>
+            <li>BAGS AND MORE</li>
+            <li>PERFUMES</li>
+            <li>OFFERS AND MORE</li>
+            <li><i class="fas fa-search"></i></li>            
+          </ul>        
+        </div>
+      </div>
+    </div>
   </body>
 </html>
 
 <script>
+  //top bar #1
+  {    
   document
     .querySelectorAll(
       "#ho2TopBar>ul>li:nth-child(5),#ho2TopBar>ul>li:nth-child(1)"
@@ -112,42 +243,49 @@
         alert("In Contruction!🚧🚧🚧");
       });
     });
-    var ho5clicked=1;
-  document.querySelector("#ho2TopBar>ul>li:nth-child(2)").addEventListener("click", function (e) {      
-    // alert("Welcome to currency changer!");
-    if(ho5clicked==1){
-      document.querySelector("#ho2TopBar>ul>li:nth-child(2)").innerHTML='CURRENCY SELECTOR &nbsp;&nbsp;<i class="fas fa-chevron-up"></i>';
+  var ho5clicked = 1;
+  document
+    .querySelector("#ho2TopBar>ul>li:nth-child(2)")
+    .addEventListener("click", function (e) {
+      // alert("Welcome to currency changer!");
+      if (ho5clicked == 1) {
+        document.querySelector("#ho2TopBar>ul>li:nth-child(2)").innerHTML =
+          'CURRENCY SELECTOR &nbsp;&nbsp;<i class="fas fa-chevron-up"></i>';
 
-      var ho4CurrBox=document.createElement('div');
-        let ho4heading=document.createElement('p');
-        ho4heading.textContent='SELECT A CURRENCY'
-        let ho4flexBox=document.createElement('div');
-          let ho4box1=document.createElement('div');
-          ho4box1.innerHTML='INR &nbsp <i class="fas fa-rupee-sign"></i>';          
-          let ho4box2=document.createElement('div');
-          ho4box2.textContent='USD $';
-        ho4flexBox.append(ho4box1,ho4box2);        
-        ho4CurrBox.append(ho4heading,ho4flexBox)
-        ho4CurrBox.setAttribute('class','ho4CurrBox');
-        e.path[3].before(ho4CurrBox);  
-        //appended the INR and USD boxes ^        
+        var ho4CurrBox = document.createElement("div");
+        let ho4flexBox = document.createElement("div");
+          let ho4heading = document.createElement("p");
+          ho4heading.textContent = "SELECT A CURRENCY";
+          let ho4box1 = document.createElement("div");
+          ho4box1.innerHTML = 'INR &nbsp <i class="fas fa-rupee-sign"></i>';
+          let ho4box2 = document.createElement("div");
+          ho4box2.textContent = "USD $";
+        ho4flexBox.append(ho4box1, ho4box2);
+        ho4CurrBox.append(ho4heading, ho4flexBox);
+        ho4CurrBox.setAttribute("class", "ho4CurrBox");
+        e.path[3].before(ho4CurrBox);
+        //appended the INR and USD boxes ^
 
-        let ho4Temp=document.querySelectorAll('.ho4CurrBox>div>div');        
-        for(let i=0;i<ho4Temp.length;i++){
-          ho4Temp[i].addEventListener('click',function(){
-            ho4Temp[i].setAttribute('id','ho4BoxesClicked');
-            alert('Goal:To change all the prices to the other currency')            
-            ho4Temp[(i+1)%ho4Temp.length].removeAttribute('id','ho4BoxesClicked');
-          })         
+        let ho4Temp = document.querySelectorAll(".ho4CurrBox>div>div");
+        for (let i = 0; i < ho4Temp.length; i++) {
+          ho4Temp[i].addEventListener("click", function () {
+            ho4Temp[i].setAttribute("id", "ho4BoxesClicked");
+            alert("Goal:To change all the prices to the other currency");
+            ho4Temp[(i + 1) % ho4Temp.length].removeAttribute(
+              "id",
+              "ho4BoxesClicked"
+            );
+          });
         }
 
         // the INR and USD boxes will alternate their border when clicked
-        ho5clicked=(ho5clicked+1)%2;  
-      }else{
-      document.querySelector("#ho2TopBar>ul>li:nth-child(2)").innerHTML='CURRENCY SELECTOR &nbsp;&nbsp;<i class="fas fa-chevron-down"></i>';
-      document.getElementsByClassName('ho3BlackBox')[0].children[0].remove();
-      ho5clicked=(ho5clicked+1)%2;  
-    }
+        ho5clicked = (ho5clicked + 1) % 2;
+      } else {
+        document.querySelector("#ho2TopBar>ul>li:nth-child(2)").innerHTML =
+          'CURRENCY SELECTOR &nbsp;&nbsp;<i class="fas fa-chevron-down"></i>';
+        document.getElementsByClassName("ho3BlackBox")[0].children[0].remove();
+        ho5clicked = (ho5clicked + 1) % 2;
+      }
     });
   document
     .querySelector("#ho2TopBar>ul>li:nth-child(3)")
@@ -164,4 +302,167 @@
     .addEventListener("click", function () {
       alert("Welcome to cart page!");
     });
+  }
+
+  // topbar#2
+  {
+    document.querySelector('#ho2TopBar').addEventListener('mouseover',function(e){
+      e.path[4].children[1].children[1].remove();
+    })
+    
+    let ho6Temp=document.querySelectorAll('#ho7TopBar>ul>li');
+    ho6Temp[0].addEventListener('click',function(){
+      alert('map clicked')
+    })
+    ho6Temp[1].addEventListener('click',function(){
+      alert('watch clicked')
+    })
+    ho6Temp[2].addEventListener('click',function(){
+      alert('smart clicked')
+    })
+    ho6Temp[3].addEventListener('click',function(){
+      alert('eyewear clicked')
+    })
+    ho6Temp[4].addEventListener('click',function(){
+      alert('image clicked')
+    })
+    ho6Temp[5].addEventListener('click',function(){
+      alert('bag clicked')
+    })
+    ho6Temp[6].addEventListener('click',function(){
+      alert('perfume clicked')
+    })
+    ho6Temp[7].addEventListener('click',function(){
+      alert('offers clicked')
+    })
+    ho6Temp[8].addEventListener('click',function(){
+      alert('search clicked')
+    })
+
+    
+    for(let i=0;i<ho6Temp.length;i++){
+      ho6Temp[i].addEventListener('mouseover',function(e){        
+        if(e.target.textContent=='WATCHES'){
+          let ho8Temp=document.createElement('div');
+          ho8Temp.setAttribute('class','ho8Temp');
+          ho8Temp.innerHTML=`
+          <div id='ho10Temp'>
+      <div id="ho9Left">
+        <table>
+          <thead>
+            <tr>
+              <th>Shop For</th>
+              <th>Shop By Style</th>
+              <th>Shop Collectibles</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>              
+                <div>
+                  <img src="https://via.placeholder.com/70" alt="">
+                  <div>Him</div>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <img src="https://via.placeholder.com/70" alt="">
+                  <div>Casual</div>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <img src="https://via.placeholder.com/70" alt="">
+                  <div>Coca Cola Edition</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div>
+                  <img src="https://via.placeholder.com/70" alt="">
+                  <div>Her</div>
+                </div>              
+              </td>
+              <td>
+                <div>
+                  <img src="https://via.placeholder.com/70" alt="">
+                  <div>Fashion</div>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <img src="https://via.placeholder.com/70" alt="">
+                  <div>Avengers</div>                
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div>
+                  <img src="https://via.placeholder.com/70" alt="">
+                  <div>Them</div>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <img src="https://via.placeholder.com/70" alt="">
+                  <div>Sporty</div>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <img src="https://via.placeholder.com/70" alt="">
+                  <div>Game Of Thrones</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>
+                <div>
+                  <img src="https://via.placeholder.com/70" alt="">
+                  <div>Tees</div>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <img src="https://via.placeholder.com/70" alt="">
+                  <div>Sunburn</div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>     
+        <button>View All</button>                  
+      </div>
+      <div id="ho9Right">
+        <img width="100%" height="100%" src="https://via.placeholder.com/70" alt="">
+        <h5>FLEX YOUR BEST GAME</h5>
+      </div> 
+  </div>
+          `;
+          if(e.path[4].children.length==1)
+            e.path[3].after(ho8Temp);                    
+        }else{
+          if(i==0 && e.path[5].children.length==2 ){
+            e.path[5].children[1].remove();
+          }else if(e.path[4].children.length==2){
+            e.path[4].children[1].remove();
+          }
+        }        
+      })
+      ho6Temp[i].addEventListener('mouseleave',function(e){
+        if(e.target.textContent=='WATCHES'){          
+          e.path[4].children[1].addEventListener('mouseleave',function(event){
+            event.path[0].remove();                            
+          })          
+        }               
+      })     
+
+
+
+    }
+    
+  }
 </script>
