@@ -22,9 +22,9 @@
       .ho3BottomBorder{
         border-bottom: 1px solid #5c5b5b;
       }
-      /* .bor {
+      .bor {
         border: 1px solid red;
-      } */
+      }
       .ho1Container {
         width: 70%;
         margin: auto;
@@ -52,7 +52,7 @@
       #ho2TopBar > ul > li:nth-child(3),
       #ho2TopBar > ul > li:nth-child(4),
       #ho2TopBar > ul > li:nth-child(5) {
-        margin-right: 5%;
+        margin-right: 3.5%;
       }
       #ho2TopBar > ul > li:nth-child(2) {
         margin-right: 28%;
@@ -190,6 +190,27 @@
       width: 100%;
       background-color: #222222; 
     }
+    .ho14Comp3{
+      width: 100%;
+      height: 400px;       
+      /* background-image: url('./Images/1900x600.jpg');          */
+      background-size:contain;  
+
+    }
+    .ho14Comp3>div{
+      /* border: 1px solid teal; */
+      width: 20%;
+      margin: auto;      
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 27%;
+    }
+    .ho14Comp3>div>div{
+      background-color: white;
+      height: 5px;
+      width: 5px;      
+      border-radius: 50%;
+    }
     </style>
   </head>
   <body>
@@ -228,6 +249,21 @@
         </div>
       </div>
     </div>
+    <div class="ho14Comp3 bor">       
+      <div class="bor">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>        
+    </div>
+    
+
+    </div>
+
+    
   </body>
 </html>
 
@@ -463,6 +499,27 @@
 
 
     }
+    
+  }
+  //Comp#3
+  {
+
+    let ho15Images=['./Images/1900x600.jpg',
+      './Images/1920-X-600.jpg',
+      './Images/1920x600.jpg',
+      './Images/1920x600\ \(1\).jpg',
+      './Images/1920x600\ \(2\).jpg',
+      './Images/FT+Girls+Bags+EOSS+2021_1920x600+px.jpg']
+    let ho16Index=0;
+    document.querySelector('.ho14Comp3').style.backgroundImage='url(./Images/1900x600.jpg)';
+    document.querySelectorAll('.ho14Comp3>div>div')[0].style.backgroundColor='red';    
+    ho16Index=(ho16Index+1)%ho15Images.length;
+    setInterval(function(){            
+      document.querySelectorAll('.ho14Comp3>div>div')[ho16Index-1].style.backgroundColor='white';
+      document.querySelector('.ho14Comp3').style.backgroundImage=`url(${ho15Images[ho16Index]})`;
+      document.querySelectorAll('.ho14Comp3>div>div')[ho16Index].style.backgroundColor='red';
+      ho16Index=(ho16Index+1)%ho15Images.length;
+    },3000)   
     
   }
 </script>
