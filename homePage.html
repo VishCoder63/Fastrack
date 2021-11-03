@@ -1,13 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home Page</title>
-</head>
-<body>
-  
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/5f6f74ca0f.js" crossorigin="anonymous"></script>
+    <title>Home Page</title>
+    <style>
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .ho3BlackBox{
+        background-color: #222222;  
+        border-bottom: 1px solid #5c5b5b;      
+      }
+      .bor {
+        border: 1px solid red;
+      }
+      .ho1Container {
+        width: 70%;
+        margin: auto;               
+      }
+      #ho2TopBar {
+        height: 30px;
+        color: #aca8a8;
+        font-weight: 600;        
+      }
+      #ho2TopBar ul {
+        font-size: 11px;
+        list-style: none;
+        display: flex;
+        padding-top: 6px;
+        justify-content: space-between;
+      }
+
+      /* #ho2TopBar li{
+      border: 1px solid red;
+    } */
+
+      #ho2TopBar > ul > li:nth-child(1),
+      #ho2TopBar > ul > li:nth-child(3),
+      #ho2TopBar > ul > li:nth-child(4),
+      #ho2TopBar > ul > li:nth-child(5) {
+        margin-right: 5%;
+      }
+      #ho2TopBar > ul > li:nth-child(2) {
+        margin-right: 28%;
+      }
+      #ho2TopBar a {
+        text-decoration: none;
+        color: black;
+      }
+      .ho4CurrBox{
+        padding-top: 20px;
+        width: 100%;
+        height: 100px;
+        color: white;
+        text-align: center;
+      }
+      .ho4CurrBox>div{
+        display: flex;
+      }
+      .ho4CurrBox p{
+        font-size: 10px;
+        margin: 10px;
+      }
+      .ho4CurrBox>div>div{        
+        border: 1px solid #5c5b5b;
+        background-color: #181818;        
+        padding-top:12px;
+        font-size: 13px;
+        font-weight: 600;
+        width:15%;
+        height:40px;
+        margin:0px 10px;
+      }
+      #ho4BoxesClicked{
+        border: 1px solid white;
+        background-color: black;        
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ho3BlackBox">
+      <div class="ho1Container bor">
+        <div id="ho2TopBar">
+          <ul>
+            <li>BRANDS</li>
+            <li>CURRENCY SELECTOR &nbsp;&nbsp;<i class="fas fa-chevron-down"></i></li>
+            <li>LOGIN</li>
+            <li>WISHLIST</li>
+            <li>BOOK MY APPOINTMENT</li>
+            <li>CART (<span>0</span>)</li>
+          </ul>
+        </div>
+      </div>
+    </div>    
+  </body>
 </html>
+
+<script>
+  document
+    .querySelectorAll(
+      "#ho2TopBar>ul>li:nth-child(5),#ho2TopBar>ul>li:nth-child(1)"
+    )
+    .forEach(function (el) {
+      el.addEventListener("click", function () {
+        alert("In Contruction!🚧🚧🚧");
+      });
+    });
+    var ho5clicked=1;
+  document.querySelector("#ho2TopBar>ul>li:nth-child(2)").addEventListener("click", function (e) {      
+    // alert("Welcome to currency changer!");
+    if(ho5clicked==1){
+      document.querySelector("#ho2TopBar>ul>li:nth-child(2)").innerHTML='CURRENCY SELECTOR &nbsp;&nbsp;<i class="fas fa-chevron-up"></i>';
+
+      var ho4CurrBox=document.createElement('div');
+        let ho4heading=document.createElement('p');
+        ho4heading.textContent='SELECT A CURRENCY'
+        let ho4flexBox=document.createElement('div');
+          let ho4box1=document.createElement('div');
+          ho4box1.innerHTML='INR &nbsp <i class="fas fa-rupee-sign"></i>';          
+          let ho4box2=document.createElement('div');
+          ho4box2.textContent='USD $';
+        ho4flexBox.append(ho4box1,ho4box2);        
+        ho4CurrBox.append(ho4heading,ho4flexBox)
+        ho4CurrBox.setAttribute('class','ho4CurrBox');
+        e.path[3].before(ho4CurrBox);  
+        //appended the INR and USD boxes ^        
+
+        let ho4Temp=document.querySelectorAll('.ho4CurrBox>div>div');        
+        for(let i=0;i<ho4Temp.length;i++){
+          ho4Temp[i].addEventListener('click',function(){
+            ho4Temp[i].setAttribute('id','ho4BoxesClicked');
+            alert('Goal:To change all the prices to the other currency')            
+            ho4Temp[(i+1)%ho4Temp.length].removeAttribute('id','ho4BoxesClicked');
+          })         
+        }
+
+        // the INR and USD boxes will alternate their border when clicked
+        ho5clicked=(ho5clicked+1)%2;  
+      }else{
+      document.querySelector("#ho2TopBar>ul>li:nth-child(2)").innerHTML='CURRENCY SELECTOR &nbsp;&nbsp;<i class="fas fa-chevron-down"></i>';
+      document.getElementsByClassName('ho3BlackBox')[0].children[0].remove();
+      ho5clicked=(ho5clicked+1)%2;  
+    }
+    });
+  document
+    .querySelector("#ho2TopBar>ul>li:nth-child(3)")
+    .addEventListener("click", function () {
+      alert("Welcome to Login page!");
+    });
+  document
+    .querySelector("#ho2TopBar>ul>li:nth-child(4)")
+    .addEventListener("click", function () {
+      alert("Welcome to WishList page!");
+    });
+  document
+    .querySelector("#ho2TopBar>ul>li:nth-child(6)")
+    .addEventListener("click", function () {
+      alert("Welcome to cart page!");
+    });
+</script>
