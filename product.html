@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/5f6f74ca0f.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Home Page</title>
+    <style>
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .ho3BlackBox {
+        background-color: #222222;
+      }
+      .ho3BottomBorder {
+        border-bottom: 1px solid #5c5b5b;
+      }
+      .bor {
+        /* check why removing this is breaking stff */
+        border: 1px solid transparent;
+      }
+      .ho1Container {
+        width: 100%;
+        margin: auto;
+      }
+      .ho1Container1 {
+        width: 100%;
+        margin: auto;
+      }
+      #ho2TopBar {
+        height: 30px;
+        color: #aca8a8;
+        font-weight: 600;
+      }
+      #ho2TopBar ul,
+      #ho7TopBar ul {
+        font-size: 11px;
+        list-style: none;
+        display: flex;
+        padding-top: 6px;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+      }
+
+      /* #ho2TopBar li{
+      border: 1px solid red;
+    } */
+
+      #ho2TopBar > ul > li:nth-child(1),
+      #ho2TopBar > ul > li:nth-child(3),
+      #ho2TopBar > ul > li:nth-child(4),
+      #ho2TopBar > ul > li:nth-child(5) {
+        margin-right: 3.5%;
+      }
+      #ho2TopBar > ul > li:nth-child(2) {
+        margin-right: 28%;
+      }
+      #ho2TopBar a {
+        text-decoration: none;
+        color: black;
+      }
+      .ho4CurrBox {
+        padding-top: 20px;
+        width: 100%;
+        height: 100px;
+        color: white;
+        text-align: center;
+      }
+      .ho4CurrBox > div {
+        display: flex;
+      }
+      .ho4CurrBox p {
+        font-size: 10px;
+        margin: 10px;
+      }
+      .ho4CurrBox > div > div {
+        border: 1px solid #5c5b5b;
+        background-color: #181818;
+        padding-top: 12px;
+        font-size: 13px;
+        font-weight: 600;
+        width: 15%;
+        height: 40px;
+        margin: 0px 10px;
+      }
+      #ho4BoxesClicked {
+        border: 1px solid white;
+        background-color: black;
+      }
+      #ho7TopBar {
+        color: white;
+        font-weight: 700;
+        height: 60px;
+      }
+      /* img{
+       
+      } */
+
+      #ho7TopBar > ul > li:nth-child(5) {
+        text-align: center;
+      }
+      #ho7TopBar > ul > li:nth-child(1) {
+        /* border: 1px solid red; */
+        height: 130%;
+        padding-top: 3.2%;
+        padding-left: 0.5%;
+      }
+      /* #ho7TopBar>ul>li{
+        border: 1px solid teal;
+      } */
+
+      #ho10Temp {
+        height: 450px;
+        width: 100%;
+        background-color: #222222;
+      }
+      #ho10Temp {
+        display: flex;
+      }
+      #ho9Left {
+        /* border: 1px solid red; */
+        width: 50%;
+        margin: auto;
+        margin-right: 10px;
+        height: 350px;
+        margin-top: 25px;
+      }
+      #ho9Right {
+        /* border: 1px solid red; */
+        width: 20%;
+        margin: auto;
+        height: 350px;
+        margin-top: 25px;
+      }
+      #ho11List1,
+      #ho12List2,
+      #ho13List3 {
+        display: flex;
+      }
+      #ho9Left img {
+        border-radius: 50%;
+      }
+      /* #ho9Left img+div{
+      display:inline-block;           
+      border: 1px solid red;   
+       margin-bottom: -30px;  
+    } */
+      #ho9Left td {
+        padding: 3px;
+        padding-left: 40px;
+      }
+      #ho9Left th {
+        padding-right: 50px;
+      }
+      #ho9Left td > div {
+        display: flex;
+      }
+      #ho9Left td > div > div {
+        margin-top: 30px;
+        margin-left: 10px;
+      }
+
+      #ho9Left table {
+        height: 60%;
+        width: 100%;
+        color: white;
+      }
+      #ho9Left button {
+        width: 100%;
+        height: 30px;
+        border: none;
+        background-color: grey;
+        color: white;
+        margin-top: 10px;
+      }
+
+      #ho9Right h5 {
+        color: white;
+        text-align: center;
+        margin: 10px;
+      }
+      .ho8Temp {
+        /* border: 1px solid yellow; */
+        height: 450px;
+        width: 100%;
+        background-color: #222222;
+      }
+      .ho14Comp3,
+      #ho18Comp3,
+      #ho24Comp7,
+      .ho14Comp4 {
+        width: 100%;
+        height: 400px;
+        background-size: contain;
+      }
+      .ho14Comp4 {
+        height: 500px;
+      }
+      .ho14Comp3 > div,
+      .ho21FlexBox {
+        /* border: 1px solid teal; */
+        width: 20%;
+        margin: auto;
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 27%;
+      }
+      .ho14Comp3 > div > div,
+      .ho21FlexBox > div {
+        background-color: white;
+        height: 5px;
+        width: 5px;
+        border-radius: 50%;
+      }
+      #ho17Body {
+        height: 510px;
+        overflow-y: scroll;
+      }
+      #ho19FlexBox,
+      #ho24FlexBox,
+      #ho27FlexBox {
+        display: flex;
+      }
+      #ho19FlexBox > div,
+      #ho24FlexBox > div,
+      #ho27FlexBox > div {
+        /* border: 1px solid teal; */
+        width: 16%;
+        height: 220px;
+        text-align: center;
+      }
+      #ho24FlexBox > div,
+      #ho27FlexBox > div {
+        width: 25%;
+        margin-right: 1%;
+      }
+      #ho24FlexBox > div:nth-child(1),
+      #ho24FlexBox > div:nth-last-child(1),
+      #ho27FlexBox > div:nth-child(1),
+      #ho27FlexBox > div:nth-last-child(1) {
+        margin-right: 0%;
+      }
+      #ho24FlexBox > div:hover,
+      #ho27FlexBox > div:hover {
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+          rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+          rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+      }
+      #ho24FlexBox > div:nth-child(1):hover,
+      #ho24FlexBox > div:nth-last-child(1):hover,
+      #ho27FlexBox > div:nth-child(1):hover,
+      #ho27FlexBox > div:nth-last-child(1):hover {
+        box-shadow: none;
+      }
+      #ho19FlexBox > div:nth-child(1),
+      #ho19FlexBox > div:nth-last-child(1),
+      #ho24FlexBox > div:nth-child(1),
+      #ho24FlexBox > div:nth-last-child(1),
+      #ho27FlexBox > div:nth-child(1),
+      #ho27FlexBox > div:nth-last-child(1) {
+        width: 3%;
+        padding-top: 9%;
+      }
+      .ho19FlexBoxC {
+        visibility: hidden;
+      }
+      #ho18Comp3,
+      #ho24Comp7,
+      #ho27Comp7 {
+        text-align: center;
+      }
+      #ho18Comp3 h2,
+      #ho24Comp7 > h2,
+      #ho27Comp7 > h2 {
+        margin: 30px 0px;
+        font-weight: 800;
+      }
+      .ho21FlexBox {
+        margin-top: 5px;
+        width: 10%;
+      }
+      .ho21FlexBox > div {
+        background-color: black;
+      }
+      /* .ho21color{
+      background-color: red;
+    } */
+
+      #ho22Comp4 {
+        background-image: url("./Images/comp5.PNG");
+      }
+      #ho23Comp4,
+      #ho28Comp10 {
+        /* border: 1px solid red; */
+        height: 135%;
+        padding-bottom: 1%;
+        text-align: center;
+        background-image: url("./Images/block.png");
+        /* background-size: contain; */
+        background-repeat: no-repeat;
+        background-position-y: bottom;
+      }
+
+      #ho23Comp4 > h2,
+      #ho28Comp10 > h2 {
+        margin: 25px 0px;
+      }
+
+      #ho23Comp4 > div,
+      #ho28Comp10 > div {
+        height: 80%;
+        width: 97%;
+        display: flex;
+        margin-top: 2%;
+        justify-content: space-evenly;
+      }
+      #ho23Comp4 > div > div,
+      #ho28Comp10 > div > div {
+        background-color: #222222;
+        width: 30%;
+        height: 100%;
+        border-radius: 0;
+        /* border: 1px solid red; */
+      }
+      #ho23Comp4 img {
+        height: 85%;
+      }
+      .ho24FlexBoxC {
+        visibility: hidden;
+      }
+      .ho27FlexBoxC {
+        visibility: hidden;
+      }
+
+      .ho26Comp {
+        height: 1000px;
+        width: 1260px;
+      }
+      #ho26Comp8 {
+        margin-top: 20px;
+        background-image: url("./Images/Comp8_2.PNG");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      #ho26Comp8 > div {
+        display: flex;
+        height: 41%;
+        margin: 5% 0%;
+        /* border: 1px solid teal; */
+        justify-content: space-around;
+        align-items: center;
+      }
+      #ho26Comp8 img {
+        width: 55%;
+      }
+      #ho26Comp8 p {
+        margin-left: 5%;
+        height: 60%;
+        width: 35%;
+        font-weight: 800;
+        font-size: 20px;
+        text-align: center;
+        padding-top: 2%;
+        color: white;
+      }
+      #ho26Comp8 > div:nth-child(2) > p {
+        color: black;
+        margin-left: 0%;
+        margin-right: 5%;
+      }
+      #ho26Comp8 p span {
+        font-size: 12px;
+        text-decoration: underline;
+      }
+      #ho28Comp10 p {
+        color: white;
+        margin: 3% 0%;
+        font-size: 13px;
+      }
+      #ho28Comp10 h3 {
+        color: orange;
+        margin: 10px;
+        font-weight: 700;
+      }
+      #ho29Comp11 {
+        text-align: center;
+      }
+      #ho29Comp11 #ho30GridTemp {
+        display: grid;
+        grid-template-columns: repeat(4, 150px);
+        grid-gap: 10px;
+        margin-left: 1%;
+        grid-template:
+          "a a b c d"
+          "a a e f g"
+          "h i j k k"
+          "l m n k k";
+      }
+      #ho30GridTemp > div {
+        /* border: 1px solid red; */
+        height: 250px;
+        background-size: cover;
+      }
+      #ho30GridTemp > div:nth-child(1),
+      #ho30GridTemp > div:nth-child(11) {
+        height: 510px;
+      }
+
+      #ho30_1 {
+        grid-area: a;
+        background-image: url("./Images/Comp11_1.PNG");
+      }
+      #ho30_2 {
+        grid-area: b;
+        background-image: url("./Images/Comp11_2.PNG");
+      }
+      #ho30_3 {
+        grid-area: c;
+        background-image: url("./Images/Comp11_3.PNG");
+      }
+      #ho30_4 {
+        grid-area: d;
+        background-image: url("./Images/Comp11_4.PNG");
+      }
+      #ho30_5 {
+        grid-area: e;
+        background-image: url("./Images/Comp11_13.PNG");
+      }
+      #ho30_6 {
+        grid-area: f;
+        background-image: url("./Images/Comp11_6.PNG");
+      }
+      #ho30_7 {
+        grid-area: g;
+        background-image: url("./Images/Comp11_7.PNG");
+      }
+      #ho30_8 {
+        grid-area: h;
+        background-image: url("./Images/Comp11_5.PNG");
+      }
+      #ho30_9 {
+        grid-area: i;
+        background-image: url("./Images/Comp11_9.PNG");
+      }
+      #ho30_10 {
+        grid-area: j;
+        background-image: url("./Images/Comp11_10.PNG");
+      }
+      #ho30_11 {
+        grid-area: k;
+        background-image: url("./Images/Comp11_8.PNG");
+      }
+      #ho30_12 {
+        grid-area: l;
+        background-image: url("./Images/Comp11_11.PNG");
+      }
+      #ho30_13 {
+        grid-area: m;
+        background-image: url("./Images/Comp11_12.PNG");
+      }
+      #ho30_14 {
+        grid-area: n;
+        background-image: url("./Images/Comp11_14.PNG");
+      }
+
+      #ho30_2:hover {
+        background-image: url(./Images/Comp11_2a.PNG);
+        background-size: cover;
+      }
+      #ho30_3:hover {
+        background-image: url(./Images/Comp11_3a.PNG);
+        background-size: cover;
+      }
+      #ho30_4:hover {
+        background-image: url(./Images/Comp11_4a.PNG);
+        background-size: cover;
+      }
+      #ho30_6:hover {
+        background-image: url(./Images/Comp11_6a.PNG);
+        background-size: cover;
+      }
+      #ho32CommenTop {
+        display: flex;
+        height: 50px;
+        align-items: center;
+      }
+      #ho32CommenTop > div,
+      #ho32CommenTop > img {
+        margin-right: 5px;
+      }
+      #ho32CommenTop > div:nth-child(1) {
+        margin-right: 60%;
+      }
+      #ho33CommenBottom{
+        display: flex;
+        /* border: 1px solid teal; */
+        justify-content: space-evenly;
+        padding-top: 20px;
+      }
+      #ho33CommenBottom>div {
+        height: 200px;
+      }
+      #ho33CommenBottom>div > div {
+        height: 20%;
+        display: flex;
+        align-items: center;        
+        
+      }
+      #ho33CommenBottom>div p {
+        width: 200px;
+      }
+      #ho33CommenBottom>div h4+div {
+        margin-top: 20px;
+        height: 50%;
+        display: flex;        
+      }
+      #ho36Comp13{
+        width:100%;
+        height: 250px;
+        text-align: center;
+        background-color: #F1F1F1;
+      }
+      #ho36Comp13 h2{
+        margin: 2%;
+
+      }
+      #ho36Comp13>div{
+        display: inline-block;
+        height: 30%;
+        width: 30%;       
+        margin-right: 2%;       
+
+      }
+      #ho36Comp13>div:nth-child(2) button{
+        background-color: black;
+        color: white;
+      }
+      #ho36Comp13>div:nth-child(3) button{
+       border: 1px solid black;
+       background-color: white;
+      }
+
+      #ho36Comp13>div:nth-child(2) button{
+        height: 100%;
+        width: 100%;
+      }
+      #ho36Comp13>div:nth-child(3) input{
+        height: 100%;
+        width: 70%;
+        padding-left:5% ;
+      }
+      #ho36Comp13>div:nth-child(3) button{
+        height: 100%;
+        width: 28%;
+      }
+
+      #ho37Comp14{
+        display: flex;
+        justify-content: space-evenly;
+        background-color: black;
+        text-align: center;
+        color: white;
+      }
+      #ho37Comp14>div{
+        width: 20%;
+        margin: 2.5% 0%;        
+      }
+      #ho38Comp14{
+        color: #778A91;        
+        width: 90%;
+        margin: auto;
+      }
+      #ho38Comp14>div>div{
+        text-align: right;
+        font-size: 14px;
+      }
+      #ho38Comp14>div>div a{
+        color: black;
+
+      }
+      #ho38Comp14 h4{
+        margin: 10px 0px;
+      }
+      #ho38Comp14 p{
+        text-align: justify;
+        font-size: 12px;
+
+      }
+      #ho39Footer,#ho39FlexBox{
+        background-color: #222222;
+        padding-top: 2%;
+        margin-top: 1%;
+      }
+
+      #ho39FlexBox{
+        display:flex;
+        justify-content: space-evenly;        
+        color: white;     
+      }
+      #ho39FlexBox>div>div{
+        margin: 10px 0px;        
+      }
+      #ho39Download>div:nth-child(2),#ho39Download>div:nth-child(3){        
+        display: flex;
+        justify-content: space-evenly;
+        /* border: 2px solid white;      */
+        align-items: center;   
+
+      }
+      #ho39Download>div:nth-child(2)>img{
+        width: 150px;    
+        height: 50px;     
+        margin-left: 5%;   
+        border: 1px solid grey;
+        border-radius: 10px;
+      }
+      #ho39Download>div:nth-child(3){
+        width: 112%;
+        height: 50px;
+      }
+      #ho39Download>div:nth-child(3)>div{
+        /* border: 1px solid teal; */
+        width: 10%;
+        margin-left: 1%;
+        padding-left: 2.5%;
+      }
+      #ho39Download>div:nth-child(5)>span>a{
+        color: white;
+      }
+      #ho39Footer>div:nth-child(2){        
+        color: grey;
+        display: flex;
+        justify-content: right;
+      }
+      #ho39Footer>div:nth-child(2)>div{        
+        margin: 20px 0px;    
+        font-size: 13px;    
+        font-weight: 600;
+        margin-right: 20px;
+      }
+      /* #ho39Footer>div:nth-child(4),#ho39Footer>div:nth-child(4){   
+        display: inline-block;
+      } */
+      #ho39Footer>div:nth-child(4){     
+        display: flex;
+        justify-content: space-evenly; 
+        align-items: center; 
+        color: white;  
+        padding: 1% 0%;    
+      }
+      #ho39Footer>div:nth-child(4)>div{  
+        /* border: 1px solid red;*/
+        width: 6%;
+        height: 50px;
+        padding-left: 2%;
+        padding-top: 0.5%;
+      }
+      #ho39Footer>div:nth-child(4)>div:nth-child(10){
+        padding-top: 1%;
+        font-size: 12px;
+        width: 25%;
+        color: grey;                   
+      }
+      
+      h1{
+        font-weight: 800;
+        margin: 4%;       
+      }
+    </style>
+  </head>
+
+  <!-- ************************************************************************HTML BELOW*************************************** -->
+  <body>
+
+    
+    <div class="ho3BlackBox ho3BottomBorder">
+      <div class="ho1Container bor">
+        <div id="ho2TopBar">
+          <ul>
+            <li>BRANDS</li>
+            <li>
+              CURRENCY SELECTOR &nbsp;&nbsp;<i class="fas fa-chevron-down"></i>
+            </li>
+            <li>LOGIN</li>
+            <li>WISHLIST</li>
+            <li>BOOK MY APPOINTMENT</li>
+            <li>CART (<span>0</span>)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="ho3BlackBox">
+      <div class="ho1Container bor">
+        <div id="ho7TopBar">
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i></li>
+            <li>WATCHES</li>
+            <li>SMART & AUDIO</li>
+            <li>EYEWEAR</li>
+            <li>
+              <img
+                width="70%"
+                height="10%"
+                src="./Images/Fast track Logo.PNG"
+                alt=""
+              />
+            </li>
+            <li>BAGS AND MORE</li>
+            <li>PERFUMES</li>
+            <li>OFFERS AND MORE</li>
+            <li><i class="fas fa-search"></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div id="ho17Body">
+      
+      
+
+      <div id="ho39Footer">
+        <div id='ho39FlexBox'>
+          <div id="ho39Customer">
+            <h4>CUSTOMER SERVICE</h4>
+            <div>Payment Options</div> 
+            <div>Track Order</div> 
+            <div>Find a Store</div> 
+            <div>Encircle Program</div> 
+          </div>
+          <div id="ho39Contact">
+            <h4>CONTACT US</h4>
+            <div>1800-266-0123</div> 
+            <div>customercare@titan.co.in</div> 
+            <div>Frequently Asked Questions</div> 
+          </div>
+          <div id="ho39Policies">
+            <h4>POLICIES</h4>
+            <div>Returns & Exchanges</div> 
+            <div>Cancellation</div> 
+            <div>Shipping</div> 
+            <div>Warranty Policies</div> 
+            <div>Delivery Information</div> 
+          </div>
+          <div id="ho39About">
+            <h4>ABOUT FASTRACK</h4>
+          <div>About Us</div>  
+            <div>Careers</div> 
+          </div>
+          <div id="ho39Download">
+            <h4>DOWNLOAD WORLD OF TITAN APP</h4>
+            <div>
+              <img src="./Images/Footer_1.PNG" alt="">
+              <img src="./Images/Footer_2.PNG" alt="">
+            </div>
+            <div>              
+                <h5>FOLLOW US ON</h5>
+                <div><i class="fab fa-facebook-square"></i></div>
+                <div><i class="fab fa-twitter"></i></div>
+                <div><i class="fab fa-google-plus-g"></i></div>
+                <div><i class="fab fa-instagram-square"></i></div>
+                <div><i class="fab fa-pinterest-square"></i></div>
+                <div><i class="fab fa-youtube"></i></div>                              
+            </div>
+            <div>NEED HELP ?</div>
+            <div> <span><a href="#">Click Here</a></span>  to chat with us on &nbsp;<i class="fab fa-whatsapp"></i></div>         
+          </div>
+        </div>
+        <div>
+          <div>TERMS & CONDITIONS&nbsp;&nbsp;</div>
+          <div> PRIVACY POLICY</div>
+        </div>
+        <hr>
+        <div>
+          <div><i class="fa-2x fab fa-cc-visa"></i></div>
+          <div><i class="fa-2x fab fa-cc-mastercard"></i></div>
+          <div><i class="fa-2x fab fa-cc-paypal"></i></div>
+          <div><i class="fa-2x fab fa-bitcoin"></i></div>
+          <div><i class="fa-2x fab fa-cc-stripe"></i></div>
+          <div><i class="fa-2x fab fa-alipay"></i></div>
+          <div><i class="fa-2x fab fa-cc-amazon-pay"></i></div>
+          <div><i class="fa-2x fab fa-google-pay"></i></div>
+          <div><i class="fa-2x fab fa-cc-paypal"></i></div>
+          <div>© 2021 Titan Company Limited. All Rights Reserved.</div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+    
+    </div>
+  </body>
+</html>
+
+<!-- *****************************************************************************SCRIPT BELOW**************************************** -->
+
+<script>
+
+  //top bar #1
+  {
+    document
+      .querySelectorAll(
+        "#ho2TopBar>ul>li:nth-child(5),#ho2TopBar>ul>li:nth-child(1)"
+      )
+      .forEach(function (el) {
+        el.addEventListener("click", function () {
+          alert("In Contruction!🚧🚧🚧");
+        });
+      });
+    var ho5clicked = 1;
+    document
+      .querySelector("#ho2TopBar>ul>li:nth-child(2)")
+      .addEventListener("click", function (e) {
+        // alert("Welcome to currency changer!");
+        if (ho5clicked == 1) {
+          document.querySelector("#ho2TopBar>ul>li:nth-child(2)").innerHTML =
+            'CURRENCY SELECTOR &nbsp;&nbsp;<i class="fas fa-chevron-up"></i>';
+
+          var ho4CurrBox = document.createElement("div");
+          let ho4flexBox = document.createElement("div");
+          let ho4heading = document.createElement("p");
+          ho4heading.textContent = "SELECT A CURRENCY";
+          let ho4box1 = document.createElement("div");
+          ho4box1.innerHTML = 'INR &nbsp <i class="fas fa-rupee-sign"></i>';
+          let ho4box2 = document.createElement("div");
+          ho4box2.textContent = "USD $";
+          ho4flexBox.append(ho4box1, ho4box2);
+          ho4CurrBox.append(ho4heading, ho4flexBox);
+          ho4CurrBox.setAttribute("class", "ho4CurrBox");
+          e.path[3].before(ho4CurrBox);
+          //appended the INR and USD boxes ^
+
+          let ho4Temp = document.querySelectorAll(".ho4CurrBox>div>div");
+          for (let i = 0; i < ho4Temp.length; i++) {
+            ho4Temp[i].addEventListener("click", function () {
+              ho4Temp[i].setAttribute("id", "ho4BoxesClicked");
+              alert("Goal:To change all the prices to the other currency");
+              ho4Temp[(i + 1) % ho4Temp.length].removeAttribute(
+                "id",
+                "ho4BoxesClicked"
+              );
+            });
+          }
+
+          // the INR and USD boxes will alternate their border when clicked
+          ho5clicked = (ho5clicked + 1) % 2;
+        } else {
+          document.querySelector("#ho2TopBar>ul>li:nth-child(2)").innerHTML =
+            'CURRENCY SELECTOR &nbsp;&nbsp;<i class="fas fa-chevron-down"></i>';
+          document
+            .getElementsByClassName("ho3BlackBox")[0]
+            .children[0].remove();
+          ho5clicked = (ho5clicked + 1) % 2;
+        }
+      });
+    document
+      .querySelector("#ho2TopBar>ul>li:nth-child(3)")
+      .addEventListener("click", function () {
+        alert("Welcome to Login page!");
+      });
+    document
+      .querySelector("#ho2TopBar>ul>li:nth-child(4)")
+      .addEventListener("click", function () {
+        alert("Welcome to WishList page!");
+      });
+    document
+      .querySelector("#ho2TopBar>ul>li:nth-child(6)")
+      .addEventListener("click", function () {
+        alert("Welcome to cart page!");
+      });
+  }
+
+  // topbar#2
+  {
+    document
+      .querySelector("#ho2TopBar")
+      .addEventListener("mouseover", function (e) {
+        e.path[4].children[1].children[1].remove();
+      });
+
+    let ho6Temp = document.querySelectorAll("#ho7TopBar>ul>li");
+    ho6Temp[0].addEventListener("click", function () {
+      alert("map clicked");
+    });
+    ho6Temp[1].addEventListener("click", function () {
+      alert("watch clicked");
+    });
+    ho6Temp[2].addEventListener("click", function () {
+      alert("smart clicked");
+    });
+    ho6Temp[3].addEventListener("click", function () {
+      alert("eyewear clicked");
+    });
+    ho6Temp[4].addEventListener("click", function () {
+      alert("image clicked");
+    });
+    ho6Temp[5].addEventListener("click", function () {
+      alert("bag clicked");
+    });
+    ho6Temp[6].addEventListener("click", function () {
+      alert("perfume clicked");
+    });
+    ho6Temp[7].addEventListener("click", function () {
+      alert("offers clicked");
+    });
+    ho6Temp[8].addEventListener("click", function () {
+      alert("search clicked");
+    });
+
+    for (let i = 0; i < ho6Temp.length; i++) {
+      ho6Temp[i].addEventListener("mouseover", function (e) {
+        if (e.target.textContent == "WATCHES") {
+          let ho8Temp = document.createElement("div");
+          ho8Temp.setAttribute("class", "ho8Temp");
+          ho8Temp.innerHTML = `
+          <div id='ho10Temp'>
+      <div id="ho9Left">
+        <table>
+          <thead>
+            <tr>
+              <th>Shop For</th>
+              <th>Shop By Style</th>
+              <th>Shop Collectibles</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>              
+                <div>
+                  <img src="https://via.placeholder.com/70" alt="">
+                  <div>Him</div>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <img src="https://via.placeholder.com/70" alt="">
+                  <div>Casual</div>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <img src="https://via.placeholder.com/70" alt="">
+                  <div>Coca Cola Edition</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div>
+                  <img src="https://via.placeholder.com/70" alt="">
+                  <div>Her</div>
+                </div>              
+              </td>
+              <td>
+                <div>
+                  <img src="https://via.placeholder.com/70" alt="">
+                  <div>Fashion</div>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <img src="https://via.placeholder.com/70" alt="">
+                  <div>Avengers</div>                
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div>
+                  <img src="https://via.placeholder.com/70" alt="">
+                  <div>Them</div>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <img src="https://via.placeholder.com/70" alt="">
+                  <div>Sporty</div>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <img src="https://via.placeholder.com/70" alt="">
+                  <div>Game Of Thrones</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>
+                <div>
+                  <img src="https://via.placeholder.com/70" alt="">
+                  <div>Tees</div>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <img src="https://via.placeholder.com/70" alt="">
+                  <div>Sunburn</div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>     
+        <button>View All</button>                  
+      </div>
+      <div id="ho9Right">
+        <img width="100%" height="100%" src="https://via.placeholder.com/70" alt="">
+        <h5>FLEX YOUR BEST GAME</h5>
+      </div> 
+  </div>
+          `;
+          if (e.path[4].children.length == 1) e.path[3].after(ho8Temp);
+        } else {
+          if (i == 0 && e.path[5].children.length == 2) {
+            e.path[5].children[1].remove();
+          } else if (e.path[4].children.length == 2) {
+            e.path[4].children[1].remove();
+          }
+        }
+      });
+      ho6Temp[i].addEventListener("mouseleave", function (e) {
+        if (e.target.textContent == "WATCHES") {
+          e.path[4].children[1].addEventListener(
+            "mouseleave",
+            function (event) {
+              event.path[0].remove();
+            }
+          );
+        }
+      });
+    }
+  }
+  //Comp#3
+  {
+    let ho15Images = [
+      "./Images/1900x600.jpg",
+      "./Images/1920-X-600.jpg",
+      "./Images/1920x600.jpg",
+      "./Images/1920x600A.jpg",
+      "./Images/1920x600B.jpg",
+      "./Images/FT+Girls+Bags+EOSS+2021_1920x600+px.jpg",
+    ];
+    let ho16Index = 0;
+    document.querySelector(".ho14Comp3").style.backgroundImage =
+      "url(./Images/1900x600.jpg)";
+    document.querySelectorAll(".ho14Comp3>div>div")[
+      ho16Index
+    ].style.backgroundColor = "red";
+    ho16Index = (ho16Index + 1) % ho15Images.length;
+    setInterval(function () {
+      if (ho16Index == 0) {
+        document.querySelectorAll(
+          ".ho14Comp3>div>div"
+        )[5].style.backgroundColor = "white";
+        document.querySelector(
+          ".ho14Comp3"
+        ).style.backgroundImage = `url(${ho15Images[ho16Index]})`;
+        document.querySelectorAll(".ho14Comp3>div>div")[
+          ho16Index
+        ].style.backgroundColor = "red";
+        ho16Index = (ho16Index + 1) % ho15Images.length;
+      } else {
+        document.querySelectorAll(".ho14Comp3>div>div")[
+          ho16Index - 1
+        ].style.backgroundColor = "white";
+        document.querySelector(
+          ".ho14Comp3"
+        ).style.backgroundImage = `url(${ho15Images[ho16Index]})`;
+        document.querySelectorAll(".ho14Comp3>div>div")[
+          ho16Index
+        ].style.backgroundColor = "red";
+        ho16Index = (ho16Index + 1) % ho15Images.length;
+      }
+    }, 2000);
+  }
+  //comp#4
+  {
+    let ho19FlexBox = document.querySelectorAll("#ho19FlexBox>div");
+    let ho20EssentialsArr = [
+      { img: "./Images/W1.jpg", name: "GIRLS WATCHES" },
+      { img: "./Images/W2.jpg", name: "GUYS WATCHES" },
+      { img: "./Images/w3.jpg", name: "SMART BAND" },
+      { img: "./Images/w4.jpg", name: "TEES WATCHES" },
+      { img: "./Images/m1.jpg", name: "FACE MASKS" },
+      { img: "./Images/b1.jpg", name: "BAGS" },
+      { img: "./Images/e1.jpg", name: "EYEWEAR" },
+      { img: "./Images/p1.jpg", name: "PERFUMES" },
+    ];
+    ho19FlexBox[0].setAttribute("class", "ho19FlexBoxC");
+    document.querySelectorAll(".ho21FlexBox>div")[0].style.backgroundColor =
+      "red";
+    // setAttribute('class','ho21color');
+    hoDisplayEssential(ho20EssentialsArr, 0);
+
+    ho19FlexBox[ho19FlexBox.length - 1].addEventListener("click", function () {
+      // alert('asd')
+      document.querySelectorAll(".ho21FlexBox>div")[0].style.backgroundColor =
+        "black";
+      document.querySelectorAll(".ho21FlexBox>div")[1].style.backgroundColor =
+        "red";
+      hoDisplayEssential(ho20EssentialsArr, 2);
+      ho19FlexBox[ho19FlexBox.length - 1].setAttribute("class", "ho19FlexBoxC");
+      ho19FlexBox[0].removeAttribute("class", "ho19FlexBoxC");
+      // console.log(document.querySelectorAll('.ho21FlexBox>div'))
+    });
+
+    ho19FlexBox[0].addEventListener("click", function () {
+      // alert('asd')
+      document.querySelectorAll(".ho21FlexBox>div")[1].style.backgroundColor =
+        "black";
+      document.querySelectorAll(".ho21FlexBox>div")[0].style.backgroundColor =
+        "red";
+      hoDisplayEssential(ho20EssentialsArr, 0);
+      ho19FlexBox[0].setAttribute("class", "ho19FlexBoxC");
+      ho19FlexBox[ho19FlexBox.length - 1].removeAttribute(
+        "class",
+        "ho19FlexBoxC"
+      );
+    });
+
+    function hoDisplayEssential(arr, s) {
+      for (let i = 1; i < ho19FlexBox.length - 1; i++) {
+        // console.log(ho19FlexBox[i].children)
+        ho19FlexBox[i].children[0].src = arr[s].img;
+        ho19FlexBox[i].children[1].textContent = arr[s].name;
+        s++;
+      }
+    }
+  }
+  //comp7
+  {
+    let ho24FlexBox = document.querySelectorAll("#ho24FlexBox>div");
+    let ho25EssentialsArr = [
+      { img: "./Images/W1.jpg", name: "GIRLS WATCHES" },
+      { img: "./Images/W2.jpg", name: "GUYS WATCHES" },
+      { img: "./Images/w3.jpg", name: "SMART BAND" },
+      { img: "./Images/w4.jpg", name: "TEES WATCHES" },
+      { img: "./Images/m1.jpg", name: "FACE MASKS" },
+      { img: "./Images/b1.jpg", name: "BAGS" },
+      { img: "./Images/e1.jpg", name: "EYEWEAR" },
+      { img: "./Images/p1.jpg", name: "PERFUMES" },
+    ];
+    ho24FlexBox[0].setAttribute("class", "ho24FlexBoxC");
+    document.querySelectorAll(".ho21FlexBox>div")[0].style.backgroundColor =
+      "red";
+    // setAttribute('class','ho21color');
+    hoDisplayEssential(ho25EssentialsArr, 0);
+
+    ho24FlexBox[ho24FlexBox.length - 1].addEventListener("click", function () {
+      // alert('asd')
+      document.querySelectorAll(".ho21FlexBox>div")[0].style.backgroundColor =
+        "black";
+      document.querySelectorAll(".ho21FlexBox>div")[1].style.backgroundColor =
+        "red";
+      hoDisplayEssential(ho25EssentialsArr, 2);
+      ho24FlexBox[ho24FlexBox.length - 1].setAttribute("class", "ho24FlexBoxC");
+      ho24FlexBox[0].removeAttribute("class", "ho24FlexBoxC");
+      // console.log(document.querySelectorAll('.ho21FlexBox>div'))
+    });
+
+    ho24FlexBox[0].addEventListener("click", function () {
+      // alert('asd')
+      document.querySelectorAll(".ho21FlexBox>div")[1].style.backgroundColor =
+        "black";
+      document.querySelectorAll(".ho21FlexBox>div")[0].style.backgroundColor =
+        "red";
+      hoDisplayEssential(ho25EssentialsArr, 0);
+      ho24FlexBox[0].setAttribute("class", "ho24FlexBoxC");
+      ho24FlexBox[ho24FlexBox.length - 1].removeAttribute(
+        "class",
+        "ho24FlexBoxC"
+      );
+    });
+
+    function hoDisplayEssential(arr, s) {
+      for (let i = 1; i < ho24FlexBox.length - 1; i++) {
+        // console.log(ho24FlexBox[i].children)
+        ho24FlexBox[i].children[0].src = arr[s].img;
+        ho24FlexBox[i].children[1].textContent = arr[s].name;
+        s++;
+      }
+    }
+  }
+
+  //comp9
+  {
+    let ho27FlexBox = document.querySelectorAll("#ho27FlexBox>div");
+    let ho27EssentialsArr = [
+      { img: "./Images/W1.jpg", name: "GIRLS WATCHES" },
+      { img: "./Images/W2.jpg", name: "GUYS WATCHES" },
+      { img: "./Images/w3.jpg", name: "SMART BAND" },
+      { img: "./Images/w4.jpg", name: "TEES WATCHES" },
+      { img: "./Images/m1.jpg", name: "FACE MASKS" },
+      { img: "./Images/b1.jpg", name: "BAGS" },
+      { img: "./Images/e1.jpg", name: "EYEWEAR" },
+      { img: "./Images/p1.jpg", name: "PERFUMES" },
+    ];
+    ho27FlexBox[0].setAttribute("class", "ho27FlexBoxC");
+    document.querySelectorAll(".ho21FlexBox>div")[0].style.backgroundColor =
+      "red";
+    // setAttribute('class','ho21color');
+    hoDisplayEssential(ho27EssentialsArr, 0);
+
+    ho27FlexBox[ho27FlexBox.length - 1].addEventListener("click", function () {
+      // alert('asd')
+      document.querySelectorAll(".ho21FlexBox>div")[0].style.backgroundColor =
+        "black";
+      document.querySelectorAll(".ho21FlexBox>div")[1].style.backgroundColor =
+        "red";
+      hoDisplayEssential(ho27EssentialsArr, 2);
+      ho27FlexBox[ho27FlexBox.length - 1].setAttribute("class", "ho27FlexBoxC");
+      ho27FlexBox[0].removeAttribute("class", "ho27FlexBoxC");
+      // console.log(document.querySelectorAll('.ho21FlexBox>div'))
+    });
+
+    ho27FlexBox[0].addEventListener("click", function () {
+      // alert('asd')
+      document.querySelectorAll(".ho21FlexBox>div")[1].style.backgroundColor =
+        "black";
+      document.querySelectorAll(".ho21FlexBox>div")[0].style.backgroundColor =
+        "red";
+      hoDisplayEssential(ho27EssentialsArr, 0);
+      ho27FlexBox[0].setAttribute("class", "ho27FlexBoxC");
+      ho27FlexBox[ho27FlexBox.length - 1].removeAttribute(
+        "class",
+        "ho27FlexBoxC"
+      );
+    });
+
+    function hoDisplayEssential(arr, s) {
+      for (let i = 1; i < ho27FlexBox.length - 1; i++) {
+        // console.log(ho27FlexBox[i].children)
+        ho27FlexBox[i].children[0].src = arr[s].img;
+        ho27FlexBox[i].children[1].textContent = arr[s].name;
+        s++;
+      }
+    }
+  }
+
+  //comp12
+  {
+    let ho34ReviewArr=[
+
+      {
+        topic:'Awesome',
+        image:'./Images/Comp12_10.jpg',
+        comment:'Very good watch',
+        name:'suman'
+      },
+      {
+        topic:'Suprr',
+        image:'./Images/Comp12_9.jpg',
+        comment:"Superb built quality and look's premium",
+        name:'Prashant'
+      },
+      {
+        topic:'best',
+        image:'./Images/Comp12_8.jpg',
+        comment:"Fastrack has been maintaining this image",
+        name:'Ajay'
+      },
+      {
+        topic:'Nice',
+        image:'./Images/Comp12_7.jpg',
+        comment:"Best",
+        name:'Punit'
+      },
+      {
+        topic:'Astonishing',
+        image:'./Images/Comp12_6.jpg',
+        comment:"It is soo good and I love it",
+        name:'Aman'
+      },
+      {
+        topic:'The very Best',
+        image:'./Images/Comp12_5.jpg',
+        comment:"The very Best",
+        name:'Priya'
+      },
+      {
+        topic:'Nice',
+        image:'./Images/Comp12_4.jpg',
+        comment:"Nice",
+        name:'Raj'
+      },
+      {
+        topic:'Supr!!',
+        image:'./Images/Comp12_3.jpg',
+        comment:"Super watch",
+        name:'Ram'
+      },
+      {
+        topic:'Adipoli Sadhanam!!',
+        image:'./Images/Comp12_2.jpg',
+        comment:"Adipooooli!!😍",
+        name:'Sreejith'
+      },
+      {
+        topic:'Mass!!',
+        image:'./Images/Comp12_1.jpg',
+        comment:"Suprr product!!",
+        name:'Murugan'
+      }     
+    ]
+    
+    var ho32Pos=ho34ReviewArr.length-1;
+
+
+    
+      ho32PopulateArray(ho34ReviewArr,ho32Pos);
+
+      var ho32CommentsTimer=setInterval(ho32RightClicked,2000);
+      document.querySelector('#ho32CommenTop>div:nth-child(3)>span').textContent=ho34ReviewArr.length;
+
+
+      document.getElementById('ho31Comments').addEventListener('mouseover',function(){
+        clearInterval(ho32CommentsTimer)
+      })
+      document.getElementById('ho31Comments').addEventListener('mouseleave',function(){        
+        ho32CommentsTimer=setInterval(ho32RightClicked,2000);
+      })
+
+      
+      
+
+
+    // console.log(document.querySelectorAll('#ho33CommenBottom>div'))
+
+
+    document.querySelectorAll('#ho32CommenTop>div:nth-child(4)>span')[0].addEventListener('click',function(){
+      // alert('left'); 
+      if(ho32Pos==0)
+        ho32Pos=(ho34ReviewArr.length-1);
+      else
+        ho32Pos=(ho32Pos-1)%ho34ReviewArr.length;            
+      ho32PopulateArray(ho34ReviewArr,ho32Pos);      
+      
+    })
+    document.querySelectorAll('#ho32CommenTop>div:nth-child(4)>span')[1].addEventListener('click',ho32RightClicked)
+
+
+
+
+    function ho32RightClicked(){
+      // alert('right')
+      ho32Pos=(ho32Pos+1)%ho34ReviewArr.length;
+      ho32PopulateArray(ho34ReviewArr,ho32Pos);
+      // console.log(document.querySelectorAll('#ho33CommenBottom>div'))      
+    }
+
+    function ho32PopulateArray(arr,pos){
+      // console.log(document.querySelectorAll('#ho33CommenBottom>div'))
+      let ho35CommenBottom=document.querySelectorAll('#ho33CommenBottom>div');
+    
+      for(let i=0;i<3;i++){                        
+        ho35CommenBottom[i].children[1].textContent=arr[pos].topic;
+        // .textContent=arr[pos].topic;
+        ho35CommenBottom[i].children[2].children[0].src=arr[pos].image;
+        ho35CommenBottom[i].children[2].children[0].style.width='90%'
+        ho35CommenBottom[i].children[2].children[0].style.height='100%'
+
+        // .src=arr[pos].image;
+        ho35CommenBottom[i].children[2].children[1].innerHTML=`
+        <p>
+          ${arr[pos].comment}
+          <br />
+          <span><strong>${arr[pos].name}</strong></span>
+        </p>`
+        pos=(pos+1)%arr.length;        
+        // ho32Pos=pos;  
+        // console.log(pos)          
+        }
+    }
+    
+
+
+
+  }
+</script>
