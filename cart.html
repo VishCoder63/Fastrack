@@ -25,7 +25,7 @@
       }
       .bor {
         /* check why removing this is breaking stff */
-        border: 1px solid transparent;
+        border: 1px solid red;
       }
       .ho1Container {
         width: 100%;
@@ -279,10 +279,28 @@
         font-weight: 800;
         margin: 4%;       
       }    
+
+      #cartSection{
+        display: flex;
+        padding-top: 10px;
+        justify-content: space-evenly;
+      }
+      #cartSection #caComp1{
+        width: 70%; 
+        height: 480px;   
+        overflow-y: scroll;    
+      }
+      #cartSection #caComp2{
+        width: 28%;      
+      }
+      #caComp1a{
+        display: flex;        
+        justify-content: space-around;
+      }
     </style>
   </head>
 
-  <!-- ************************************************************************HTML BELOW*************************************** -->
+  <!-- *****************************************************HTML BELOW*************************************** -->
   <body>
 
     
@@ -302,7 +320,6 @@
         </div>
       </div>
     </div>
-
     <div class="ho3BlackBox">
       <div class="ho1Container bor">
         <div id="ho7TopBar">
@@ -327,9 +344,37 @@
         </div>
       </div>
     </div>
-
     <div id="ho17Body">    
+      <!-- ******************************cart section starts here******************************** -->
+      <div id="cartSection">
+        <div class='bor' id="caComp1">
+          <h2>CART: <span>0</span> ITEMS</h2>
+          <div id="caComp1a">
+            <h4>ITEM(S)</h4>
+            <h4>QUANTITY</h4>
+            <h4>TOTAL</h4>
+          </div>          
+          <hr>
 
+
+
+        </div>
+        <div class='bor' id="caComp2"></div>
+      </div>
+            
+
+
+
+
+
+
+
+
+
+
+      
+
+      <!-- ******************************cart section ends here******************************** -->
       <div id="ho39Footer">
         <div id='ho39FlexBox'>
           <div id="ho39Customer">
@@ -403,31 +448,33 @@
   </body>
 </html>
 
-<!-- *****************************************************************************SCRIPT BELOW**************************************** -->
+<!-- ********************************************************SCRIPT BELOW**************************************** -->
 
 <script>
-  
 
+  
+  
+  
   //top bar #1
   {
     document
-      .querySelectorAll(
-        "#ho2TopBar>ul>li:nth-child(5),#ho2TopBar>ul>li:nth-child(1)"
+    .querySelectorAll(
+      "#ho2TopBar>ul>li:nth-child(5),#ho2TopBar>ul>li:nth-child(1)"
       )
       .forEach(function (el) {
         el.addEventListener("click", function () {
           alert("In Contruction!🚧🚧🚧");
         });
       });
-    var ho5clicked = 1;
-    document
+      var ho5clicked = 1;
+      document
       .querySelector("#ho2TopBar>ul>li:nth-child(2)")
       .addEventListener("click", function (e) {
         // alert("Welcome to currency changer!");
         if (ho5clicked == 1) {
           document.querySelector("#ho2TopBar>ul>li:nth-child(2)").innerHTML =
-            'CURRENCY SELECTOR &nbsp;&nbsp;<i class="fas fa-chevron-up"></i>';
-
+          'CURRENCY SELECTOR &nbsp;&nbsp;<i class="fas fa-chevron-up"></i>';
+          
           var ho4CurrBox = document.createElement("div");
           let ho4flexBox = document.createElement("div");
           let ho4heading = document.createElement("p");
@@ -441,7 +488,7 @@
           ho4CurrBox.setAttribute("class", "ho4CurrBox");
           e.path[3].before(ho4CurrBox);
           //appended the INR and USD boxes ^
-
+          
           let ho4Temp = document.querySelectorAll(".ho4CurrBox>div>div");
           for (let i = 0; i < ho4Temp.length; i++) {
             ho4Temp[i].addEventListener("click", function () {
@@ -450,49 +497,49 @@
               ho4Temp[(i + 1) % ho4Temp.length].removeAttribute(
                 "id",
                 "ho4BoxesClicked"
-              );
-            });
-          }
-
-          // the INR and USD boxes will alternate their border when clicked
-          ho5clicked = (ho5clicked + 1) % 2;
-        } else {
-          document.querySelector("#ho2TopBar>ul>li:nth-child(2)").innerHTML =
+                );
+              });
+            }
+            
+            // the INR and USD boxes will alternate their border when clicked
+            ho5clicked = (ho5clicked + 1) % 2;
+          } else {
+            document.querySelector("#ho2TopBar>ul>li:nth-child(2)").innerHTML =
             'CURRENCY SELECTOR &nbsp;&nbsp;<i class="fas fa-chevron-down"></i>';
-          document
+            document
             .getElementsByClassName("ho3BlackBox")[0]
             .children[0].remove();
-          ho5clicked = (ho5clicked + 1) % 2;
-        }
-      });
+            ho5clicked = (ho5clicked + 1) % 2;
+          }
+        });
+        document
+        .querySelector("#ho2TopBar>ul>li:nth-child(3)")
+        .addEventListener("click", function () {
+          alert("Welcome to Login page!");
+        });
     document
-      .querySelector("#ho2TopBar>ul>li:nth-child(3)")
-      .addEventListener("click", function () {
-        alert("Welcome to Login page!");
-      });
+    .querySelector("#ho2TopBar>ul>li:nth-child(4)")
+    .addEventListener("click", function () {
+      alert("Welcome to WishList page!");
+    });
     document
-      .querySelector("#ho2TopBar>ul>li:nth-child(4)")
-      .addEventListener("click", function () {
-        alert("Welcome to WishList page!");
-      });
-    document
-      .querySelector("#ho2TopBar>ul>li:nth-child(6)")
-      .addEventListener("click", function () {
+    .querySelector("#ho2TopBar>ul>li:nth-child(6)")
+    .addEventListener("click", function () {
         alert("Welcome to cart page!");
       });
-  }
-
-  // topbar#2
-  {
-    document
+    }
+    
+    // topbar#2
+    {
+      document
       .querySelector("#ho2TopBar")
       .addEventListener("mouseover", function (e) {
         e.path[4].children[1].children[1].remove();
       });
-
-    let ho6Temp = document.querySelectorAll("#ho7TopBar>ul>li");
-    ho6Temp[0].addEventListener("click", function () {
-      alert("map clicked");
+      
+      let ho6Temp = document.querySelectorAll("#ho7TopBar>ul>li");
+      ho6Temp[0].addEventListener("click", function () {
+        alert("map clicked");
     });
     ho6Temp[1].addEventListener("click", function () {
       alert("watch clicked");
@@ -518,7 +565,7 @@
     ho6Temp[8].addEventListener("click", function () {
       alert("search clicked");
     });
-
+    
     for (let i = 0; i < ho6Temp.length; i++) {
       ho6Temp[i].addEventListener("mouseover", function (e) {
         if (e.target.textContent == "WATCHES") {
@@ -526,110 +573,110 @@
           ho8Temp.setAttribute("class", "ho8Temp");
           ho8Temp.innerHTML = `
           <div id='ho10Temp'>
-      <div id="ho9Left">
-        <table>
-          <thead>
-            <tr>
-              <th>Shop For</th>
-              <th>Shop By Style</th>
-              <th>Shop Collectibles</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>              
-                <div>
-                  <img src="https://via.placeholder.com/70" alt="">
-                  <div>Him</div>
-                </div>
-              </td>
-              <td>
-                <div>
-                  <img src="https://via.placeholder.com/70" alt="">
-                  <div>Casual</div>
-                </div>
-              </td>
-              <td>
-                <div>
-                  <img src="https://via.placeholder.com/70" alt="">
-                  <div>Coca Cola Edition</div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div>
-                  <img src="https://via.placeholder.com/70" alt="">
+            <div id="ho9Left">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Shop For</th>
+                    <th>Shop By Style</th>
+                    <th>Shop Collectibles</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>              
+                          <div>
+                            <img src="https://via.placeholder.com/70" alt="">
+                            <div>Him</div>
+                            </div>
+                            </td>
+                            <td>
+                              <div>
+                                <img src="https://via.placeholder.com/70" alt="">
+                                <div>Casual</div>
+                                </div>
+                                </td>
+                                <td>
+                                  <div>
+                                    <img src="https://via.placeholder.com/70" alt="">
+                                    <div>Coca Cola Edition</div>
+                                    </div>
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <div>
+                                          <img src="https://via.placeholder.com/70" alt="">
                   <div>Her</div>
-                </div>              
-              </td>
-              <td>
-                <div>
-                  <img src="https://via.placeholder.com/70" alt="">
-                  <div>Fashion</div>
-                </div>
-              </td>
-              <td>
-                <div>
-                  <img src="https://via.placeholder.com/70" alt="">
-                  <div>Avengers</div>                
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div>
-                  <img src="https://via.placeholder.com/70" alt="">
-                  <div>Them</div>
-                </div>
-              </td>
-              <td>
-                <div>
-                  <img src="https://via.placeholder.com/70" alt="">
-                  <div>Sporty</div>
-                </div>
-              </td>
-              <td>
-                <div>
-                  <img src="https://via.placeholder.com/70" alt="">
-                  <div>Game Of Thrones</div>
-                </div>
-              </td>
-            </tr>
-            <tr>
+                  </div>              
+                  </td>
+                  <td>
+                    <div>
+                      <img src="https://via.placeholder.com/70" alt="">
+                      <div>Fashion</div>
+                      </div>
+                      </td>
+                      <td>
+                        <div>
+                          <img src="https://via.placeholder.com/70" alt="">
+                          <div>Avengers</div>                
+                          </div>
+                          </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div>
+                                <img src="https://via.placeholder.com/70" alt="">
+                                <div>Them</div>
+                                </div>
+                                </td>
+                                <td>
+                                  <div>
+                                    <img src="https://via.placeholder.com/70" alt="">
+                                    <div>Sporty</div>
+                                    </div>
+                                    </td>
+                                    <td>
+                                      <div>
+                                        <img src="https://via.placeholder.com/70" alt="">
+                                        <div>Game Of Thrones</div>
+                                        </div>
+                                        </td>
+                                        </tr>
+                                        <tr>
               <td></td>
               <td>
                 <div>
                   <img src="https://via.placeholder.com/70" alt="">
                   <div>Tees</div>
-                </div>
-              </td>
-              <td>
-                <div>
-                  <img src="https://via.placeholder.com/70" alt="">
-                  <div>Sunburn</div>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>     
-        <button>View All</button>                  
-      </div>
-      <div id="ho9Right">
-        <img width="100%" height="100%" src="https://via.placeholder.com/70" alt="">
-        <h5>FLEX YOUR BEST GAME</h5>
-      </div> 
-  </div>
-          `;
-          if (e.path[4].children.length == 1) e.path[3].after(ho8Temp);
-        } else {
-          if (i == 0 && e.path[5].children.length == 2) {
-            e.path[5].children[1].remove();
-          } else if (e.path[4].children.length == 2) {
-            e.path[4].children[1].remove();
-          }
-        }
-      });
+                  </div>
+                  </td>
+                  <td>
+                    <div>
+                      <img src="https://via.placeholder.com/70" alt="">
+                      <div>Sunburn</div>
+                      </div>
+                      </td>
+                      </tr>
+                      </tbody>
+                      </table>     
+                      <button>View All</button>                  
+                      </div>
+                      <div id="ho9Right">
+                        <img width="100%" height="100%" src="https://via.placeholder.com/70" alt="">
+                        <h5>FLEX YOUR BEST GAME</h5>
+                        </div> 
+                        </div>
+                        `;
+                        if (e.path[4].children.length == 1) e.path[3].after(ho8Temp);
+                      } else {
+                        if (i == 0 && e.path[5].children.length == 2) {
+                          e.path[5].children[1].remove();
+                        } else if (e.path[4].children.length == 2) {
+                          e.path[4].children[1].remove();
+                        }
+                      }
+                    });
       ho6Temp[i].addEventListener("mouseleave", function (e) {
         if (e.target.textContent == "WATCHES") {
           e.path[4].children[1].addEventListener(
@@ -637,11 +684,67 @@
             function (event) {
               event.path[0].remove();
             }
-          );
-        }
-      });
+            );
+          }
+        });
+      }
     }
-  }
-  
-  
-</script>
+    
+    //cartCards
+    {
+      // let cartArr=[
+      //   {    
+      //   pImageArray: [
+      //     'https://staticimg.titan.co.in/Fastrack/Catalog/6234NL01_1.jpg?pView=pdp',
+      //     'https://staticimg.titan.co.in/Fastrack/Catalog/6234NL01_3.jpg?pView=pdp',
+      //     'https://staticimg.titan.co.in/Fastrack/Catalog/6234NL01_4.jpg?pView=pdp',
+      //     'https://staticimg.titan.co.in/Fastrack/Catalog/6234NL01_5.jpg?pView=pdp'
+      //   ],
+      //   pName:'GLITCH BLACK DIAL BLACK LEATHER STRAP WATCH',
+      //   pMRP:2195,
+      //   pText:'Fastrack Glitch Black Dial Analog Watch for Girls',
+      //   pOffer:10,
+      //   pCode: '6234NL01',
+      //   pColor: 'Black',
+      //   pGender:'W'
+      // },
+      // {    
+      //   pImageArray: [
+      //     'https://staticimg.titan.co.in/Fastrack/Catalog/6234QL01_1.jpg?pView=pdp',
+      //     'https://staticimg.titan.co.in/Fastrack/Catalog/6234QL01_3.jpg?pView=pdp',
+      //     'https://staticimg.titan.co.in/Fastrack/Catalog/6234QL01_4.jpg?pView=pdp',
+      //     'https://staticimg.titan.co.in/Fastrack/Catalog/6234QL01_5.jpg?pView=pdp'
+      //   ],
+      //   pName:'GLITCH SILVER DIAL BLUE LEATHER STRAP WATCH',
+      //   pMRP:2395,
+      //   pText:'Fastrack Glitch Silver Dial Analog Watch for Girls',
+      //   pOffer:10,
+      //   pCode: '6234QL01',
+      //   pColor: 'Blue',
+      //   pGender:'W'
+        
+      // },
+      // {    
+      //   pImageArray: [
+      //     'https://staticimg.titan.co.in/Fastrack/Catalog/6234QL02_1.jpg?pView=pdp',
+      //     'https://staticimg.titan.co.in/Fastrack/Catalog/6234QL02_3.jpg?pView=pdp',
+      //     'https://staticimg.titan.co.in/Fastrack/Catalog/6234QL02_4.jpg?pView=pdp',
+      //     'https://staticimg.titan.co.in/Fastrack/Catalog/6234QL02_5.jpg?pView=pdp'
+      //   ],
+      //   pName:'GLITCH BLUE DIAL GREEN LEATHER STRAP WATCH',
+      //   pMRP:2595,
+      //   pText:'Fastrack Glitch blue Dial Analog Watch for Girls',
+      //   pOffer:20,
+      //   pCode: '6234QL02',
+      //   pGender: 'W',
+      //   pColor:'Green'
+      // }
+      // ]
+      // localStorage.setItem('cartArr',JSON.stringify(cartArr))
+      
+      
+      let cartArr=JSON.parse(localStorage.getItem('cartArr'))
+      console.log(cartArr)
+      
+    }
+  </script>
