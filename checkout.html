@@ -293,8 +293,94 @@
         height: 5%;
         border-radius: 50%;
       }    
+      #comp4Review{
+        /* border: 2px solid teal; */
+        width: 80%;
+      }
       #chComp3AreaFinal{
         display: none;
+      }
+      #cartSection{                
+        padding-top: 10px;
+        justify-content: space-evenly;
+      }
+      #caComp1a{
+        display: flex;   
+        justify-content: space-evenly;        
+      }      
+      #caComp1a>h4:nth-child(1){                
+        width: 40%;
+        margin-right: 8%;
+        text-align: center;
+
+      }
+      #caComp1a>h4:nth-child(2){
+        
+        width: 15%;   
+        text-align: center;
+      }
+      #caComp1a>h4:nth-child(3){
+        
+        width: 15%;
+        text-align: center;
+      }
+      #caComp1a>h4:nth-child(4){
+        
+        text-align: center;
+        
+      }      
+      .caCardTop{
+        display: flex;        
+        height: 55%;        
+      }
+      .caCardTop>div{
+        width: 15%;
+        /* border: 2px solid black;         */
+      }
+      .caCardTop>div:nth-child(1){        
+                
+        width: 42%;   
+        margin-right: 15%;           
+      }
+      .caCardTop>div:nth-child(2){    
+        padding-top: 10%;           
+      }
+      .caCardTop>div:nth-child(3){ 
+        padding-top: 10%;      
+        
+      }
+      .caCardTop img{
+        width: 60%;
+        height: 60%;        
+      }
+      .caCardb2>h5,.caCardb2>h4{
+        margin: 10% 0%;
+      }
+      .caCardb{
+        display: flex;
+        /* border: 1px solid teal; */
+        align-items: center;
+      }
+      .caCardb span{        
+        text-decoration-line: line-through;
+      }
+      #caCardbOff{        
+        text-decoration-line: none;
+        margin-left: 5px;
+        font-weight: 600;
+        color: red;
+      }      
+
+      .caCardc2{                      
+        border:1px solid black;
+        padding-left:5%;
+        padding-top:3%;
+        width:17%;
+        height:17%;          
+      }
+      .caCarde{
+        font-weight: 600;
+        margin-top: 10%;
       }
     </style>
   </head>
@@ -416,13 +502,60 @@
       <hr>
       <div id="comp4">
         <div id='chCircles'></div>
-        <div>
+        <div class='bor' id="comp4Review">
           <h2>ORDER REVIEW<span></span></h2>
-          <div id="">
+          <div >
             <p>Please review your order to ensure your details are correct.</p>
-
             <p>If you have reviewed your order, you can proceed to the next stage and make the payment.</p>
-            
+
+            <!-- ********************************Code from cart.html starts here************************************** -->
+            <div class='bor' id="cartSection">              
+                <div class='bor' id="caComp1a">
+                  <h4>ITEM(S)</h4>
+                  <h4>QUANTITY</h4>
+                  <h4>TOTAL</h4>
+                  <h4>DELIVERY METHOD</h4>
+                </div>          
+                <hr>
+                <div id="caComp1CardSection">          
+                </div>              
+
+                <div class='bor' id="caComp2c">
+                  <h2>TOTAL BREAKDOWN</h2>
+                  <table>
+                    <tr>
+                      <td>Order Subtotal</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Discount</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Promotional Code</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Shipping</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td><h3>YOU PAY</h3></td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td><h4>INCLUSIVE OF ALL TAXES*</h4></td>
+                    </tr>
+                    <tr>
+                      <td>YOU SAVE</td>
+                      <td>1</td>
+                    </tr>
+                  </table>
+                </div>
+            </div>
+
+
+            <!-- ********************************Code from cart.html ends here************************************** -->            
           </div>
         </div>
       </div>
@@ -511,7 +644,7 @@
   </body>
 </html>
 
-<!-- *****************************************************************************SCRIPT BELOW**************************************** -->
+<!-- ***********************************************************SCRIPT BELOW**************************************** -->
 
 <script>
   
@@ -817,6 +950,100 @@ if(currUser){
 
       
   })
+
+  var cartArr=JSON.parse(localStorage.getItem('cartArr'))||[];
+  displayCards(cartArr);
+
+// *****************************Code from cart.js******************
+function displayCards(cArr){
+        cArr.map(function(cartProd){
+          let caCardTop=document.createElement('div');
+          caCardTop.setAttribute('class','caCardTop')
+          // cardb
+          {        
+            var caCardb=document.createElement('div');
+              let caCardbImg=document.createElement('img');
+              caCardbImg.src=cartProd.prod.pImageArray[0];            
+              let caCardb2=document.createElement('div');
+              caCardb2.setAttribute('class','caCardb2');              
+                let caCardbName=document.createElement('h4');
+                caCardbName.textContent=cartProd.prod.pName;
+                let caCardbCode=document.createElement('h5');
+                caCardbCode.textContent=cartProd.prod.pCode;
+                let caCardbMRP=document.createElement('h4');  
+                caCardbMRP.innerHTML='<span><i class="fas fa-rupee-sign"></i>'+cartProd.prod.pMRP+'</span>&nbsp&nbsp&nbsp;<i class="fas fa-rupee-sign"></i>'+ ((100-cartProd.prod.pOffer)/100)*cartProd.prod.pMRP+"<span id='caCardbOff'>("+cartProd.prod.pOffer+"% off)</span>";
+                // let caCardbWish=document.createElement('select');  
+                // caCardbWish.setAttribute('class','caCardbWish');
+                //   let options=document.createElement('option');
+                //   options.textContent='Move To Wishlist'                
+                // caCardbWish.append(options)
+              caCardb2.append(caCardbName,caCardbCode,caCardbMRP)
+            caCardb.append(caCardbImg,caCardb2);              
+            caCardb.setAttribute('class','caCardb')
+          }
+          // cardc
+  
+          {        
+            var caCardc=document.createElement('div'); 
+              let caCardc2=document.createElement('div');                            
+              caCardc2.textContent=cartProd.qty
+              caCardc.append(caCardc2);
+              caCardc2.setAttribute('class','caCardc2')
+          }
+          // cardd
+          {
+            var caCardd=document.createElement('div');
+            calcTotal();
+            
+            function calcTotal(){
+              
+              caCardd.innerHTML='<i class="fas fa-rupee-sign"></i>'+((100-cartProd.prod.pOffer)/100)*cartProd.prod.pMRP*cartProd.qty;                            
+              
+            }
+            caCardd.setAttribute('class','caCardd')   
+          }
+          // carde
+          {
+            var caCarde=document.createElement('div');
+            caCarde.textContent='FREE';
+            caCarde.setAttribute('class','caCarde')   
+          }
+
+
+          caCardTop.append(caCardb,caCardc,caCardd,caCarde);
+  
+          let hr=document.createElement('hr')
+          hr.style.border='2px solid #D1D1D1'
+          let br=document.createElement('br')  
+  
+          caComp1CardSection.append(caCardTop,hr,br)
+  
+        })
+
+
+        // document.querySelector('#caComp1>h2 span').textContent=cartArr.reduce(function(acc,el){
+        //   return acc+Number(el.qty);
+        // },0)
+
+      }    
+
+
+      let caComp2cTdEls= document.querySelectorAll('#caComp2c>table td')
+      let caComp2cTdValues=JSON.parse(localStorage.getItem('checkoutObj'))
+
+      caComp2cTdEls[1].innerHTML=caComp2cTdValues.orderTotal;
+      caComp2cTdEls[3].innerHTML=caComp2cTdValues.orderDisc;
+      caComp2cTdEls[5].innerHTML=caComp2cTdValues.orderPromo;
+      caComp2cTdEls[7].innerHTML='FREE';
+      caComp2cTdEls[9].innerHTML=caComp2cTdValues.orderYouPay;
+      caComp2cTdEls[12].innerHTML=caComp2cTdValues.orderSave;
+
+     
+// *****************************Code from cart.js ends******************
+
+
+
+
   
 
   

@@ -1,0 +1,143 @@
+<script>
+
+  
+</script>
+
+function displayCards(cArr){
+  cArr.map(function(cartProd){
+    let caCardTop=document.createElement('div');
+    caCardTop.setAttribute('class','caCardTop')
+    // cardb
+    {        
+      var caCardb=document.createElement('div');
+        let caCardbImg=document.createElement('img');
+        caCardbImg.src=cartProd.prod.pImageArray[0];            
+        let caCardb2=document.createElement('div');
+        caCardb2.setAttribute('class','caCardb2');              
+          let caCardbName=document.createElement('h4');
+          caCardbName.textContent=cartProd.prod.pName;
+          let caCardbCode=document.createElement('h5');
+          caCardbCode.textContent=cartProd.prod.pCode;
+          let caCardbMRP=document.createElement('h4');  
+          caCardbMRP.innerHTML='<span><i class="fas fa-rupee-sign"></i>'+cartProd.prod.pMRP+'</span>&nbsp&nbsp&nbsp;<i class="fas fa-rupee-sign"></i>'+ ((100-cartProd.prod.pOffer)/100)*cartProd.prod.pMRP+"<span id='caCardbOff'>("+cartProd.prod.pOffer+"% off)</span>";
+          let caCardbWish=document.createElement('select');  
+          caCardbWish.setAttribute('class','caCardbWish');
+            let options=document.createElement('option');
+            options.textContent='Move To Wishlist'                
+          caCardbWish.append(options)
+        caCardb2.append(caCardbName,caCardbCode,caCardbMRP,caCardbWish)
+      caCardb.append(caCardbImg,caCardb2);              
+      caCardb.setAttribute('class','caCardb')
+    }
+    // cardc
+
+    {        
+      var caCardc=document.createElement('div');            
+      
+        let caCardc1=document.createElement('div');
+          caCardc1.innerHTML='<i class="fas fa-minus"></i>'
+          caCardc1.addEventListener('click',function(){
+            // alert('minus')
+            if(caCardc2Inp.value>1)
+            {
+              caCardc2Inp.value--;
+              cartProd.qty=caCardc2Inp.value;
+              localStorage.setItem('cartArr',JSON.stringify(cartArr));
+              document.querySelector('#caComp1>h2 span').textContent=cartArr.reduce(function(acc,el){
+              return acc+Number(el.qty);
+              },0)
+              
+              calcTotal();
+              location.reload();
+              
+            }
+
+          })
+        let caCardc2=document.createElement('div');              
+        let caCardc2Inp=document.createElement('input');
+        caCardc2Inp.style.width='100%';
+        caCardc2Inp.style.height='100%';
+        caCardc2Inp.textContent=cartProd.qty
+          // caCardc2.textContent=cartProd.qty
+          
+          caCardc2Inp.value=cartProd.qty;
+          caCardc2Inp.addEventListener('change',function(){
+            // alert('box')
+            cartProd.qty=caCardc2Inp.value;
+              localStorage.setItem('cartArr',JSON.stringify(cartArr));
+              document.querySelector('#caComp1>h2 span').textContent=cartArr.reduce(function(acc,el){
+              return acc+Number(el.qty);
+              },0)
+              
+              calcTotal();
+              location.reload();
+              
+          })       
+          caCardc2.append(caCardc2Inp)   
+        let caCardc3=document.createElement('div');
+          caCardc3.innerHTML='<i class="fas fa-plus"></i>'
+          caCardc3.addEventListener('click',function(){
+            // alert('plus')
+            if(caCardc2Inp.value)
+            {
+              caCardc2Inp.value++;
+              cartProd.qty=caCardc2Inp.value;
+              localStorage.setItem('cartArr',JSON.stringify(cartArr));
+              document.querySelector('#caComp1>h2 span').textContent=cartArr.reduce(function(acc,el){
+              return acc+Number(el.qty);
+              },0)                    
+              calcTotal();
+              location.reload();
+              
+            }
+          })
+        let caCardc4=document.createElement('div');
+        caCardc4.textContent='REMOVE'          
+        caCardc4.addEventListener('click',function(){              
+          modalBox.style.display='block'
+          document.querySelector('.modalContent>button:nth-child(3)').addEventListener('click',function(){
+            cartArr=cartArr.filter(function(el){
+              return el!=cartProd;
+            })
+            localStorage.setItem('cartArr',JSON.stringify(cartArr));
+            location.reload();
+            displayCards(cartArr);              
+            modalBox.style.display='none'
+        
+          })
+          // console.log(cartProd.prod)    
+          // document.style.backgroundColor= 'rgba('+'0,0,0,0.4'+')';
+          
+        })
+        caCardc.append(caCardc1,caCardc2,caCardc3,caCardc4)
+        caCardc.setAttribute('class','caCardc')
+    }
+    // cardd
+    {
+      var caCardd=document.createElement('div');
+      calcTotal();
+      
+      function calcTotal(){
+        
+        caCardd.innerHTML='<i class="fas fa-rupee-sign"></i>'+((100-cartProd.prod.pOffer)/100)*cartProd.prod.pMRP*cartProd.qty;              
+        
+        
+      }
+      caCardd.setAttribute('class','caCardd')   
+    }
+    caCardTop.append(caCardb,caCardc,caCardd);
+
+    let hr=document.createElement('hr')
+    hr.style.border='2px solid #D1D1D1'
+    let br=document.createElement('br')  
+
+    caComp1CardSection.append(caCardTop,hr,br)
+
+  })
+
+
+  document.querySelector('#caComp1>h2 span').textContent=cartArr.reduce(function(acc,el){
+    return acc+Number(el.qty);
+  },0)
+
+}
