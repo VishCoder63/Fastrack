@@ -1087,6 +1087,7 @@
                     },0)
                     
                     calcTotal();
+                    location.reload();
                     
                   }
 
@@ -1108,6 +1109,7 @@
                     },0)
                     
                     calcTotal();
+                    location.reload();
                     
                 })       
                 caCardc2.append(caCardc2Inp)   
@@ -1124,6 +1126,7 @@
                     return acc+Number(el.qty);
                     },0)                    
                     calcTotal();
+                    location.reload();
                     
                   }
                 })
@@ -1152,9 +1155,11 @@
           {
             var caCardd=document.createElement('div');
             calcTotal();
+            
             function calcTotal(){
               
               caCardd.innerHTML='<i class="fas fa-rupee-sign"></i>'+((100-cartProd.prod.pOffer)/100)*cartProd.prod.pMRP*cartProd.qty;              
+              
               
             }
             caCardd.setAttribute('class','caCardd')   
@@ -1180,7 +1185,7 @@
     }
   
   //orderSummaryCartSection
-  {
+  // {
     let caVoucherApplied=0,orderSave=0,orderDisc=0,caPromoApplied=0,orderTot=0;
     let caComp2a=document.getElementById('caComp2a');
     document.getElementById('caComp2b').addEventListener('click',function(e){      
@@ -1301,5 +1306,5 @@
       // let caComp2cSave
       // console.log(orderSave,Math.floor((orderDisc/100)*orderTot))
       caComp2cTd[12].innerHTML='-'+'&nbsp&nbsp<i class="fas fa-rupee-sign"></i>'+(orderSave)
-    }
+    // }
   </script>
