@@ -25,7 +25,7 @@
       }
       .bor {
         /* check why removing this is breaking stff */
-        border: 1px solid red;
+        border: 1px solid transparent;
       }
       .ho1Container {
         width: 100%;
@@ -284,10 +284,9 @@
         display: flex;
         /* align-items: center; */
       }
-      #chCircles{
-        
-        padding: 1% 1.5%;
-        margin: 1% 2%;
+      #chCircles{       
+        padding: 2%;
+        margin: 2% 2%;
         border: 1px solid black;
         width: 5%;
         height: 5%;
@@ -299,6 +298,15 @@
       }
       #chComp3AreaFinal{
         display: none;
+      }
+      #chComp3AreaFinal>table{
+        /* border: 1px solid teal; */
+        margin:30px 0px;
+        width: 150%;
+        text-align: left;
+      }
+      #chComp3AreaFinal>table td{
+        padding: 10px 0px;        
       }
       #cartSection{           
         /* background-color: teal;      */
@@ -338,11 +346,11 @@
         width: 15%;
         /* border: 2px solid black;         */
       }
-      .caCardTop>div:nth-child(1){        
-                
-        width: 42%;   
+      .caCardTop>div:nth-child(1){ 
+        /* border: 1px solid teal; */
+        width: 45%;   
         margin-right: 15%;           
-      }
+      }      
       .caCardTop>div:nth-child(2){    
         padding-top: 10%;           
       }
@@ -351,8 +359,8 @@
         
       }
       .caCardTop img{
-        width: 60%;
-        height: 60%;        
+        width: 55%;
+        height: 55%;        
       }
       .caCardb2>h5,.caCardb2>h4{
         margin: 10% 0%;
@@ -395,6 +403,122 @@
         /* background-color: teal; */
         display: none;
       }
+      #comp5PayPage{        
+        width: 100%;        
+        /* height: 700px; */
+      }
+      #comp5PayTextArea{
+        display: flex;
+        width: 80%;      
+        height: 75%;  
+        margin: auto;
+        /* border: 1px solid teal; */
+        
+      }      
+      
+      #comp5PayTextArea>div:nth-child(1){
+        /* background-color: red; */
+        padding-top: 70px;
+        border-right: 1px solid grey;
+      }
+      #comp5PayTextArea>div:nth-child(1) button{        
+        height:60px;        
+        border-bottom: 1px solid #ECECEC;
+      }
+      #comp5PayTextArea>div:nth-child(1) h4{
+        margin: 5px 0px;
+      }
+      #comp5PayTextArea button{
+        display: flex;
+        width: 100%;   
+        align-items: center;        
+        text-align: left; 
+        border: none;
+        background-color: white;        
+      }
+      #comp5PayTextArea button:hover{
+        background-color: #ECECEC;        
+        /* background-color: red; */
+      }
+      #comp5PayTextArea button div{        
+        margin-right: 20px;
+        margin-left: 10px;
+      }      
+      #comp5PayTextArea>div{
+        /* border: 1px solid black; */
+        width: 50%;
+      }
+      #comp5PayTextArea>div:nth-child(2)>div:nth-child(1){
+        height: 20%;
+      }
+      #comp5PayTextArea>div:nth-child(2)>div:nth-child(2){
+        height: 80%;
+      }
+      
+      #comp5PayTextAreaFormUp{        
+        padding: 20px;             
+        padding-bottom: 150px; 
+      }      
+      
+      #comp5PayTextAreaForm>input{
+        width: 90%;
+        height: 40px;        
+        margin: 10px 0px;
+      }
+      #comp5PayTextAreaForm>input:nth-last-child(1){
+        background-color: orange;
+        border: none;
+        color: white;
+        font-weight: 600;
+      }
+      #comp5PayTextAreaFormSib{
+        padding: 10px;        
+        width: 40%;
+      }
+      #comp5PayTextAreaFormSib span{
+        display: block;        
+        font-size: 20px;
+        margin-top: 10px;        
+
+      }
+      #chComp3Form input,#chComp3Form select,#chComp3Form button{
+        width: 45%;
+        height: 40px;
+        border: none;
+        background-color: #F6F6F6;                
+      }
+      #chComp3Form button{
+        height: 50px;
+        background-color: black;
+        color: white;
+        width: 40%;
+        margin: 40px 10px 30px 0px;
+      }
+      #chComp3Form label{
+        display: inline-block;
+        color: grey;
+        font-weight: 600;
+        margin: 10px 0px;
+      }
+      #checkOutSection>div>div>h2{        
+        margin-top: 45px;     
+        margin-bottom:15px;             
+      }
+      #comp1>h3{
+        font-size: 16px;        
+        margin: 22px;
+      }
+      #caComp2c>h2{
+        margin: 10px 0px;
+      }
+      #caComp2c>table td{
+        padding: 10px 0px;
+      }
+      #caComp2c>table{
+        width: 60%;
+      }
+      
+
     </style>
   </head>
 
@@ -465,7 +589,7 @@
           <h2>DELIVERY INFORMATION<span></span></h2> 
           <div id="chComp3Area">
             <p>In order to deliver your order, we need to gather some information from you. Please fill the form below.</p>
-            <h2>YOUR PERSONAL DETAILS</h2>
+            <!-- <h2>YOUR PERSONAL DETAILS</h2> -->
             <form id='chComp3Form' class='bor'>
               <label>TITLE *</label><br>
               <select id="chComp3FormT">
@@ -498,7 +622,7 @@
             </form>
           </div>
           <div id="chComp3AreaFinal">
-            <table border='1'>
+            <table >
               <thead>
                 <th>CONTACT DETAILS</th>
                 <th>ADDRESS DETAILS</th>
@@ -553,15 +677,15 @@
                       <td>1</td>
                     </tr>
                     <tr>
-                      <td><h3>YOU PAY</h3></td>
-                      <td>1</td>
+                      <td><h2>YOU PAY</h2></td>
+                      <td><h2>1</h2></td>
                     </tr>
                     <tr>
                       <td><h4>INCLUSIVE OF ALL TAXES*</h4></td>
                     </tr>
                     <tr>
-                      <td>YOU SAVE</td>
-                      <td>1</td>
+                      <td><h4>YOU SAVE</h4></td>
+                      <td><h4>1</h4></td>
                     </tr>
                   </table>
                 </div>
@@ -576,9 +700,52 @@
       <hr>
       <div id="comp5">
         <div id='chCircles'></div>
-        <div>
+        <div class='bor' id="comp5PayPage">
           <h2>PAYMENT INFORMATION<span></span></h2>
-          <div id=""></div>
+          <div class='bor' id="comp5PayTextArea">
+            <div>
+              <h4>Select a payment method</h4>
+              <button>
+                <div><i class="fas fa-credit-card"></i></div>
+                <div>
+                  <h4>Credit/Debit Card</h4> 
+                   Visa, Mastercard, Maestro, Rupay
+                </div>                
+              </button><br>                       
+              <button>
+                <div><i class="fas fa-university"></i></div>
+                <div>
+                  <h4>Netbanking</h4>                   
+                  Pay with Internet Banking Account
+                </div>                
+              </button><br>                       
+              <button>
+                <div><i class="fas fa-wallet"></i></div>
+                <div>
+                  <h4>Wallet</h4>                   
+                  Pay using a Wallet
+                </div>                
+              </button><br>                       
+
+            </div>
+            <div  id='comp5PayTextAreaFormUp'>
+              <div id='comp5PayTextAreaFormSib'></div>
+              <div>
+                <form id='comp5PayTextAreaForm'>
+                <h5>Pay with Credit/Debit Card</h5><br>             
+                <label>Card Number</label><br>
+                <input id='comp5Card' type="number"><br><br>
+                <label>Expiry Date</label><br>
+                <input id='comp5Exp' type="date" placeholder="MM/YY"><br><br>
+                <label>CVV</label><br>
+                <input id='comp5CVV' type="password" placeholder="***"><br><br>
+                <label>Cardholder's Name</label><br>
+                <input id='comp5Name' type="text"><br><br>
+                <input type="submit" value='PAY NOW'>
+              </form>
+              </div>
+            </div>                                    
+          </div>
 
         </div>
       </div>    
@@ -1048,6 +1215,7 @@ function displayCards(cArr){
 
       let caComp2cTdEls= document.querySelectorAll('#caComp2c>table td')
       let caComp2cTdValues=JSON.parse(localStorage.getItem('checkoutObj'))
+      document.getElementById('comp5PayTextArea').style.display='none'  
 
       caComp2cTdEls[1].innerHTML=caComp2cTdValues.orderTotal;
       caComp2cTdEls[3].innerHTML=caComp2cTdValues.orderDisc;
@@ -1055,13 +1223,44 @@ function displayCards(cArr){
       caComp2cTdEls[7].innerHTML='FREE';
       caComp2cTdEls[9].innerHTML=caComp2cTdValues.orderYouPay;      
       caComp2cTdEls[12].innerHTML=caComp2cTdValues.orderSave;
+      caComp2cTdEls[12].style.color='red';
+      caComp2cTdEls[12].style.fontWeight='600';
+      caComp2cTdEls[11].style.color='red';
+
 
       document.querySelector('#cartSection button').addEventListener('click',function(){
-        alert('Lets Pay!!')
+        // alert('Lets Pay!!')
+        chCircles[2].innerHTML='<i class="fas fa-check"></i>';
+        document.getElementById('comp4ReviewKid').style.display='none';
+        document.getElementById('comp5PayTextArea').style.display='flex'  
       })
 
      
 // *****************************Code from cart.js ends******************
+
+document.querySelector('#comp5PayTextArea>div:nth-child(2)>div:nth-child(1)').innerHTML=`Amount payable is <span>${caComp2cTdValues.orderYouPay}</span>`
+      
+
+
+      let comp5PayTextAreaForm=document.getElementById('comp5PayTextAreaForm')
+      comp5PayTextAreaForm.addEventListener('submit',function(e){
+        e.preventDefault();
+        if(comp5PayTextAreaForm.comp5Card.value==''||comp5PayTextAreaForm.comp5Exp.value==''||comp5PayTextAreaForm.comp5CVV.value==''||comp5PayTextAreaForm.comp5Name.value=='')
+          alert('Please fill all fields!')
+        else{
+          if(comp5PayTextAreaForm.comp5Card.value.length!=16) alert('Card Number should be 16 digits long!')
+          else if(comp5PayTextAreaForm.comp5CVV.value.length!=3) alert('CVV should be 3 digits long!')
+          else{
+            alert('Order successfully placed!! 🎉🎉🎉')
+            window.location.href='#';
+          }
+          
+          }
+
+
+
+
+      })
 
 
 
