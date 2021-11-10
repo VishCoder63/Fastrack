@@ -1258,14 +1258,14 @@
 
       document.querySelector('#caComp2d>button').addEventListener('click',function(){
         alert('checkout')
-        console.log(caComp2cTd[5].innerHTML)
+        // console.log(caComp2cTd[5].innerHTML)
 
         let checkoutObj={
-          orderTotal:caComp2cTd[1].children[0].nextSibling.textContent,
-          orderDisc:caComp2cTd[5].children[0].nextSibling.textContent,
-          orderPromo:caComp2cTd[7].children[0].nextSibling.textContent,
-          orderYouPay:caComp2cTd[9].children[0].nextSibling.textContent,
-          orderSave:caComp2cTd[12].children[0].nextSibling.textContent
+          orderTotal:caComp2cTd[1].innerHTML,
+          orderDisc:caComp2cTd[5].innerHTML,
+          orderPromo:caComp2cTd[7].innerHTML,
+          orderYouPay:caComp2cTd[9].innerHTML,
+          orderSave:caComp2cTd[12].innerHTML
         }
         localStorage.setItem('checkoutObj',JSON.stringify(checkoutObj));
       })
