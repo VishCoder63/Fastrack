@@ -300,7 +300,8 @@
       #chComp3AreaFinal{
         display: none;
       }
-      #cartSection{                
+      #cartSection{           
+        /* background-color: teal;      */
         padding-top: 10px;
         justify-content: space-evenly;
       }
@@ -381,6 +382,18 @@
       .caCarde{
         font-weight: 600;
         margin-top: 10%;
+      }
+      #cartSection button{
+        background-color: black;
+        color: white;
+        width: 30%;
+        height: 50px;
+        border: none;
+        margin: 20px 0px;
+      }      
+      #comp4ReviewKid{
+        /* background-color: teal; */
+        display: none;
       }
     </style>
   </head>
@@ -504,7 +517,7 @@
         <div id='chCircles'></div>
         <div class='bor' id="comp4Review">
           <h2>ORDER REVIEW<span></span></h2>
-          <div >
+          <div id="comp4ReviewKid">
             <p>Please review your order to ensure your details are correct.</p>
             <p>If you have reviewed your order, you can proceed to the next stage and make the payment.</p>
 
@@ -552,6 +565,7 @@
                     </tr>
                   </table>
                 </div>
+                <button>CONTINUE TO PAYMENT</button>
             </div>
 
 
@@ -906,7 +920,8 @@ if(currUser){
   chCircles[0].innerHTML='<i class="fas fa-check"></i>'
   let chComp3Area=document.getElementById('chComp3Area')
   let chComp3AreaFinal=document.getElementById('chComp3AreaFinal')    
-  let chComp3Form=document.getElementById('chComp3Form')  
+  let chComp3Form=document.getElementById('chComp3Form') 
+
   document.getElementById('chComp3FormSubBtn').addEventListener('click',function(e){ 
     e.preventDefault();
     let notFilled=0;
@@ -945,8 +960,11 @@ if(currUser){
         chComp3Area.style.display='none'
         chComp3AreaFinal.style.display='block'
         chCircles[1].innerHTML='<i class="fas fa-check"></i>';
+        document.getElementById('comp4ReviewKid').style.display='block';
       } 
-      
+
+
+
 
       
   })
@@ -1035,9 +1053,12 @@ function displayCards(cArr){
       caComp2cTdEls[3].innerHTML=caComp2cTdValues.orderDisc;
       caComp2cTdEls[5].innerHTML=caComp2cTdValues.orderPromo;
       caComp2cTdEls[7].innerHTML='FREE';
-      caComp2cTdEls[9].innerHTML=caComp2cTdValues.orderYouPay;
-      // caComp2cTdEls[12].innerHTML='-&nbsp;&nbsp;<i class="fas fa-rupee-sign" aria-hidden="true"></i>592';
+      caComp2cTdEls[9].innerHTML=caComp2cTdValues.orderYouPay;      
       caComp2cTdEls[12].innerHTML=caComp2cTdValues.orderSave;
+
+      document.querySelector('#cartSection button').addEventListener('click',function(){
+        alert('Lets Pay!!')
+      })
 
      
 // *****************************Code from cart.js ends******************
