@@ -1696,7 +1696,7 @@
     
       ho32PopulateArray(ho34ReviewArr,ho32Pos);
 
-      var ho32CommentsTimer=setInterval(ho32RightClicked,2000);
+      var ho32CommentsTimer=setInterval(ho32RightClicked,1000);
       document.querySelector('#ho32CommenTop>div:nth-child(3)>span').textContent=ho34ReviewArr.length;
 
 
@@ -1704,7 +1704,7 @@
         clearInterval(ho32CommentsTimer)
       })
       document.getElementById('ho31Comments').addEventListener('mouseleave',function(){        
-        ho32CommentsTimer=setInterval(ho32RightClicked,2000);
+        ho32CommentsTimer=setInterval(ho32RightClicked,1000);
       })
 
       
