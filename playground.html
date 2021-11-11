@@ -9,7 +9,99 @@
       crossorigin="anonymous"
     ></script>
   <title>Document</title>
-  <link rel="stylesheet" href="play.css">
+  <style>
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .bor{
+      border: 1px solid transparent;
+    }
+
+    #proComp2{    
+      display: flex;
+      height: 100%;
+      justify-content: space-between;
+      border: 1px solid grey;
+      padding: 20px;
+      
+    }
+    #proComp2>div{
+      /* border: 1px solid grey; */
+      width: 48%;        
+      
+    }
+    #proComp2>div:nth-last-child(1){
+      height: 100%;
+      width: 2%;
+      text-align: center;
+    }
+    #proComp2>div:nth-last-child(2){
+      width: 35%;
+      text-align: center;  
+    }
+    #proComp2a1,#proComp2a2{
+      display: flex;        
+      justify-content: center;        
+      height: 7%;        
+      
+    }
+    #proComp2a1{
+      margin-top: 10px;
+      height: 45%;        
+    }
+    #proComp2a1>div:nth-child(2){
+      height: 100%;        
+      width: 90%;
+      margin: 0% 1%;
+    }
+    #proComp2a1>div:nth-child(1),#proComp2a1>div:nth-child(3){
+      padding-top: 20%;
+    }
+    #proComp2a2>div{
+      margin: 1% 1.5%;
+      width: 7%;  
+      height: 80%;
+    }
+    #proComp2b>div{
+      margin: 3.5%;
+    }
+    #proComp2b>div:nth-child(1){
+      margin:0% 0% 0% 3.5%;
+    }
+    #proComp2b5>div{
+      display: flex;
+      width: 30%;
+      height: 45px;        
+      justify-content: space-evenly;
+    }
+    #proComp2b5>div>div{
+      width: 30%;
+      text-align: center;
+      padding-top: 6%;
+      border: 1px solid black;
+    }
+    #proComp2b6>div:nth-child(1){
+      text-align: center;
+    }
+
+    #proComp2b6>div:nth-child(2){
+      height: 45px;      
+      text-align: center;
+      padding-top: 3%;
+      background-color: black;
+      width: 100%;    
+      font-size: 14px;    
+      color: white;
+      border: none;
+    }
+    .proComp2a2Circles{
+      border: 3px solid black;  
+      border-radius: 50%;
+    }
+  </style>
 </head>
 <body>
   <div id="proComp2" class='bor'>
@@ -139,17 +231,21 @@ pText: "Fastrack Glitch Black Dial Analog Watch for Girls"
 
 
   document.querySelector('#proComp2b6>div:nth-child(2)').addEventListener('click',function(){
-    console.log('hkb')
+    
     let tempQty=document.querySelectorAll('#proComp2b5>div>div')[1].textContent;
     let tempProd=product;
     let tempObj={
       prod:tempProd,
       qty:tempQty
-    }
-    console.log(1)
+    }    
     let tempArr=JSON.parse(localStorage.getItem('cartArr'))
     tempArr.push(tempObj);
+    console.log(tempArr)
     localStorage.setItem('cartArr',JSON.stringify(tempArr));
+  })
+
+  document.getElementById('proComp2c').addEventListener('click',function(){
+    alert('Time to go!')
   })
 
 
