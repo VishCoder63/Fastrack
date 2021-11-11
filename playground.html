@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #asd{
+      width: 100%;      
+    }
+    .plCardBtnView{
+      border: 1px solid red;
+      display: flex;
+        width: 90%;
+        height: 400px;        
+      }      
+      .plCardBtnView>div{
+        border: 1px solid red;        
+      }
+      .plCardBtnView>div:nth-child(1){
+        width: 40%;
+        display: flex;                
+      }
+      .plCardBtnView>div:nth-child(1)>div:nth-child(1),.plCardBtnView>div:nth-child(1)>div:nth-child(3){
+        width: 5%;
+        border: 1px solid red;
+      }
+      .plCardBtnView>div:nth-child(1)>div:nth-child(2){
+        width: 90%;
+        border: 1px solid red;
+      }
+      .plCardBtnView>div:nth-child(1)>div:nth-child(2)>div:nth-child(2){
+        height: 80%;
+        border: 1px solid red;        
+      }
+      .plCardBtnView>div:nth-child(2){
+        width: 55%;
+      }
+      .plCardBtnView>div:nth-child(3){
+        width: 5%;
+      }
+
+  </style>
+</head>
+<body>
+  <div id="asd">    
+    <div class="plCardBtnView">
+      <div>
+        <div>1</div>
+        <div>
+          <div>1</div>
+          <div>2</div>
+        </div>
+        <div>3</div>
+      </div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  
+</body>
+</html>
+
+<!-- <script>
+  let plCardBtnView=document.createElement('div');
+  plCardBtnView.setAttribute('class','plCardBtnView');
+  // **********ignore below****************
+  document.getElementById('asd').append(plCardBtnView)
+
+
+</script> -->
