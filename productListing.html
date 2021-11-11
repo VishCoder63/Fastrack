@@ -25,7 +25,7 @@
       }
       .bor {
         /* check why removing this is breaking stff */
-        border: 1px solid red;
+        border: 1px solid transparent;
       }
       .ho1Container {
         width: 100%;
@@ -289,6 +289,7 @@
       #plComp2{
         display: flex;
         justify-content: space-between;
+        margin: 10px 0px;
       }
       /* #plComp2>div{
         border:1px solid red;
@@ -309,11 +310,15 @@
       #plComp3{
         display: flex;
         justify-content: space-evenly;
-        height: 650px;      
+        height: 900px;      
       }
       #plComp3a{
         width: 20%;
         height: 100%;
+        background-color: #F6F6F6;
+      }
+      #plComp3a1{
+        background-color: white;
       }
       #plComp3b{
         width: 80%;          
@@ -323,29 +328,30 @@
         gap: 15px;
         justify-content: center; */
         padding-top: 10px;
-        padding-bottom: 10px;  
+        /* padding-bottom: 10px;  */
+        /* border: 1px dashed red;          */
       }
       #plComp3b>.plComp3bFlexBox{
         display: flex;
         justify-content: space-evenly;
         width: 100%;
-        border: 2px dashed brown;
+        /* border: 2px dashed brown; */
       }
-      #plComp3b>div>div{
-        border: 1px solid teal;
-        width: 31%;
+      #plComp3b>.plComp3bFlexBox>div{
+        /* border: 1px solid teal; */
+        width: 30%;
         height: 480px;
         text-align: center;
         /* padding-top: 5%; */
         margin: 10px 0px;
       }
-      #plComp3b>div>div:hover{
+      #plComp3b>.plComp3bFlexBox>div:hover{
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
       }
       .plCardImage{
         /* border: 1px solid red; */
-        width: 85%;        
+        width: 75%;        
         height: 75%;        
         margin-bottom: 1%;        
       }
@@ -359,10 +365,131 @@
 
       }
       .plCardBtnView{
-        width: 100%;
-        height: 400px;
-        background-color: red;
-      }      
+        width: 95%;
+        margin: auto;
+        /* border: 2px solid tomato; */
+        height: 450px;
+        
+      }
+        #proComp2{              
+          display: flex;
+          height: 100%;
+          width: 100%;
+          justify-content: space-between;
+          border: 1px solid grey;
+          padding: 20px;
+          
+        }
+        #proComp2>div{
+          /* border: 1px solid grey; */
+          width: 48%;        
+          
+        }
+        #proComp2>div:nth-last-child(1){
+          height: 100%;
+          width: 2%;
+          text-align: center;
+        }
+        #proComp2>div:nth-last-child(2){
+          width: 35%;
+          text-align: center;  
+        }
+        #proComp2a1,#proComp2a2{
+          display: flex;        
+          justify-content: center;        
+          height: 13%;        
+          
+        }
+        #proComp2a1{
+          margin-top: 10px;
+          height: 50%;        
+        }
+        #proComp2a1>div:nth-child(2){
+          height: 100%;        
+          width: 90%;
+          margin: 0% 1%;
+        }
+        #proComp2a1>div:nth-child(1),#proComp2a1>div:nth-child(3){
+          padding-top: 20%;
+        }
+        #proComp2a2>div{
+          margin: 1% 1.5%;
+          width: 7%;  
+          height: 80%;
+        }
+        #proComp2b>div{
+          margin: 3.5%;
+        }
+        #proComp2b>div:nth-child(1){
+          margin:0% 0% 0% 3.5%;
+        }
+        #proComp2b5>div{
+          display: flex;
+          width: 30%;
+          height: 45px;        
+          justify-content: space-evenly;
+        }
+        #proComp2b5>div>div{
+          width: 30%;
+          text-align: center;
+          padding-top: 6%;
+          border: 1px solid black;
+        }
+        #proComp2b6>div:nth-child(1){
+          text-align: center;
+        }
+
+        #proComp2b6>div:nth-child(2){
+          height: 45px;      
+          text-align: center;
+          padding-top: 3%;
+          background-color: black;
+          width: 100%;    
+          font-size: 14px;    
+          color: white;
+          border: none;
+        }
+        .proComp2a2Circles{
+          border: 3px solid black;  
+          border-radius: 50%;
+        }  
+        #plComp3a>.plComp3afilter{
+          height: 7%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding:0px 15px
+        }   
+        #plComp3a1 p{
+          text-decoration-line: underline;
+          text-underline-offset: 4px;
+        }
+        #plComp3a1 p>span{
+          font-size: 11px;
+        }
+        
+        #plComp3a2TextArea{
+          padding-top: 10px;
+          height: 150px;
+          /* background-color: red;     */
+          display: none;      
+        }    
+        #plComp3a2TextArea table{
+          font-size: 15px;
+          width: 100%;
+          max-height: 100%;
+        }        
+        .tableDivider{
+          display: flex;
+          justify-content: space-evenly;
+          padding-top: 10px;
+        }
+        #plComp2a{
+          margin-top: 10px;          
+        }
+        
+           
+      
     </style>
   </head>
 
@@ -433,7 +560,123 @@
       </div>
       <div class='bor' id="plComp3">
         <div class='bor' id="plComp3a">
-                      
+          
+          <div class='bor plComp3afilter' id="plComp3a1">
+            <h4>FILTER BY</h4>
+            <p><span><i class="fas fa-sync"></i></span>&nbsp;Clear all</p>
+          </div>
+
+
+          <div class='bor plComp3afilter' id="plComp3a2">
+            <h4>Price</h4>
+            <p><i class="fas fa-plus"></i></p>
+          </div>
+
+          <div id='plComp3a2TextArea'>
+            <table>
+              <tr>
+                <td><input type="radio" value='1500'></td>
+                <td>Less than <i class="fas fa-rupee-sign"></i>1500</td>
+              </tr>
+              <tr>
+                <td><input type="radio" value='1500-2000'></td>
+                <td>Between <i class="fas fa-rupee-sign"></i>1500 and <i class="fas fa-rupee-sign"></i>2000</td>
+              </tr>
+              <tr>
+                <td><input type="radio" value='2000'></td>
+                <td>Greater than <i class="fas fa-rupee-sign"></i>2000</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class='bor plComp3afilter' id="plComp3a3">
+            <h4>Gender</h4>
+            <p><i class="fas fa-plus"></i></p>
+          </div>
+
+          <div id='plComp3a2TextArea'>
+            <table>
+              <tr>
+                <td><input type="radio" value='M'></td>
+                <td >Men</td>
+              </tr>
+              <tr>
+                <td><input type="radio" value='W'></td>
+                <td>Women</td>
+              </tr>              
+            </table>
+          </div>
+
+          <div class='bor plComp3afilter' id="plComp3a4">
+            <h4>Color</h4>
+            <p><i class="fas fa-plus"></i></p>
+          </div>
+
+          <div class='tableDivider' id='plComp3a2TextArea'>
+            <div>
+              <table>
+                <tr>
+                  <td><input type="radio" value='Black'></td>
+                  <td>Black</td>
+                </tr>
+                <tr>
+                  <td><input type="radio" value='Blue'></td>
+                  <td>Blue</td>
+                </tr>
+                <tr>
+                  <td><input type="radio" value='Green'></td>
+                  <td>Green</td>
+                </tr>
+                <tr>
+                  <td><input type="radio" value='White'></td>
+                  <td>White</td>
+                  </tr>
+            </table>
+            </div> 
+            <div>
+              <table>                
+                <tr>
+                  <td><input type="radio" value='Gold'></td>
+                  <td>Gold</td>
+                </tr>
+                <tr>
+                  <td><input type="radio" value='Brown'></td>
+                  <td>Brown</td>
+                </tr>
+                <tr>
+                  <td><input type="radio" value='Silver'></td>
+                  <td>Silver</td>
+                </tr>
+                <tr>
+                  <td><input type="radio" value='Yellow'></td>
+                  <td>Yellow</td>
+                </tr>              
+              </table>
+            </div>  
+          </div>
+
+          <div class='bor plComp3afilter' id="plComp3a5">
+            <h4>Discount</h4>
+            <p><i class="fas fa-plus"></i></p>
+          </div>  
+
+          <div id='plComp3a2TextArea'>
+            <table>
+              <tr>
+                <td><input type="radio" value='10'></td>
+                <td>10%</td>
+              </tr>
+              <tr>
+                <td><input type="radio" value='15'></td>
+                <td>15%</td>
+              </tr>    
+              <tr>
+                <td><input type="radio" value='20'></td>
+                <td>20%</td>
+              </tr>              
+            </table>
+          </div>
+
         </div>
         <div class='bor' id="plComp3b">
           <!-- product cards go here -->
@@ -864,7 +1107,7 @@
 //     pOffer:15,
 //     pCode: '6234WL01',
 //     pGender: 'W',
-//     pColor:'Pink'
+//     pColor:'Gold'
 //   },
 //   {    
 //     pImageArray: [
@@ -1097,65 +1340,147 @@
 //     localStorage.setItem('fastrackData',JSON.stringify(fastrackData));
 
     let fastrackData=JSON.parse(localStorage.getItem('fastrackData'))||[];
+    var plComp3atempArr=[],filterApplied=0;
     let plComp3b=document.getElementById('plComp3b');
     // console.log(fastrackData)
 
+    // VVVVVVVVVVVVVV Change as per filter VVVVVVVVVVVVVV
+     document.querySelectorAll('#plComp2a span')[0].textContent=fastrackData.length+' ';    
+
     let plComp2bDivs= document.querySelectorAll('#plComp2b>div');
     let priceClicked=0,discClicked=0,rateClicked=0;
-    //price filtering
+    //price sorting
+
     plComp2bDivs[0].addEventListener('click',function(){
       if(priceClicked==0){
         priceClicked=1;
         plComp2bDivs[0].children[0].innerHTML='<i class="fas fa-chevron-up"></i>'    
         //sort in asc order
+        let tempArr=fastrackData.map(function(el){
+          return el;
+        })    
+        
+
+        if(plComp3atempArr.length!=0 || filterApplied==1) tempArr=plComp3atempArr.map(function(el){
+          return el;
+        });
+
+        tempArr=tempArr.sort(function(a,b){
+          return a.pMRP-b.pMRP;
+        })
+
+        pldisplayItems(tempArr);
+        console.log(tempArr)
         
         
       }else{
         priceClicked=0;
         plComp2bDivs[0].children[0].innerHTML='<i class="fas fa-chevron-down"></i>'
         //sort in desc order
+        let tempArr=fastrackData.map(function(el){
+          return el;
+        })       
+
+        if(plComp3atempArr.length!=0 || filterApplied==1) tempArr=plComp3atempArr.map(function(el){
+          return el;
+        });
+
+        tempArr=tempArr.sort(function(a,b){
+          return b.pMRP-a.pMRP;
+        })
+
+        pldisplayItems(tempArr);
+        console.log(tempArr)
       }
     })
 
-    //discount filtering
+    //discount sorting
 
-    plComp2bDivs[1].addEventListener('click',function(){
+    plComp2bDivs[1].addEventListener('click',function(){      
       if(discClicked==0){
         discClicked=1;
         plComp2bDivs[1].children[0].innerHTML='<i class="fas fa-chevron-up"></i>'    
                 //sort in asc order
+                let tempArr=fastrackData.map(function(el){
+                  return el;
+                })                
+
+                if(plComp3atempArr.length!=0 || filterApplied==1) tempArr=plComp3atempArr.map(function(el){
+                  return el;
+                });
+
+                tempArr=tempArr.sort(function(a,b){
+                  return a.pOffer-b.pOffer;
+                })
+
+                console.log(tempArr)
+                pldisplayItems(tempArr);
+                
     
       }else{
         discClicked=0;
         plComp2bDivs[1].children[0].innerHTML='<i class="fas fa-chevron-down"></i>'
                 //sort in desc order
+                let tempArr=fastrackData.map(function(el){
+                  return el;
+                })
+                
+
+                if(plComp3atempArr.length!=0 || filterApplied==1) tempArr=plComp3atempArr.map(function(el){
+                  return el;
+                });
+
+                tempArr=tempArr.sort(function(a,b){
+                  return b.pOffer-a.pOffer;
+                })
+
+                pldisplayItems(tempArr);
+                console.log(tempArr)
+                
 
       }
     })
 
-    //rating filtering
-    plComp2bDivs[2].addEventListener('click',function(){
-      if(rateClicked==0){
-        rateClicked=1;
-        plComp2bDivs[2].children[0].innerHTML='<i class="fas fa-chevron-up"></i>'  
-                //sort in asc order
-      
-      }else{
-        rateClicked=0;
-        plComp2bDivs[2].children[0].innerHTML='<i class="fas fa-chevron-down"></i>'
-                //sort in desc order
+    //rating sorting
+    {
+      // plComp2bDivs[2].addEventListener('click',function(){
+      //   if(rateClicked==0){
+      //     rateClicked=1;
+      //     plComp2bDivs[2].children[0].innerHTML='<i class="fas fa-chevron-up"></i>'  
+      //             //sort in asc order
+      //             let tempArr=fastrackData.map(function(el){
+      //               return el;
+      //             })
+      //             tempArr=tempArr.sort(function(a,b){
+      //               return b.pMRP-a.pMRP;
+      //             })
+      //             pldisplayItems(tempArr);
+      //             console.log(tempArr)
+                  
+        
+      //   }else{
+      //     rateClicked=0;
+      //     plComp2bDivs[2].children[0].innerHTML='<i class="fas fa-chevron-down"></i>'
+      //             //sort in desc order
+      //             let tempArr=fastrackData.map(function(el){
+      //             return el;
+      //           })
+      //           console.log(tempArr)
+                  
+  
+      //   }
+      // })
 
-      }
-    })
+    }
 
 
 // comp 3b
     pldisplayItems(fastrackData);
 
     
-    // console.log(plComp3b)
-
+    
     function pldisplayItems(arr){
+      plComp3b.innerHTML=null;
       let plComp3bFlexBox=document.createElement('div');
       plComp3bFlexBox.setAttribute('class','plComp3bFlexBox');
       for(let i=0;i<arr.length;i++){
@@ -1184,9 +1509,70 @@
         plCardBtn.textContent='Quick View';
         plCardBtn.addEventListener('click',function(e){
           let plCardBtnView=document.createElement('div');
-          plCardBtnView.setAttribute('class','plCardBtnView');
-          e.path[2].after(plCardBtnView);
-        })
+          plCardBtnView.setAttribute('class','plCardBtnView');                    
+
+            plCardBtnView.innerHTML=
+            `<div id="proComp2" class='bor'>
+              <div id="proComp2a" class='bor'>
+                <div id="proComp2a1" class='bor'>
+                  <div>
+                    <i class=" chevronIcons fa-2x fas fa-chevron-left"></i></div>
+                  <div>              
+                    <img width='100%' height='100%' src="https://via.placeholder.com/200" alt="">
+                  </div>
+                  <div>
+                    <i class="chevronIcons fa-2x fas fa-chevron-right"></i></div>
+                </div>
+                <div id="proComp2a2" class='bor'>
+                  <div class='bor'>
+                    <img width='100%' height='100%' src="https://via.placeholder.com/200" alt="">
+                  </div>
+                  <div class='bor'>
+                    <img width='100%' height='100%' src="https://via.placeholder.com/200" alt="">
+                  </div>
+                  <div class='bor'>
+                    <img width='100%' height='100%' src="https://via.placeholder.com/200" alt="">
+                  </div>
+                  <div class='bor'>
+                    <img width='100%' height='100%' src="https://via.placeholder.com/200" alt="">
+                  </div>
+                </div>
+              </div>
+              <div id="proComp2b" class='bor'>
+                <div id="proComp2b1" class='bor'>
+                  <h2 class='bor'>Product Name</h2>                           
+                </div>
+                <h4 id="proComp2b2" class='bor'>
+                  Product Code
+                </h4>
+                <div id="proComp2b3" class='bor'>
+                  <span>0</span> <span>0</span> <span>(<span>0</span>% Off)</span>
+                </div>
+                <div id="proComp2b4" class='bor'>
+                  Product Text
+                </div>
+                <div id="proComp2b5" class='bor'>        
+                  <div class='bor'>
+                    <div class='bor'>-</div>
+                    <div class='bor'>1</div>
+                    <div class='bor'>+</div>
+                  </div>
+                </div>   
+                <div id="proComp2b6" class='bor'>
+                  <div>In Stock</div>        
+                    <div>Add to Cart</div>                  
+                </div>      
+              </div>
+              <div id="proComp2c" class='bor'>
+                <i class="fas fa-times"></i>
+              </div>
+            </div> 
+          `          
+            e.path[2].after(plCardBtnView)
+            // console.log(e.path[3].children[1])
+            // console.log(arr[i])
+            plPopulateViewCard(plCardBtnView,arr[i])
+          })
         plProdCard.append(plCardImage,plCardName,plCardPrice,plCardBtn);       
         // card creation done
         plComp3bFlexBox.append(plProdCard);        
@@ -1200,6 +1586,211 @@
     }
 
 
+    function plPopulateViewCard(currEl,item){
+      let product=item;
+  // console.log(product) 
+
+  // ****all data filled***
+
+  let proComp2a1MainImage=document.querySelector('#proComp2a1>div:nth-child(2)>img');
+  let proComp2a2ImageArr=document.querySelectorAll('#proComp2a2>div>img');
+  // console.log(proComp2a1MainImage,proComp2a2ImageArr)
+  proComp2a1MainImage.src=product.pImageArray[0];
+  for(let i=0;i<proComp2a2ImageArr.length;i++){
+    proComp2a2ImageArr[i].src=product.pImageArray[i];
+  }
+  document.querySelector('#proComp2b1>h2').textContent=product.pName;
+  document.querySelector('#proComp2b1>h2').style.fontWeight='800'
+  document.querySelector('#proComp2b2').textContent=product.pCode;
+  document.querySelector('#proComp2b1').style.fontWeight='800'
+  document.querySelectorAll('#proComp2b3>span')[0].innerHTML='<i class="fas fa-rupee-sign"></i>'+product.pMRP;
+  document.querySelectorAll('#proComp2b3>span')[0].style.fontSize='25px'
+  document.querySelectorAll('#proComp2b3>span')[0].style.fontWeight='600'
+  document.querySelectorAll('#proComp2b3>span')[0].style.marginRight='10px'
+  document.querySelectorAll('#proComp2b3>span')[1].innerHTML='<i class="fas fa-rupee-sign"></i>'+product.pMRP*(1-product.pOffer/100);
+  document.querySelectorAll('#proComp2b3>span')[1].style.textDecorationLine='line-through'
+  document.querySelectorAll('#proComp2b3>span')[1].style.color='grey';
+  document.querySelectorAll('#proComp2b3>span')[2].children[0].innerHTML='<i class="fas fa-rupee-sign"></i>'+product.pOffer;
+  document.querySelectorAll('#proComp2b3>span')[2].style.color='red'
+  document.querySelector('#proComp2b4').textContent=product.pText;
+  
+  // ****all data filled***
+
+  let proComp2a1ImgCounter=0;
+
+  document.querySelectorAll('#proComp2a1>div>i')[0].addEventListener('click',function(){
+    document.querySelectorAll('#proComp2a2>div')[proComp2a1ImgCounter].removeAttribute('class','proComp2a2Circles')
+    if(proComp2a1ImgCounter==0)proComp2a1ImgCounter=3;
+    else
+    proComp2a1ImgCounter--;
+    document.querySelectorAll('#proComp2a1>div')[1].children[0].src=document.querySelectorAll('#proComp2a2>div')[proComp2a1ImgCounter].children[0].src
+    document.querySelectorAll('#proComp2a2>div')[proComp2a1ImgCounter].setAttribute('class','proComp2a2Circles')
+    
+  })
+  document.querySelectorAll('#proComp2a1>div>i')[1].addEventListener('click',function(){ 
+    document.querySelectorAll('#proComp2a2>div')[proComp2a1ImgCounter].removeAttribute('class','proComp2a2Circles')
+    proComp2a1ImgCounter=(proComp2a1ImgCounter+1)%4;
+    document.querySelectorAll('#proComp2a1>div')[1].children[0].src=document.querySelectorAll('#proComp2a2>div')[proComp2a1ImgCounter].children[0].src
+    document.querySelectorAll('#proComp2a2>div')[proComp2a1ImgCounter].setAttribute('class','proComp2a2Circles')
+    
+  })
+
+  document.querySelectorAll('#proComp2b5>div>div')[0].addEventListener('click',function(){
+    let temp=Number(document.querySelectorAll('#proComp2b5>div>div')[1].textContent);    
+    if(temp>1)
+    document.querySelectorAll('#proComp2b5>div>div')[1].textContent=temp-1;
+  })
+  document.querySelectorAll('#proComp2b5>div>div')[2].addEventListener('click',function(){
+    let temp=Number(document.querySelectorAll('#proComp2b5>div>div')[1].textContent);    
+    document.querySelectorAll('#proComp2b5>div>div')[1].textContent=temp+1;
+  })
+
+
+  document.querySelector('#proComp2b6>div:nth-child(2)').addEventListener('click',function(){
+    
+    let tempQty=document.querySelectorAll('#proComp2b5>div>div')[1].textContent;
+    let tempProd=product;
+    let tempObj={
+      prod:tempProd,
+      qty:tempQty
+    }    
+    let tempArr=JSON.parse(localStorage.getItem('cartArr'))
+    tempArr.push(tempObj);
+    console.log(tempArr)
+    localStorage.setItem('cartArr',JSON.stringify(tempArr));
+  })
+
+  document.getElementById('proComp2c').addEventListener('click',function(){
+    // alert('Time to go!')
+    currEl.remove();
+  })
+
+
+    }
+
+//comp 3a
+{
+  let plComp3aOptions= document.querySelectorAll('#plComp3a>.plComp3afilter')
+  console.log(plComp3aOptions[0].children)
+
+
+
+  plComp3aOptions[0].children[1].addEventListener('click',function(){
+    window.location.reload();
+  })
+
+  for(let i=1;i<plComp3aOptions.length;i++){
+    plComp3aOptions[i].children[1].addEventListener('click',function(){     
+
+      if(plComp3aOptions[i].children[1].innerHTML=='<i class="fas fa-minus" aria-hidden="true"></i>')
+      {
+        // alert('close')
+        plComp3aOptions[i].children[1].innerHTML='<i class="fas fa-plus" aria-hidden="true"></i>'
+        plComp3aOptions[i].nextElementSibling.style.display='none'
+
+      }
+      else if(plComp3aOptions[i].children[1].innerHTML=='<i class="fas fa-plus" aria-hidden="true"></i>'){
+        // alert('open')
+        plComp3aOptions[i].children[1].innerHTML='<i class="fas fa-minus" aria-hidden="true"></i>';
+
+
+        if(i==3)                    
+        plComp3aOptions[i].nextElementSibling.style.display='flex'
+        else
+        plComp3aOptions[i].nextElementSibling.style.display='block'
+      }
+
+                
+  })
+    
+    
+  }
+  
+
+  // implementing filters
+
+  let plComp3a2TextAreaFilters= document.querySelectorAll('#plComp3a2TextArea table input');
+  for(let i=0;i<plComp3a2TextAreaFilters.length;i++){
+    plComp3a2TextAreaFilters[i].addEventListener('click',function(e){
+      // this loop 
+      for(let j=0;j<plComp3a2TextAreaFilters.length;j++){
+        if(j!=i)
+        plComp3a2TextAreaFilters[j].checked=false;
+      }
+      //ensures only one radio is checked at one time
+      // console.log(e.path[2].children[1].textContent)
+      console.log(e.target.value)
+
+      if(e.target.value=='1500'){
+        filterApplied=1;
+        plComp3atempArr=fastrackData.filter(function(el){
+          return el.pMRP<1500;
+        })
+        console.log(plComp3atempArr)
+        document.querySelectorAll('#plComp2a span')[0].textContent=plComp3atempArr.length+' ';    
+        pldisplayItems(plComp3atempArr);
+
+      }else if(e.target.value=='1500-2000'){
+        filterApplied=1;
+        plComp3atempArr=fastrackData.filter(function(el){
+          return (el.pMRP>1500 && el.pMRP<2000);
+        })
+        console.log(plComp3atempArr)
+        document.querySelectorAll('#plComp2a span')[0].textContent=plComp3atempArr.length+' ';    
+        pldisplayItems(plComp3atempArr);
+
+      }else if(e.target.value=='2000'){
+        filterApplied=1;
+
+        plComp3atempArr=fastrackData.filter(function(el){
+          return el.pMRP>2000;
+        })
+        console.log(plComp3atempArr)
+        document.querySelectorAll('#plComp2a span')[0].textContent=plComp3atempArr.length+' ';    
+        pldisplayItems(plComp3atempArr);
+
+      }else if(e.target.value=='M' || e.target.value=='W'){
+        filterApplied=1;
+
+        plComp3atempArr=fastrackData.filter(function(el){
+          return el.pGender==e.target.value;
+        })
+        console.log(plComp3atempArr)
+        document.querySelectorAll('#plComp2a span')[0].textContent=plComp3atempArr.length+' ';    
+        pldisplayItems(plComp3atempArr);
+
+      }else if(e.target.value==10||e.target.value==15||e.target.value==20){
+        filterApplied=1;
+
+        plComp3atempArr=fastrackData.filter(function(el){
+          return el.pOffer==e.target.value;
+        })
+        console.log(plComp3atempArr)
+        document.querySelectorAll('#plComp2a span')[0].textContent=plComp3atempArr.length+' ';    
+        pldisplayItems(plComp3atempArr);
+
+      }else{
+        filterApplied=1;
+        plComp3atempArr=fastrackData.filter(function(el){
+          return el.pColor==e.target.value;
+        })
+        console.log(plComp3atempArr)
+        document.querySelectorAll('#plComp2a span')[0].textContent=plComp3atempArr.length+' ';    
+        pldisplayItems(plComp3atempArr);
+
+      }
+
+      
+      
+      
+      
+      
+
+    })    
+  }
+
+
+}
 
   }
   
