@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script
+      src="https://kit.fontawesome.com/5f6f74ca0f.js"
+      crossorigin="anonymous"
+    ></script>
+  <title>Document</title>
+  <link rel="stylesheet" href="play.css">
+</head>
+<body>
+  <div id="proComp2" class='bor'>
+    <div id="proComp2a" class='bor'>
+      <div id="proComp2a1" class='bor'>
+        <div>
+          <i class=" chevronIcons fa-2x fas fa-chevron-left"></i></div>
+        <div>              
+          <img width='100%' height='100%' src="https://via.placeholder.com/200" alt="">
+        </div>
+        <div>
+          <i class="chevronIcons fa-2x fas fa-chevron-right"></i></div>
+      </div>
+      <div id="proComp2a2" class='bor'>
+        <div class='bor'>
+          <img width='100%' height='100%' src="https://via.placeholder.com/200" alt="">
+        </div>
+        <div class='bor'>
+          <img width='100%' height='100%' src="https://via.placeholder.com/200" alt="">
+        </div>
+        <div class='bor'>
+          <img width='100%' height='100%' src="https://via.placeholder.com/200" alt="">
+        </div>
+        <div class='bor'>
+          <img width='100%' height='100%' src="https://via.placeholder.com/200" alt="">
+        </div>
+      </div>
+    </div>
+    <div id="proComp2b" class='bor'>
+      <div id="proComp2b1" class='bor'>
+        <h2 class='bor'>Product Name</h2>                           
+      </div>
+      <h4 id="proComp2b2" class='bor'>
+        Product Code
+      </h4>
+      <div id="proComp2b3" class='bor'>
+        <span>0</span> <span>0</span> <span>(<span>0</span>% Off)</span>
+      </div>
+      <div id="proComp2b4" class='bor'>
+        Product Text
+      </div>
+      <div id="proComp2b5" class='bor'>        
+        <div class='bor'>
+          <div class='bor'>-</div>
+          <div class='bor'>1</div>
+          <div class='bor'>+</div>
+        </div>
+      </div>   
+      <div id="proComp2b6" class='bor'>
+        <div>In Stock</div>        
+          <div>Add to Cart</div>                  
+      </div>      
+    </div>
+    <div id="proComp2c" class='bor'>
+      <i class="fas fa-times"></i>
+    </div>
+  </div> 
+</body>
+</html>
+<!-- pCode: "6234NL01"
+pColor: "Black"
+pGender: "W"
+pImageArray: (4) ['https://staticimg.titan.co.in/Fastrack/Catalog/6234NL01_1.jpg?pView=pdp', 'https://staticimg.titan.co.in/Fastrack/Catalog/6234NL01_3.jpg?pView=pdp', 'https://staticimg.titan.co.in/Fastrack/Catalog/6234NL01_4.jpg?pView=pdp', 'https://staticimg.titan.co.in/Fastrack/Catalog/6234NL01_5.jpg?pView=pdp']
+pMRP: 2195
+pName: "GLITCH BLACK DIAL BLACK LEATHER STRAP WATCH"
+pOffer: 10
+pText: "Fastrack Glitch Black Dial Analog Watch for Girls"
+[[Prototype]]: Object -->
+<script>
+  let product=JSON.parse(localStorage.getItem('cartArr'))[0].prod;
+  console.log(product) 
+
+  // ****all data filled***
+
+  let proComp2a1MainImage=document.querySelector('#proComp2a1>div:nth-child(2)>img');
+  let proComp2a2ImageArr=document.querySelectorAll('#proComp2a2>div>img');
+  // console.log(proComp2a1MainImage,proComp2a2ImageArr)
+  proComp2a1MainImage.src=product.pImageArray[0];
+  for(let i=0;i<proComp2a2ImageArr.length;i++){
+    proComp2a2ImageArr[i].src=product.pImageArray[i];
+  }
+  document.querySelector('#proComp2b1>h2').textContent=product.pName;
+  document.querySelector('#proComp2b1>h2').style.fontWeight='800'
+  document.querySelector('#proComp2b2').textContent=product.pCode;
+  document.querySelector('#proComp2b1').style.fontWeight='800'
+  document.querySelectorAll('#proComp2b3>span')[0].innerHTML='<i class="fas fa-rupee-sign"></i>'+product.pMRP;
+  document.querySelectorAll('#proComp2b3>span')[0].style.fontSize='25px'
+  document.querySelectorAll('#proComp2b3>span')[0].style.fontWeight='600'
+  document.querySelectorAll('#proComp2b3>span')[0].style.marginRight='10px'
+  document.querySelectorAll('#proComp2b3>span')[1].innerHTML='<i class="fas fa-rupee-sign"></i>'+product.pMRP*(1-product.pOffer/100);
+  document.querySelectorAll('#proComp2b3>span')[1].style.textDecorationLine='line-through'
+  document.querySelectorAll('#proComp2b3>span')[1].style.color='grey';
+  document.querySelectorAll('#proComp2b3>span')[2].children[0].innerHTML='<i class="fas fa-rupee-sign"></i>'+product.pOffer;
+  document.querySelectorAll('#proComp2b3>span')[2].style.color='red'
+  document.querySelector('#proComp2b4').textContent=product.pText;
+  
+  // ****all data filled***
+
+  let proComp2a1ImgCounter=0;
+
+  document.querySelectorAll('#proComp2a1>div>i')[0].addEventListener('click',function(){
+    document.querySelectorAll('#proComp2a2>div')[proComp2a1ImgCounter].removeAttribute('class','proComp2a2Circles')
+    if(proComp2a1ImgCounter==0)proComp2a1ImgCounter=3;
+    else
+    proComp2a1ImgCounter--;
+    document.querySelectorAll('#proComp2a1>div')[1].children[0].src=document.querySelectorAll('#proComp2a2>div')[proComp2a1ImgCounter].children[0].src
+    document.querySelectorAll('#proComp2a2>div')[proComp2a1ImgCounter].setAttribute('class','proComp2a2Circles')
+    
+  })
+  document.querySelectorAll('#proComp2a1>div>i')[1].addEventListener('click',function(){ 
+    document.querySelectorAll('#proComp2a2>div')[proComp2a1ImgCounter].removeAttribute('class','proComp2a2Circles')
+    proComp2a1ImgCounter=(proComp2a1ImgCounter+1)%4;
+    document.querySelectorAll('#proComp2a1>div')[1].children[0].src=document.querySelectorAll('#proComp2a2>div')[proComp2a1ImgCounter].children[0].src
+    document.querySelectorAll('#proComp2a2>div')[proComp2a1ImgCounter].setAttribute('class','proComp2a2Circles')
+    
+  })
+
+  document.querySelectorAll('#proComp2b5>div>div')[0].addEventListener('click',function(){
+    let temp=Number(document.querySelectorAll('#proComp2b5>div>div')[1].textContent);    
+    if(temp>1)
+    document.querySelectorAll('#proComp2b5>div>div')[1].textContent=temp-1;
+  })
+  document.querySelectorAll('#proComp2b5>div>div')[2].addEventListener('click',function(){
+    let temp=Number(document.querySelectorAll('#proComp2b5>div>div')[1].textContent);    
+    document.querySelectorAll('#proComp2b5>div>div')[1].textContent=temp+1;
+  })
+
+
+  document.querySelector('#proComp2b6>div:nth-child(2)').addEventListener('click',function(){
+    console.log('hkb')
+    let tempQty=document.querySelectorAll('#proComp2b5>div>div')[1].textContent;
+    let tempProd=product;
+    let tempObj={
+      prod:tempProd,
+      qty:tempQty
+    }
+    console.log(1)
+    let tempArr=JSON.parse(localStorage.getItem('cartArr'))
+    tempArr.push(tempObj);
+    localStorage.setItem('cartArr',JSON.stringify(tempArr));
+  })
+
+
+  
+
+
+
+
+
+
+</script>
+
+
