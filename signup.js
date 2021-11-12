@@ -1,7 +1,8 @@
 
 
   var accepted=0; 
-  var signedUpUsers=JSON.parse(localStorage.getItem('signedUpUsers'))||[];
+var signedUpUsers = JSON.parse(localStorage.getItem('signedUpUsers')) || [];
+  console.log(signedUpUsers)
   document.querySelector('#si1form').addEventListener('submit',function(event){
     event.preventDefault(); 
     document.getElementById('si11mustAgree').addEventListener('change',function(){
