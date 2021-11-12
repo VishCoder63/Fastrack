@@ -1,5 +1,5 @@
 
-  var signedUpUsers= JSON.parse(localStorage.getItem('signedUpUsers'));
+var signedUpUsers = JSON.parse(localStorage.getItem('signedUpUsers')) || [];  
 
   var lo1Mobile=document.querySelector('.lo4Choice>h4:nth-child(1)');
   var lo13Email=document.querySelector('.lo4Choice>h4:nth-child(2)');
@@ -66,7 +66,7 @@
         var found=0;
         for(let i=0;i<signedUpUsers.length && found==0;i++){
           if(signedUpUsers[i].si5Code+signedUpUsers[i].si6MobNo==number){
-            alert('logged in');
+            // alert('logged in');
             localStorage.setItem('currUser',JSON.stringify(signedUpUsers[i]))            
             window.location.href='OTP.html';
             
@@ -84,7 +84,7 @@
         var found=0;
         for(let i=0;i<signedUpUsers.length && found==0;i++){
           if(signedUpUsers[i].si7EmailID==email){
-            alert('logged in');
+            // alert('logged in');
             localStorage.setItem('currUser',JSON.stringify(signedUpUsers[i]))            
             window.location.href='OTP.html';
             
@@ -111,7 +111,7 @@
       var found=0;
         for(let i=0;i<signedUpUsers.length && found==0;i++){          
           if(signedUpUsers[i].si7EmailID===passMail && signedUpUsers[i].si8Pass===passPassword){
-            alert('logged in');
+            // alert('logged in');
             localStorage.setItem('currUser',JSON.stringify(signedUpUsers[i]))            
             window.location.href='OTP.html';         
             

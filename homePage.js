@@ -368,20 +368,58 @@ fastrackData=JSON.parse(localStorage.getItem('fastrackData'))
           ho5clicked = (ho5clicked + 1) % 2;
         }
       });
+  
+  
+  
+  currUser = JSON.parse(localStorage.getItem('currUser'));  
+  if (currUser) {
+    document
+      .querySelector("#ho2TopBar>ul>li:nth-child(3)").innerHTML = currUser.si3firstName + '&nbsp;&nbsp;&nbsp;<span>LOGOUT</span>';
+    
+      document
+      .querySelector("#ho2TopBar>ul>li:nth-child(3)").children[0].addEventListener('click', function () {
+        localStorage.removeItem('currUser');
+        window.location.reload();      
+      })
+    
+  } else {
+    document
+      .querySelector("#ho2TopBar>ul>li:nth-child(3)").innerHTML = 'LOGIN';
+  }
+  
+  if (!currUser) {
     document
       .querySelector("#ho2TopBar>ul>li:nth-child(3)")
       .addEventListener("click", function () {
-        alert("Welcome to Login page!");
+        // alert("Welcome to Login page!");
+        window.location.href = 'login.html';
       });
+  }
+
     document
       .querySelector("#ho2TopBar>ul>li:nth-child(4)")
       .addEventListener("click", function () {
         alert("Welcome to WishList page!");
       });
+  
+  
+        cartArr = JSON.parse(localStorage.getItem('cartArr'));
+        if (cartArr) {
+          document
+            .querySelector("#ho2TopBar>ul>li:nth-child(6)").children[0].textContent = cartArr.reduce(function (acc, el) {
+              return acc + Number(el.qty);
+            },0);
+        } else {
+          document
+          .querySelector("#ho2TopBar>ul>li:nth-child(6)").children[0].textContent=0    
+        }
+     
     document
       .querySelector("#ho2TopBar>ul>li:nth-child(6)")
       .addEventListener("click", function () {
-        alert("Welcome to cart page!");
+        // alert("Welcome to cart page!");
+        window.location.href='cart.html'
+
       });
   }
 
@@ -398,7 +436,8 @@ fastrackData=JSON.parse(localStorage.getItem('fastrackData'))
       alert("map clicked");
     });
     ho6Temp[1].addEventListener("click", function () {
-      alert("watch clicked");
+      // alert("watch clicked");
+      window.location.href='productListing.html'
     });
     ho6Temp[2].addEventListener("click", function () {
       alert("smart clicked");
@@ -407,7 +446,8 @@ fastrackData=JSON.parse(localStorage.getItem('fastrackData'))
       alert("eyewear clicked");
     });
     ho6Temp[4].addEventListener("click", function () {
-      alert("image clicked");
+      // alert("image clicked");
+      window.location.href = 'homePage.html';
     });
     ho6Temp[5].addEventListener("click", function () {
       alert("bag clicked");
@@ -427,6 +467,7 @@ fastrackData=JSON.parse(localStorage.getItem('fastrackData'))
         if (e.target.textContent == "WATCHES") {
           let ho8Temp = document.createElement("div");
           ho8Temp.setAttribute("class", "ho8Temp");
+
           ho8Temp.innerHTML = `
           <div id='ho10Temp'>
       <div id="ho9Left">
@@ -442,19 +483,19 @@ fastrackData=JSON.parse(localStorage.getItem('fastrackData'))
             <tr>
               <td>              
                 <div>
-                  <img src="https://via.placeholder.com/70" alt="">
+                  <img src="./Images/t2W1.PNG" alt="" width=35% height=35%>
                   <div>Him</div>
                 </div>
               </td>
               <td>
                 <div>
-                  <img src="https://via.placeholder.com/70" alt="">
+                <img src="./Images/t2W2.PNG" alt="" width=35% height=35%>
                   <div>Casual</div>
                 </div>
               </td>
               <td>
                 <div>
-                  <img src="https://via.placeholder.com/70" alt="">
+                <img src="./Images/t2W3.PNG" alt="" width=35% height=35%>
                   <div>Coca Cola Edition</div>
                 </div>
               </td>
@@ -462,19 +503,19 @@ fastrackData=JSON.parse(localStorage.getItem('fastrackData'))
             <tr>
               <td>
                 <div>
-                  <img src="https://via.placeholder.com/70" alt="">
+                <img src="./Images/t2W4.PNG" alt="" width=35% height=35%>
                   <div>Her</div>
                 </div>              
               </td>
               <td>
                 <div>
-                  <img src="https://via.placeholder.com/70" alt="">
+                <img src="./Images/t2W5.PNG" alt="" width=35% height=35%>
                   <div>Fashion</div>
                 </div>
               </td>
               <td>
                 <div>
-                  <img src="https://via.placeholder.com/70" alt="">
+                <img src="./Images/t2W6.PNG" alt="" width=35% height=35%>
                   <div>Avengers</div>                
                 </div>
               </td>
@@ -482,19 +523,19 @@ fastrackData=JSON.parse(localStorage.getItem('fastrackData'))
             <tr>
               <td>
                 <div>
-                  <img src="https://via.placeholder.com/70" alt="">
+                <img src="./Images/t2W7.PNG" alt="" width=35% height=35%>
                   <div>Them</div>
                 </div>
               </td>
               <td>
                 <div>
-                  <img src="https://via.placeholder.com/70" alt="">
+                <img src="./Images/t2W8.PNG" alt="" width=35% height=35%>
                   <div>Sporty</div>
                 </div>
               </td>
               <td>
                 <div>
-                  <img src="https://via.placeholder.com/70" alt="">
+                <img src="./Images/t2W9.PNG" alt="" width=35% height=35%>
                   <div>Game Of Thrones</div>
                 </div>
               </td>
@@ -503,27 +544,29 @@ fastrackData=JSON.parse(localStorage.getItem('fastrackData'))
               <td></td>
               <td>
                 <div>
-                  <img src="https://via.placeholder.com/70" alt="">
+                <img src="./Images/t2W10.PNG" alt="" width=35% height=35%>
                   <div>Tees</div>
                 </div>
               </td>
               <td>
                 <div>
-                  <img src="https://via.placeholder.com/70" alt="">
+                <img src="./Images/t2W11.PNG" alt="" width=35% height=35%>
                   <div>Sunburn</div>
                 </div>
               </td>
             </tr>
           </tbody>
         </table>     
-        <button>View All</button>                  
+        <button id='viewallBtn'>View All</button>                  
       </div>
       <div id="ho9Right">
-        <img width="100%" height="100%" src="https://via.placeholder.com/70" alt="">
+      <img src="./Images/t2W12.PNG" alt="" width=100% height=100%>
         <h5>FLEX YOUR BEST GAME</h5>
       </div> 
   </div>
-          `;
+          `;          
+
+
           if (e.path[4].children.length == 1) e.path[3].after(ho8Temp);
         } else {
           if (i == 0 && e.path[5].children.length == 2) {
