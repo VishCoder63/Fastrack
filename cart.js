@@ -267,70 +267,8 @@
     }
     
     //cartCards
-    {
-
-      // let cartArr=[
-      // {
-      //  qty:1,
-      //  prod:{    
-      //   pImageArray: [
-      //     'https://staticimg.titan.co.in/Fastrack/Catalog/6234NL01_1.jpg?pView=pdp',
-      //     'https://staticimg.titan.co.in/Fastrack/Catalog/6234NL01_3.jpg?pView=pdp',
-      //     'https://staticimg.titan.co.in/Fastrack/Catalog/6234NL01_4.jpg?pView=pdp',
-      //     'https://staticimg.titan.co.in/Fastrack/Catalog/6234NL01_5.jpg?pView=pdp'
-      //   ],
-      //   pName:'GLITCH BLACK DIAL BLACK LEATHER STRAP WATCH',
-      //   pMRP:2195,
-      //   pText:'Fastrack Glitch Black Dial Analog Watch for Girls',
-      //   pOffer:10,
-      //   pCode: '6234NL01',
-      //   pColor: 'Black',
-      //   pGender:'W'
-      // }
-      // },
-      // {
-      //  qty:1,
-      //  prod:{    
-      //   pImageArray: [
-      //     'https://staticimg.titan.co.in/Fastrack/Catalog/6234NL01_1.jpg?pView=pdp',
-      //     'https://staticimg.titan.co.in/Fastrack/Catalog/6234NL01_3.jpg?pView=pdp',
-      //     'https://staticimg.titan.co.in/Fastrack/Catalog/6234NL01_4.jpg?pView=pdp',
-      //     'https://staticimg.titan.co.in/Fastrack/Catalog/6234NL01_5.jpg?pView=pdp'
-      //   ],
-      //   pName:'GLITCH BLACK DIAL BLACK LEATHER STRAP WATCH',
-      //   pMRP:2195,
-      //   pText:'Fastrack Glitch Black Dial Analog Watch for Girls',
-      //   pOffer:10,
-      //   pCode: '6234NL01',
-      //   pColor: 'Black',
-      //   pGender:'W'
-      // }
-      // },
-      // {
-      //  qty:1,
-      //  prod:{    
-      //   pImageArray: [
-      //     'https://staticimg.titan.co.in/Fastrack/Catalog/6234NL01_1.jpg?pView=pdp',
-      //     'https://staticimg.titan.co.in/Fastrack/Catalog/6234NL01_3.jpg?pView=pdp',
-      //     'https://staticimg.titan.co.in/Fastrack/Catalog/6234NL01_4.jpg?pView=pdp',
-      //     'https://staticimg.titan.co.in/Fastrack/Catalog/6234NL01_5.jpg?pView=pdp'
-      //   ],
-      //   pName:'GLITCH BLACK DIAL BLACK LEATHER STRAP WATCH',
-      //   pMRP:2195,
-      //   pText:'Fastrack Glitch Black Dial Analog Watch for Girls',
-      //   pOffer:10,
-      //   pCode: '6234NL01',
-      //   pColor: 'Black',
-      //   pGender:'W'
-      // }
-      // }      
-      // ]      
-      // localStorage.setItem('cartArr',JSON.stringify(cartArr))      
-
-
-
-      
-      var cartArr=JSON.parse(localStorage.getItem('cartArr'))||[];
+{
+  var cartArr = JSON.parse(localStorage.getItem('cartArr')) || [];
       
 
       let caComp1CardSection=document.getElementById('caComp1CardSection')
@@ -594,7 +532,8 @@
           orderSave:caComp2cTd[12].innerHTML
         }
         localStorage.setItem('checkoutObj', JSON.stringify(checkoutObj));
-        window.location.href='checkout.html'
+        if (cartArr && cartArr.length != 0) window.location.href = 'checkout.html'
+        else alert('Please add some Items..Your Cart is empty!!');
       })
       
       document.querySelector('#caComp2e').addEventListener('click',function(){

@@ -186,8 +186,8 @@
       #ho18Comp3,
       #ho24Comp7,
       .ho14Comp4 {
-        width: 100%;
-        height: 400px;
+        width: 101%;
+        height: 380px;
         background-size: contain;
       }
       .ho14Comp4 {
@@ -203,8 +203,8 @@
         margin-top: 27%;
       }
       .ho14Comp3 > div > div,
-      .ho21FlexBox > div {
-        background-color: white;
+      .ho21FlexBox > div {        
+        background-color:white;
         height: 5px;
         width: 5px;
         border-radius: 50%;

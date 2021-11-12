@@ -272,8 +272,8 @@
   
   //product functionality
   {
-    let product=JSON.parse(localStorage.getItem('cartArr'))[0].prod;
-    console.log(product)
+    let product=JSON.parse(localStorage.getItem('currItem'));
+    // console.log(product)
     let proComp2a1ImgCounter=0;
     let proComp2a1Left=document.querySelectorAll('#proComp2a1>div>i')[0]
     let proComp2a1Right=document.querySelectorAll('#proComp2a1>div>i')[1]
@@ -344,7 +344,7 @@ document.querySelectorAll('#proComp2b5>div>div')[0].addEventListener('click',fun
       prod:tempProd,
       qty:tempQty
     }    
-    let tempArr=JSON.parse(localStorage.getItem('cartArr'))
+    let tempArr = JSON.parse(localStorage.getItem('cartArr')) || [];
     tempArr.push(tempObj);
     // console.log(tempArr)
     localStorage.setItem('cartArr', JSON.stringify(tempArr));

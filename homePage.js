@@ -1,5 +1,5 @@
 //store the master product data on localStorage
-var fastrackData = [
+var fastrackData1 = [
   {    
     pImageArray: [
       'https://staticimg.titan.co.in/Fastrack/Catalog/6234NL01_1.jpg?pView=pdp',
@@ -306,10 +306,10 @@ var fastrackData = [
   }
 ]
 
-// localStorage.setItem('fastrackData', JSON.stringify(fastrackData));
+localStorage.setItem('fastrackData', JSON.stringify(fastrackData1));
 //*************************MASTER DATA STORED******************************************* */
 
-fastrackData=JSON.parse(localStorage.getItem('fastrackData'))
+let fastrackData=JSON.parse(localStorage.getItem('fastrackData'))
 
 //top bar #1
   {
@@ -349,7 +349,7 @@ fastrackData=JSON.parse(localStorage.getItem('fastrackData'))
           for (let i = 0; i < ho4Temp.length; i++) {
             ho4Temp[i].addEventListener("click", function () {
               ho4Temp[i].setAttribute("id", "ho4BoxesClicked");
-              alert("Goal:To change all the prices to the other currency");
+              // alert("Goal:To change all the prices to the other currency");
               ho4Temp[(i + 1) % ho4Temp.length].removeAttribute(
                 "id",
                 "ho4BoxesClicked"
@@ -613,9 +613,7 @@ fastrackData=JSON.parse(localStorage.getItem('fastrackData'))
         document.querySelector(
           ".ho14Comp3"
         ).style.backgroundImage = `url(${ho15Images[ho16Index]})`;
-        document.querySelectorAll(".ho14Comp3>div>div")[
-          ho16Index
-        ].style.backgroundColor = "red";
+        document.querySelectorAll(".ho14Comp3>div>div")[ho16Index].style.backgroundColor = "red";        
         ho16Index = (ho16Index + 1) % ho15Images.length;
       } else {
         document.querySelectorAll(".ho14Comp3>div>div")[

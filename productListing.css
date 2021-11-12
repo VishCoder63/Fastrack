@@ -285,9 +285,10 @@
         border:1px solid red;
       } */
       #plComp2b{
+        
         display: flex;
         width: 45%;
-        justify-content: space-evenly;
+        justify-content: space-between;
       }
       #plComp2b>div{        
         text-align: center;
@@ -494,7 +495,8 @@
           padding-top: 10px;
         }
         #plComp2a{
-          margin-top: 10px;          
+          margin-top: 10px;    
+          padding-left: 10px;      
         }
         
            

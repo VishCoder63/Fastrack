@@ -8,7 +8,10 @@ document.getElementById('si1form').addEventListener('submit',function(e){
     alert('Please enter the given OTP!!')
   }else if(document.getElementById('si8OTP').value==document.getElementById('si7OTPRand').value){
     // alert('Cool!!')
-    window.location.href='homePage.html'
+    if (JSON.parse(localStorage.getItem('cartArr'))&&JSON.parse(localStorage.getItem('cartArr')).length>0)
+      window.location.href = 'checkout.html'
+    else      
+      window.location.href='homePage.html'
   }else{
     alert('Incorrect OTP!!')
   }

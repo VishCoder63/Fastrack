@@ -304,8 +304,9 @@
 
     plComp2bDivs[0].addEventListener('click',function(){
       if(priceClicked==0){
-        priceClicked=1;
-        plComp2bDivs[0].children[0].innerHTML='<i class="fas fa-chevron-up"></i>'    
+        priceClicked = 1;        
+        // plComp2bDivs[0].children[0].innerHTML = '<i class="fas fa-chevron-up"></i>'
+          
         //sort in asc order
         let tempArr=fastrackData.map(function(el){
           return el;
@@ -326,7 +327,7 @@
         
       }else{
         priceClicked=0;
-        plComp2bDivs[0].children[0].innerHTML='<i class="fas fa-chevron-down"></i>'
+        // plComp2bDivs[0].children[0].innerHTML='<i class="fas fa-chevron-down"></i>'
         //sort in desc order
         let tempArr=fastrackData.map(function(el){
           return el;
@@ -350,7 +351,7 @@
     plComp2bDivs[1].addEventListener('click',function(){      
       if(discClicked==0){
         discClicked=1;
-        plComp2bDivs[1].children[0].innerHTML='<i class="fas fa-chevron-up"></i>'    
+        // plComp2bDivs[1].children[0].innerHTML='<i class="fas fa-chevron-up"></i>'    
                 //sort in asc order
                 let tempArr=fastrackData.map(function(el){
                   return el;
@@ -370,7 +371,7 @@
     
       }else{
         discClicked=0;
-        plComp2bDivs[1].children[0].innerHTML='<i class="fas fa-chevron-down"></i>'
+        // plComp2bDivs[1].children[0].innerHTML='<i class="fas fa-chevron-down"></i>'
                 //sort in desc order
                 let tempArr=fastrackData.map(function(el){
                   return el;
@@ -538,6 +539,15 @@
 
         // card creation done
         plComp3bFlexBox.append(plProdCard);        
+        for (let i = 0; i < 3; i++){
+          plProdCard.children[i].addEventListener('click', function () {
+            console.log(arr[i])
+            localStorage.setItem('currItem', JSON.stringify(arr[i]));
+            window.location.href = 'product.html';
+          })
+        }
+        
+        
         if(plComp3bFlexBox.children.length==3 || i==arr.length-1){
           plComp3b.append(plComp3bFlexBox);
           plComp3bFlexBox=document.createElement('div');
@@ -616,7 +626,7 @@
       prod:tempProd,
       qty:tempQty
     }    
-    let tempArr = JSON.parse(localStorage.getItem('cartArr')) || [];
+    let tempArr = JSON.parse(localStorage.getItem('cartArr'))||[];    
     tempArr.push(tempObj);
     // console.log(tempArr)
     localStorage.setItem('cartArr', JSON.stringify(tempArr));
