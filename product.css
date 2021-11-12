@@ -1,0 +1,381 @@
+
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .ho3BlackBox {
+        background-color: #222222;
+      }
+      .ho3BottomBorder {
+        border-bottom: 1px solid #5c5b5b;
+      }
+      .bor {
+        /* check why removing this is breaking stff */
+        border: 1px solid transparent;
+      }
+      .ho1Container {
+        width: 100%;
+        margin: auto;
+      }
+      /* .ho1Container1 {
+        width: 100%;
+        margin: auto;
+      } */
+      #ho2TopBar {
+        height: 30px;
+        color: #aca8a8;
+        font-weight: 600;
+      }
+      #ho2TopBar ul,
+      #ho7TopBar ul {
+        font-size: 11px;
+        list-style: none;
+        display: flex;
+        padding-top: 6px;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+      }
+
+      /* #ho2TopBar li{
+      border: 1px solid red;
+    } */
+
+      #ho2TopBar > ul > li:nth-child(1),
+      #ho2TopBar > ul > li:nth-child(3),
+      #ho2TopBar > ul > li:nth-child(4),
+      #ho2TopBar > ul > li:nth-child(5) {
+        margin-right: 3.5%;
+      }
+      #ho2TopBar > ul > li:nth-child(2) {
+        margin-right: 28%;
+      }
+      #ho2TopBar a {
+        text-decoration: none;
+        color: black;
+      }
+      .ho4CurrBox {
+        padding-top: 20px;
+        width: 100%;
+        height: 100px;
+        color: white;
+        text-align: center;
+      }
+      .ho4CurrBox > div {
+        display: flex;
+      }
+      .ho4CurrBox p {
+        font-size: 10px;
+        margin: 10px;
+      }
+      .ho4CurrBox > div > div {
+        border: 1px solid #5c5b5b;
+        background-color: #181818;
+        padding-top: 12px;
+        font-size: 13px;
+        font-weight: 600;
+        width: 15%;
+        height: 40px;
+        margin: 0px 10px;
+      }
+      #ho4BoxesClicked {
+        border: 1px solid white;
+        background-color: black;
+      }
+      #ho7TopBar {
+        color: white;
+        font-weight: 700;
+        height: 60px;
+      }
+      /* img{
+       
+      } */
+
+      #ho7TopBar > ul > li:nth-child(5) {
+        text-align: center;
+      }
+      #ho7TopBar > ul > li:nth-child(1) {
+        /* border: 1px solid red; */
+        height: 130%;
+        padding-top: 3.2%;
+        padding-left: 0.5%;
+      }
+      /* #ho7TopBar>ul>li{
+        border: 1px solid teal;
+      } */
+
+      #ho10Temp {
+        height: 450px;
+        width: 100%;
+        background-color: #222222;
+      }
+      #ho10Temp {
+        display: flex;
+      }
+      #ho9Left {
+        /* border: 1px solid red; */
+        width: 50%;
+        margin: auto;
+        margin-right: 10px;
+        height: 350px;
+        margin-top: 25px;
+      }
+      #ho9Right {
+        /* border: 1px solid red; */
+        width: 20%;
+        margin: auto;
+        height: 350px;
+        margin-top: 25px;
+      }
+      #ho11List1,
+      #ho12List2,
+      #ho13List3 {
+        display: flex;
+      }
+      #ho9Left img {
+        border-radius: 50%;
+      }
+      /* #ho9Left img+div{
+      display:inline-block;           
+      border: 1px solid red;   
+       margin-bottom: -30px;  
+    } */
+      #ho9Left td {
+        padding: 3px;
+        padding-left: 40px;
+      }
+      #ho9Left th {
+        padding-right: 50px;
+      }
+      #ho9Left td > div {
+        display: flex;
+      }
+      #ho9Left td > div > div {
+        margin-top: 30px;
+        margin-left: 10px;
+      }
+
+      #ho9Left table {
+        height: 60%;
+        width: 100%;
+        color: white;
+      }
+      #ho9Left button {
+        width: 100%;
+        height: 30px;
+        border: none;
+        background-color: grey;
+        color: white;
+        margin-top: 10px;
+      }
+
+      #ho9Right h5 {
+        color: white;
+        text-align: center;
+        margin: 10px;
+      }
+      .ho8Temp {
+        /* border: 1px solid yellow; */
+        height: 450px;
+        width: 100%;
+        background-color: #222222;
+      }
+      
+      #ho17Body {
+        height: 510px;
+        overflow-y: scroll;
+      }
+      #ho39Footer,#ho39FlexBox{
+        background-color: #222222;
+        padding-top: 2%;
+        margin-top: 1%;
+      }
+
+      #ho39FlexBox{
+        display:flex;
+        justify-content: space-evenly;        
+        color: white;     
+      }
+      #ho39FlexBox>div>div{
+        margin: 10px 0px;        
+      }
+      #ho39Download>div:nth-child(2),#ho39Download>div:nth-child(3){        
+        display: flex;
+        justify-content: space-evenly;
+        /* border: 2px solid white;      */
+        align-items: center;   
+
+      }
+      #ho39Download>div:nth-child(2)>img{
+        width: 150px;    
+        height: 50px;     
+        margin-left: 5%;   
+        border: 1px solid grey;
+        border-radius: 10px;
+      }
+      #ho39Download>div:nth-child(3){
+        width: 112%;
+        height: 50px;
+      }
+      #ho39Download>div:nth-child(3)>div{
+        /* border: 1px solid teal; */
+        width: 10%;
+        margin-left: 1%;
+        padding-left: 2.5%;
+      }
+      #ho39Download>div:nth-child(5)>span>a{
+        color: white;
+      }
+      #ho39Footer>div:nth-child(2){        
+        color: grey;
+        display: flex;
+        justify-content: right;
+      }
+      #ho39Footer>div:nth-child(2)>div{        
+        margin: 20px 0px;    
+        font-size: 13px;    
+        font-weight: 600;
+        margin-right: 20px;
+      }
+      /* #ho39Footer>div:nth-child(4),#ho39Footer>div:nth-child(4){   
+        display: inline-block;
+      } */
+      #ho39Footer>div:nth-child(4){     
+        display: flex;
+        justify-content: space-evenly; 
+        align-items: center; 
+        color: white;  
+        padding: 1% 0%;    
+      }
+      #ho39Footer>div:nth-child(4)>div{  
+        /* border: 1px solid red;*/
+        width: 6%;
+        height: 50px;
+        padding-left: 2%;
+        padding-top: 0.5%;
+      }
+      #ho39Footer>div:nth-child(4)>div:nth-child(10){
+        padding-top: 1%;
+        font-size: 12px;
+        width: 25%;
+        color: grey;                   
+      }
+      
+      .chevronIcons{
+        color: grey;        
+      }
+      h1{
+        font-weight: 800;
+        margin: 4%;       
+      }  
+      
+      #proComp1{
+        height: 20px;
+        margin-left: 2%;
+      }
+      #proComp2{
+        display: flex;
+        height: 100%;
+      }
+      #proComp2>div{
+        width: 45%;        
+        margin-top: 30px;
+      }
+      #proComp2a1,#proComp2a2{
+        display: flex;        
+        justify-content: center;        
+        height: 15%;        
+        
+      }
+      #proComp2a1{
+        height: 85%;        
+      }
+      #proComp2a1>div:nth-child(2){
+        height: 100%;        
+        width: 90%;
+        margin: 0% 1%;
+      }
+      #proComp2a1>div:nth-child(1),#proComp2a1>div:nth-child(3){
+        padding-top: 30%;
+      }
+      #proComp2a2>div{
+        margin: 1% 1.5%;
+        width: 10%;
+        height: 80%;
+      }
+      #proComp2b>div{
+        margin: 3.5%;
+      }
+      #proComp2b>div:nth-child(1){
+        margin:0% 0% 0% 3.5%;
+      }
+      #proComp2b1{
+        display: flex; 
+        height: 20%;       
+      }
+      #proComp2b1>div:nth-child(2){
+        width: 20%;
+      }
+      #proComp2b1>div:nth-child(2) p{
+        font-size: 11px;
+
+      }
+      #proComp2b5>div{
+        display: flex;
+        width: 30%;
+        height: 40px;        
+        justify-content: space-evenly;
+        margin-top: 10px;
+      }
+      #proComp2b5>div>div{
+        width: 30%;
+        text-align: center;
+        padding-top: 5%;
+        border: 1px solid black;
+      }
+      #proComp2b6>div:nth-child(1){
+        padding-left: 3.5%;
+        
+      }
+      #proComp2b6>div:nth-child(2){
+        height: 50px;
+        display: flex;
+        justify-content: space-evenly;        
+      }
+      #proComp2b6>div>div:nth-child(1){
+        text-align: center;
+        padding-top: 3%;
+        background-color: #E67A20;
+        width: 42%;    
+        font-size: 14px;    
+        color: white;
+        border: 1px solid grey;
+      }
+      #proComp2b6>div>div:nth-child(2){
+        text-align: center;        
+        padding-top: 2%;
+        border: 1px solid grey;
+        width: 10%;  
+      }
+      #proComp2b6>div>div:nth-child(3){
+        text-align: center;
+        padding-top: 3%;
+        width: 44%;  
+        font-size: 14px;
+        border: 1px solid grey;
+        color: white;
+        background-color:black;              
+      }
+      #proComp2b7{
+        margin-top: 2%;
+        text-align: center;
+        padding-top: 2%;
+        border: 1px solid black;
+        height: 50px;
+      }
+      .proComp2a2Images{
+        border-radius:50%;   
+        padding:5px;
+      }
