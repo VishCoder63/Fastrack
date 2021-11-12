@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OTP</title>
-  </head>
-  <body>
-    <div class="bor" id="ot1Container">
-      <div class="bor">
-        <a href="#"><img height='100%' width="100%" src="./Images/Fastrack.PNG" alt="" /></a> 
-      </div>    
-      <div>
-        <p>VERIFY OTP</p>
-        <p>Pl</p>
-      </div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OTP Page</title>
+
+  
+  <script src="https://kit.fontawesome.com/5f6f74ca0f.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="OTP.css">
+  
+</head>
+<body>
+  <div class="bor" id="si1Container">
+    <div class="bor">
+      <a href="#"><img height='100%' width="100%" src="./Images/Fastrack.PNG" alt="" /></a> 
     </div>
-
-
-  </body>
+    <div class='bor'>
+      <form id='si1form'>
+        <p>OTP</p>         
+        <input id='si7OTPRand' type="number" disabled><br>
+        <input id='si8OTP' type="number" placeholder="Please type the above OTP *"><br>        
+        <input  id='si9SubBtn' type="submit" value="VALIDATE"></input>              
+      </form>
+    </div>
+    <h5>* Denotes mandatory field.</h5>
+  </div>
+</body>
 </html>
+<script src="OTP.js"></script>
+
