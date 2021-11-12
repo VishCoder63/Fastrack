@@ -538,10 +538,12 @@
 
 
         // card creation done
-        plComp3bFlexBox.append(plProdCard);        
-        for (let i = 0; i < 3; i++){
-          plProdCard.children[i].addEventListener('click', function () {
-            console.log(arr[i])
+
+        plComp3bFlexBox.append(plProdCard);
+
+        
+        for (let j = 0; j < 3; j++){
+          plProdCard.children[j].addEventListener('click', function () {            
             localStorage.setItem('currItem', JSON.stringify(arr[i]));
             window.location.href = 'product.html';
           })
