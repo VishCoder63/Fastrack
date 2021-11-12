@@ -1,0 +1,513 @@
+     
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .ho3BlackBox {
+        background-color: #222222;
+      }
+      .ho3BottomBorder {
+        border-bottom: 1px solid #5c5b5b;
+      }
+      .bor {
+        /* check why removing this is breaking stff */
+        border: 1px solid transparent;
+      }
+      .ho1Container {
+        width: 100%;
+        margin: auto;
+      }
+      /* .ho1Container1 {
+        width: 100%;
+        margin: auto;
+      } */
+      #ho2TopBar {
+        height: 30px;
+        color: #aca8a8;
+        font-weight: 600;
+      }
+      #ho2TopBar ul,
+      #ho7TopBar ul {
+        font-size: 11px;
+        list-style: none;
+        display: flex;
+        padding-top: 6px;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100%;
+      }
+
+      /* #ho2TopBar li{
+      border: 1px solid red;
+    } */
+
+      #ho2TopBar > ul > li:nth-child(1),
+      #ho2TopBar > ul > li:nth-child(3),
+      #ho2TopBar > ul > li:nth-child(4),
+      #ho2TopBar > ul > li:nth-child(5) {
+        margin-right: 3.5%;
+      }
+      #ho2TopBar > ul > li:nth-child(2) {
+        margin-right: 28%;        
+        
+      }
+      #ho2TopBar a {
+        text-decoration: none;
+        color: black;
+      }
+      .ho4CurrBox {
+        padding-top: 20px;
+        width: 100%;
+        height: 100px;
+        color: white;
+        text-align: center;
+      }
+      .ho4CurrBox > div {
+        display: flex;
+      }
+      .ho4CurrBox p {
+        font-size: 10px;
+        margin: 10px;
+      }
+      .ho4CurrBox > div > div {
+        border: 1px solid #5c5b5b;
+        background-color: #181818;
+        padding-top: 12px;
+        font-size: 13px;
+        font-weight: 600;
+        width: 15%;
+        height: 40px;
+        margin: 0px 10px;
+      }
+      #ho4BoxesClicked {
+        border: 1px solid white;
+        background-color: black;
+      }
+      #ho7TopBar {
+        color: white;
+        font-weight: 700;
+        height: 60px;
+      }
+      /* img{
+       
+      } */
+
+      #ho7TopBar > ul > li:nth-child(5) {
+        text-align: center;
+      }
+      #ho7TopBar > ul > li:nth-child(1) {
+        /* border: 1px solid red; */
+        height: 130%;
+        padding-top: 3.2%;
+        padding-left: 0.5%;
+      }
+      /* #ho7TopBar>ul>li{
+        border: 1px solid teal;
+      } */
+
+      #ho10Temp {
+        height: 450px;
+        width: 100%;
+        background-color: #222222;
+      }
+      #ho10Temp {
+        display: flex;
+      }
+      #ho9Left {
+        /* border: 1px solid red; */
+        width: 50%;
+        margin: auto;
+        margin-right: 10px;
+        height: 350px;
+        margin-top: 25px;
+      }
+      #ho9Right {
+        /* border: 1px solid red; */
+        width: 20%;
+        margin: auto;
+        height: 350px;
+        margin-top: 25px;
+      }
+      #ho11List1,
+      #ho12List2,
+      #ho13List3 {
+        display: flex;
+      }
+      #ho9Left img {
+        border-radius: 50%;
+      }
+      /* #ho9Left img+div{
+      display:inline-block;           
+      border: 1px solid red;   
+       margin-bottom: -30px;  
+    } */
+      #ho9Left td {
+        padding: 3px;
+        padding-left: 40px;
+      }
+      #ho9Left th {
+        padding-right: 50px;
+      }
+      #ho9Left td > div {
+        display: flex;
+      }
+      #ho9Left td > div > div {
+        margin-top: 30px;
+        margin-left: 10px;
+      }
+
+      #ho9Left table {
+        height: 60%;
+        width: 100%;
+        color: white;
+      }
+      #ho9Left button {
+        width: 100%;
+        height: 30px;
+        border: none;
+        background-color: grey;
+        color: white;
+        margin-top: 10px;
+      }
+
+      #ho9Right h5 {
+        color: white;
+        text-align: center;
+        margin: 10px;
+      }
+      .ho8Temp {
+        /* border: 1px solid yellow; */
+        height: 450px;
+        width: 100%;
+        background-color: #222222;
+      }
+      
+      #ho17Body {
+        height: 510px;
+        overflow-y: scroll;
+      }
+      #ho39Footer,#ho39FlexBox{
+        background-color: #222222;
+        padding-top: 2%;
+        margin-top: 1%;
+      }
+
+      #ho39FlexBox{
+        display:flex;
+        justify-content: space-evenly;        
+        color: white;     
+      }
+      #ho39FlexBox>div>div{
+        margin: 10px 0px;        
+      }
+      #ho39Download>div:nth-child(2),#ho39Download>div:nth-child(3){        
+        display: flex;
+        justify-content: space-evenly;
+        /* border: 2px solid white;      */
+        align-items: center;   
+
+      }
+      #ho39Download>div:nth-child(2)>img{
+        width: 150px;    
+        height: 50px;     
+        margin-left: 5%;   
+        border: 1px solid grey;
+        border-radius: 10px;
+      }
+      #ho39Download>div:nth-child(3){
+        width: 112%;
+        height: 50px;
+      }
+      #ho39Download>div:nth-child(3)>div{
+        /* border: 1px solid teal; */
+        width: 10%;
+        margin-left: 1%;
+        padding-left: 2.5%;
+      }
+      #ho39Download>div:nth-child(5)>span>a{
+        color: white;
+      }
+      #ho39Footer>div:nth-child(2){        
+        color: grey;
+        display: flex;
+        justify-content: right;
+      }
+      #ho39Footer>div:nth-child(2)>div{        
+        margin: 20px 0px;    
+        font-size: 13px;    
+        font-weight: 600;
+        margin-right: 20px;
+      }
+      /* #ho39Footer>div:nth-child(4),#ho39Footer>div:nth-child(4){   
+        display: inline-block;
+      } */
+      #ho39Footer>div:nth-child(4){     
+        display: flex;
+        justify-content: space-evenly; 
+        align-items: center; 
+        color: white;  
+        padding: 1% 0%;    
+      }
+      #ho39Footer>div:nth-child(4)>div{  
+        /* border: 1px solid red;*/
+        width: 6%;
+        height: 50px;
+        padding-left: 2%;
+        padding-top: 0.5%;
+      }
+      #ho39Footer>div:nth-child(4)>div:nth-child(10){
+        padding-top: 1%;
+        font-size: 12px;
+        width: 25%;
+        color: grey;                   
+      }
+      
+      h1{
+        font-weight: 800;
+        margin: 4%;       
+      }    
+      
+      #comp2,#comp3,#comp4,#comp5{
+        display: flex;
+        /* align-items: center; */
+      }
+      #chCircles{       
+        padding: 2%;
+        margin: 2% 2%;
+        border: 1px solid black;
+        width: 5%;
+        height: 5%;
+        border-radius: 50%;
+      }    
+      #comp4Review{
+        /* border: 2px solid teal; */
+        width: 80%;
+      }
+      #chComp3AreaFinal{
+        display: none;
+      }
+      #chComp3AreaFinal>table{
+        /* border: 1px solid teal; */
+        margin:30px 0px;
+        width: 150%;
+        text-align: left;
+      }
+      #chComp3AreaFinal>table td{
+        padding: 10px 0px;        
+      }
+      #cartSection{           
+        /* background-color: teal;      */
+        padding-top: 10px;
+        justify-content: space-evenly;
+      }
+      #caComp1a{
+        display: flex;   
+        justify-content: space-evenly;     
+        margin-top: 20px;   
+      }      
+      #caComp1a>h4:nth-child(1){                
+        width: 40%;
+        margin-right: 8%;
+        text-align: center;
+
+      }
+      #caComp1a>h4:nth-child(2){
+        
+        width: 15%;   
+        text-align: center;
+      }
+      #caComp1a>h4:nth-child(3){
+        
+        width: 15%;
+        text-align: center;
+      }
+      #caComp1a>h4:nth-child(4){
+        
+        text-align: center;
+        
+      }      
+      .caCardTop{
+        display: flex;        
+        height: 55%;        
+      }
+      .caCardTop>div{
+        width: 15%;
+        /* border: 2px solid black;         */
+      }
+      .caCardTop>div:nth-child(1){ 
+        /* border: 1px solid teal; */
+        width: 45%;   
+        margin-right: 15%;           
+      }      
+      .caCardTop>div:nth-child(2){    
+        padding-top: 10%;           
+      }
+      .caCardTop>div:nth-child(3){ 
+        padding-top: 10%;      
+        
+      }
+      .caCardTop img{
+        width: 55%;
+        height: 55%;        
+      }
+      .caCardb2>h5,.caCardb2>h4{
+        margin: 10% 0%;
+      }
+      .caCardb{
+        display: flex;
+        /* border: 1px solid teal; */
+        align-items: center;
+      }
+      .caCardb span{        
+        text-decoration-line: line-through;
+      }
+      #caCardbOff{        
+        text-decoration-line: none;
+        margin-left: 5px;
+        font-weight: 600;
+        color: red;
+      }      
+
+      .caCardc2{                      
+        border:1px solid black;
+        padding-left:5%;
+        padding-top:3%;
+        width:17%;
+        height:17%;          
+      }
+      .caCarde{
+        font-weight: 600;
+        margin-top: 10%;
+      }
+      #cartSection button{
+        background-color: black;
+        color: white;
+        width: 30%;
+        height: 50px;
+        border: none;
+        margin: 20px 0px;
+      }      
+      #comp4ReviewKid{
+        /* background-color: teal; */
+        display: none;
+      }
+      #comp5PayPage{        
+        width: 100%;        
+        /* height: 700px; */
+      }
+      #comp5PayTextArea{
+        display: flex;
+        width: 80%;      
+        height: 75%;  
+        margin: auto;
+        /* border: 1px solid teal; */
+        
+      }      
+      
+      #comp5PayTextArea>div:nth-child(1){
+        /* background-color: red; */
+        padding-top: 70px;
+        border-right: 1px solid grey;
+      }
+      #comp5PayTextArea>div:nth-child(1) button{        
+        height:60px;        
+        border-bottom: 1px solid #ECECEC;
+      }
+      #comp5PayTextArea>div:nth-child(1) h4{
+        margin: 5px 0px;
+      }
+      #comp5PayTextArea button{
+        display: flex;
+        width: 100%;   
+        align-items: center;        
+        text-align: left; 
+        border: none;
+        background-color: white;        
+      }
+      #comp5PayTextArea button:hover{
+        background-color: #ECECEC;        
+        /* background-color: red; */
+      }
+      #comp5PayTextArea button div{        
+        margin-right: 20px;
+        margin-left: 10px;
+      }      
+      #comp5PayTextArea>div{
+        /* border: 1px solid black; */
+        width: 50%;
+      }
+      #comp5PayTextArea>div:nth-child(2)>div:nth-child(1){
+        height: 20%;
+      }
+      #comp5PayTextArea>div:nth-child(2)>div:nth-child(2){
+        height: 80%;
+      }
+      
+      #comp5PayTextAreaFormUp{        
+        padding: 20px;             
+        padding-bottom: 150px; 
+      }      
+      
+      #comp5PayTextAreaForm>input{
+        width: 90%;
+        height: 40px;        
+        margin: 10px 0px;
+      }
+      #comp5PayTextAreaForm>input:nth-last-child(1){
+        background-color: orange;
+        border: none;
+        color: white;
+        font-weight: 600;
+      }
+      #comp5PayTextAreaFormSib{
+        padding: 10px;        
+        width: 40%;
+      }
+      #comp5PayTextAreaFormSib span{
+        display: block;        
+        font-size: 20px;
+        margin-top: 10px;        
+
+      }
+      #chComp3Form input,#chComp3Form select,#chComp3Form button{
+        width: 45%;
+        height: 40px;
+        border: none;
+        background-color: #F6F6F6;                
+      }
+      #chComp3Form button{
+        height: 50px;
+        background-color: black;
+        color: white;
+        width: 40%;
+        margin: 40px 10px 30px 0px;
+      }
+      #chComp3Form label{
+        display: inline-block;
+        color: grey;
+        font-weight: 600;
+        margin: 10px 0px;
+      }
+      #checkOutSection>div>div>h2{        
+        margin-top: 45px;     
+        margin-bottom:15px;             
+      }
+      #comp1>h3{
+        font-size: 16px;        
+        margin: 22px;
+      }
+      #caComp2c>h2{
+        margin: 10px 0px;
+      }
+      #caComp2c>table td{
+        padding: 10px 0px;
+      }
+      #caComp2c>table{
+        width: 60%;
+      }
+      
+
+    
+      
