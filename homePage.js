@@ -1,6 +1,317 @@
+//store the master product data on localStorage
+var fastrackData = [
+  {    
+    pImageArray: [
+      'https://staticimg.titan.co.in/Fastrack/Catalog/6234NL01_1.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/6234NL01_3.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/6234NL01_4.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/6234NL01_5.jpg?pView=pdp'
+    ],
+    pName:'GLITCH BLACK DIAL BLACK LEATHER STRAP WATCH',
+    pMRP:2195,
+    pText:'Fastrack Glitch Black Dial Analog Watch for Girls',
+    pOffer:10,
+    pCode: '6234NL01',
+    pColor: 'Black',
+    pGender:'W'
+  },
+  {    
+    pImageArray: [
+      'https://staticimg.titan.co.in/Fastrack/Catalog/6234QL01_1.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/6234QL01_3.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/6234QL01_4.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/6234QL01_5.jpg?pView=pdp'
+    ],
+    pName:'GLITCH SILVER DIAL BLUE LEATHER STRAP WATCH',
+    pMRP:2395,
+    pText:'Fastrack Glitch Silver Dial Analog Watch for Girls',
+    pOffer:10,
+    pCode: '6234QL01',
+    pColor: 'Blue',
+    pGender:'W'
+    
+  },
+  {    
+    pImageArray: [
+      'https://staticimg.titan.co.in/Fastrack/Catalog/6234QL02_1.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/6234QL02_3.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/6234QL02_4.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/6234QL02_5.jpg?pView=pdp'
+    ],
+    pName:'GLITCH BLUE DIAL GREEN LEATHER STRAP WATCH',
+    pMRP:2595,
+    pText:'Fastrack Glitch blue Dial Analog Watch for Girls',
+    pOffer:20,
+    pCode: '6234QL02',
+    pGender: 'W',
+    pColor:'Green'
+  },
+  {    
+    pImageArray: [
+      'https://staticimg.titan.co.in/Fastrack/Catalog/6234SL01_1.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/6234SL01_3.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/6234SL01_4.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/6234SL01_5.jpg?pView=pdp'
+    ],
+    pName:'GLITCH SILVER DIAL SILVER LEATHER STRAP WATCH',
+    pMRP:1995,
+    pText:'Fastrack Glitch Silver Dial Analog Watch for Girls',
+    pOffer:15,
+    pCode: '6234SL01',
+    pGender: 'W',
+    pColor:'White'
+    
+  },
+  {    
+    pImageArray: [
+      'https://staticimg.titan.co.in/Fastrack/Catalog/6234WL01_1.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/6234WL01_3.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/6234WL01_4.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/6234WL01_5.jpg?pView=pdp'
+    ],
+    pName:'GLITCH ROSE GOLD DIAL ROSE GOLD LEATHER STRAP WATCH',
+    pMRP:2395,
+    pText:'Fastrack Glitch Rose Gold Dial Analog Watch for Girls',
+    pOffer:15,
+    pCode: '6234WL01',
+    pGender: 'W',
+    pColor:'Gold'
+  },
+  {    
+    pImageArray: [
+      'https://staticimg.titan.co.in/Fastrack/Catalog/6237NM01_1.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/6237NM01_3.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/6237NM01_4.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/6237NM01_5.jpg?pView=pdp'
+    ],
+    pName:'GLITCH GREY DIAL BLACK BRASS STRAP WATCH',
+    pMRP:2995,
+    pText:'Fastrack Glitch Grey Dial Analog Watch for Girls',
+    pOffer:10,
+    pCode: '6237NM01',
+    pGender: 'W',
+    pColor:'Black'
+  },
+  {    
+    pImageArray: [
+      'https://staticimg.titan.co.in/Fastrack/Catalog/6237QM01_1.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/6237QM01_3.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/6237QM01_4.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/6237QM01_5.jpg?pView=pdp'
+    ],
+    pName:'GLITCH BROWN DIAL BROWN BRASS STRAP WATCH',
+    pMRP:3265,
+    pText:'Fastrack Glitch Brown Dial Analog Watch for Girls',
+    pOffer:20,
+    pCode: '6237QM01',
+    pGender: 'W',
+    pColor:'Brown'
+  },
+  {    
+    pImageArray: [
+      'https://staticimg.titan.co.in/Fastrack/Catalog/6237SM01_1.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/6237SM01_3.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/6237SM01_4.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/6237SM01_5.jpg?pView=pdp'
+    ],
+    pName:'GLITCH SILVER DIAL SILVER BRASS STRAP WATCH',
+    pMRP:2795,
+    pText:'Fastrack Glitch Silver Dial Analog Watch for Girls',
+    pOffer:15,
+    pCode: '6237SM01',
+    pGender: 'W',
+    pColor:'Silver'
+  },
+  {    
+    pImageArray: [
+      'https://staticimg.titan.co.in/Fastrack/Catalog/68026NM01_1.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/68026NM01_3.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/68026NM01_4.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/68026NM01_5.jpg?pView=pdp'
+    ],
+    pName:'GLITCH BLACK DIAL BLACK BRASS STRAP WATCH',
+    pMRP:5395,
+    pText:'Fastrack Glitch Black Dial Analog Watch for Girls',
+    pOffer:20,
+    pCode: '68026NM01',
+    pGender: 'W',
+    pColor:'Black'
+  },
+  {    
+    pImageArray: [
+      'https://staticimg.titan.co.in/Fastrack/Catalog/68026SM01_1.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/68026SM01_3.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/68026SM01_4.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/68026SM01_5.jpg?pView=pdp'
+    ],
+    pName:'GLITCH SILVER DIAL SILVER BRASS STRAP WATCH',
+    pMRP:4995,
+    pText:'Fastrack Glitch Silver Dial Analog Watch for Girls',
+    pOffer:10,
+    pCode: '68026SM01',
+    pGender: 'W',
+    pColor:'Silver'
+  },
+  //***********************************Men's Watches data below***********************************************************************
+  
+  {    
+    pImageArray: [
+      'https://staticimg.titan.co.in/Fastrack/Catalog/3220SL03_1.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/3220SL03_3.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/3220SL03_4.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/3220SL03_5.jpg?pView=pdp'
+    ],
+    pName:'STUNNERS MULTICOLOUR DIAL YELLOW LEATHER STRAP WATCH',
+    pMRP:2095,
+    pText:'Fastrack Stunners Multicolour Dial Analog Watch for Guys',
+    pOffer:10,
+    pCode: '3220SL03',
+    pGender: 'M',
+    pColor:'Yellow'
+  },
+  {    
+    pImageArray: [
+      'https://staticimg.titan.co.in/Fastrack/Catalog/3220NM01_1.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/3220NM01_3.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/3220NM01_4.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/3220NM01_5.jpg?pView=pdp'
+    ],
+    pName:'STUNNERS MULTICOLOUR DIAL BLACK METAL STRAP WATCH',
+    pMRP:2595,
+    pText:'Fastrack Stunners Multicolour Dial Analog Watch for Guys',
+    pOffer:15,
+    pCode: '3220NM01',
+    pGender: 'M',
+    pColor:'Black'
+  },
+  {    
+    pImageArray: [
+      'https://staticimg.titan.co.in/Fastrack/Catalog/3245NL02_1.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/3245NL02_3.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/3245NL02_4.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/3245NL02_5.jpg?pView=pdp'
+    ],
+    pName:'STUNNERS ORANGE DIAL BROWN LEATHER STRAP WATCH',
+    pMRP:2395,
+    pText:'Fastrack Stunners Orange Dial Analog Watch for Guys',
+    pOffer:20,
+    pCode: '3245NL02',
+    pGender: 'M',
+    pColor:'Brown'
+  },
+  {    
+    pImageArray: [
+      'https://staticimg.titan.co.in/Fastrack/Catalog/3245NM02_1.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/3245NM02_3.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/3245NM02_4.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/3245NM02_5.jpg?pView=pdp'
+    ],
+    pName:'STUNNERS BLACK DIAL BLACK METAL STRAP WATCH',
+    pMRP:2595,
+    pText:'Fastrack Stunners Black Dial Analog Watch for Guys',
+    pOffer:15,
+    pCode: '3245NM02',
+    pGender: 'M',
+    pColor:'Black'
+  },
+  {    
+    pImageArray: [
+      'https://staticimg.titan.co.in/Fastrack/Catalog/38064PP01_1.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/38064PP01_3.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/38064PP01_4.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/38064PP01_5.jpg?pView=pdp'
+    ],
+    pName:'STREETWEAR ANA DIGI WATCH',
+    pMRP:2795,
+    pText:'Fastrack Streetwear Ana Digi Watch for Men',
+    pOffer:10,
+    pCode: '38064PP01',
+    pGender: 'M',
+    pColor:'Black'
+  },
+  {    
+    pImageArray: [
+      'https://staticimg.titan.co.in/Fastrack/Catalog/3254SM01_1.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/3254SM01_2.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/3254SM01_4.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/3254SM01_5.jpg?pView=pdp'
+    ],
+    pName:'STUNNER IN SILVER DIAL & METAL STRAP',
+    pMRP:1795,
+    pText:'Fastrack Stunners - Silver Dial Analog Watch for Guys',
+    pOffer:15,
+    pCode: '3254SM01',
+    pGender: 'M',
+    pColor:'Silver'
+  },
+  {    
+    pImageArray: [
+      'https://staticimg.titan.co.in/Fastrack/Catalog/3251KL01_1.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/3251KL01_3.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/3251KL01_4.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/3251KL01_5.jpg?pView=pdp'
+    ],
+    pName:'GAMIFY WATCH WITH BLACK DIAL',
+    pMRP:4395,
+    pText:'Fastrack Gamify Watch - Black Dial Analog for Guys',
+    pOffer:10,
+    pCode: '3251KL01',
+    pGender: 'M',
+    pColor:'Green'
+  },
+  {    
+    pImageArray: [
+      'https://staticimg.titan.co.in/Fastrack/Catalog/3251KM01_1.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/3251KM01_3.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/3251KM01_4.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/3251KM01_5.jpg?pView=pdp'
+    ],
+    pName:'GAMIFY WATCH WITH BLACK DIAL',
+    pMRP:5295,
+    pText:'Fastrack Gamify Watch - Black Dial Analog for Guys',
+    pOffer:15,
+    pCode: '3251KM01',
+    pGender: 'M',
+    pColor:'Silver'
+  },
+  {    
+    pImageArray: [
+      'https://staticimg.titan.co.in/Fastrack/Catalog/3232SL01_1.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/3232SL01_3.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/3232SL01_4.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/3232SL01_5.jpg?pView=pdp'
+    ],
+    pName:'SILVER DIAL ANALOG WATCH',
+    pMRP:1755,
+    pText:'Fastrack Silver Dial Analog Watch for Guys',
+    pOffer:20,
+    pCode: '3232SL01',
+    pGender: 'M',
+    pColor:'Brown'
+  },
+  {    
+    pImageArray: [
+      'https://staticimg.titan.co.in/Fastrack/Catalog/3246SM01_1.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/3246SM01_2.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/3246SM01_4.jpg?pView=pdp',
+      'https://staticimg.titan.co.in/Fastrack/Catalog/3246SM01_5.jpg?pView=pdp'
+    ],
+    pName:'WHITE DIAL STAINLESS STEEL STRAP WATCH',
+    pMRP:2450,
+    pText:'Fastrack Bare Basics White Dial Analog Watch for Guys with Date function',
+    pOffer:20,
+    pCode: '3246SM01',
+    pGender: 'M',
+    pColor:'Silver'
+  }
+]
 
+// localStorage.setItem('fastrackData', JSON.stringify(fastrackData));
+//*************************MASTER DATA STORED******************************************* */
 
-  //top bar #1
+fastrackData=JSON.parse(localStorage.getItem('fastrackData'))
+
+//top bar #1
   {
     document
       .querySelectorAll(
@@ -333,17 +644,32 @@
   }
   //comp7
   {
-    let ho24FlexBox = document.querySelectorAll("#ho24FlexBox>div");
-    let ho25EssentialsArr = [
-      { img: "./Images/W1.jpg", name: "GIRLS WATCHES" },
-      { img: "./Images/W2.jpg", name: "GUYS WATCHES" },
-      { img: "./Images/w3.jpg", name: "SMART BAND" },
-      { img: "./Images/w4.jpg", name: "TEES WATCHES" },
-      { img: "./Images/m1.jpg", name: "FACE MASKS" },
-      { img: "./Images/b1.jpg", name: "BAGS" },
-      { img: "./Images/e1.jpg", name: "EYEWEAR" },
-      { img: "./Images/p1.jpg", name: "PERFUMES" },
-    ];
+  let ho24FlexBox = document.querySelectorAll("#ho24FlexBox>div");
+
+
+
+  
+  let ho25EssentialsArr = [
+    { img: "./Images/W1.jpg", name: "GIRLS WATCHES" },
+    { img: "./Images/W2.jpg", name: "GUYS WATCHES" },
+    { img: "./Images/w3.jpg", name: "SMART BAND" },
+    { img: "./Images/w4.jpg", name: "TEES WATCHES" },
+    { img: "./Images/m1.jpg", name: "FACE MASKS" },
+    { img: "./Images/b1.jpg", name: "BAGS" },
+    { img: "./Images/e1.jpg", name: "EYEWEAR" },
+    { img: "./Images/p1.jpg", name: "PERFUMES" },
+];
+  
+  //random starting point for the trending items index
+  let ho25EssentialsArrCounter = Math.floor(Math.random() * (fastrackData.length - 1));
+  
+  for (let i = 0; i < 8; i++){
+    ho25EssentialsArr[i].img = fastrackData[ho25EssentialsArrCounter].pImageArray[0];
+    ho25EssentialsArr[i].name = fastrackData[ho25EssentialsArrCounter].pName;
+    ho25EssentialsArrCounter=(ho25EssentialsArrCounter+2)%(fastrackData.length)
+  }
+
+  
     ho24FlexBox[0].setAttribute("class", "ho24FlexBoxC");
     document.querySelectorAll(".ho21FlexBox>div")[0].style.backgroundColor =
       "red";
@@ -398,7 +724,17 @@
       { img: "./Images/b1.jpg", name: "BAGS" },
       { img: "./Images/e1.jpg", name: "EYEWEAR" },
       { img: "./Images/p1.jpg", name: "PERFUMES" },
-    ];
+  ];
+
+  //random starting point for the trending items index
+  let ho27EssentialsArrCounter=Math.floor(Math.random() * (fastrackData.length - 1));
+  
+  for (let i = 0; i < 8; i++){
+    ho27EssentialsArr[i].img = fastrackData[ho27EssentialsArrCounter].pImageArray[0];
+    ho27EssentialsArr[i].name = fastrackData[ho27EssentialsArrCounter].pName;
+    ho27EssentialsArrCounter=(ho27EssentialsArrCounter+2)%(fastrackData.length)
+  }
+
     ho27FlexBox[0].setAttribute("class", "ho27FlexBoxC");
     document.querySelectorAll(".ho21FlexBox>div")[0].style.backgroundColor =
       "red";
@@ -442,71 +778,91 @@
   }
 
   //comp12
-  {
+{
+  // `${Math.floor(Math.random()*30)}/${Math.floor(Math.random()*12)}/2021`
     let ho34ReviewArr=[
 
       {
         topic:'Awesome',
         image:'./Images/Comp12_10.jpg',
         comment:'Very good watch',
-        name:'suman'
+        name: 'suman',
+        date:'01/01/21'
       },
       {
         topic:'Suprr',
         image:'./Images/Comp12_9.jpg',
         comment:"Superb built quality and look's premium",
-        name:'Prashant'
+        name: 'Prashant',
+        date:'01/12/21'
+        
+        
       },
       {
         topic:'best',
         image:'./Images/Comp12_8.jpg',
         comment:"Fastrack has been maintaining this image",
-        name:'Ajay'
+        name:'Ajay',
+        date:'03/07/21'
       },
       {
         topic:'Nice',
         image:'./Images/Comp12_7.jpg',
         comment:"Best",
-        name:'Punit'
+        name:'Punit',
+        date:'04/06/21'
       },
       {
         topic:'Astonishing',
         image:'./Images/Comp12_6.jpg',
         comment:"It is soo good and I love it",
-        name:'Aman'
+        name:'Aman',
+        date:'08/10/21'
       },
       {
         topic:'The very Best',
         image:'./Images/Comp12_5.jpg',
         comment:"The very Best",
-        name:'Priya'
+        name:'Priya',
+        date:'25/06/21'
       },
       {
         topic:'Nice',
         image:'./Images/Comp12_4.jpg',
         comment:"Nice",
-        name:'Raj'
+        name:'Raj',
+        date:'09/09/21'
       },
       {
         topic:'Supr!!',
         image:'./Images/Comp12_3.jpg',
         comment:"Super watch",
-        name:'Ram'
+        name:'Ram',
+        date:'13/11/21'
       },
       {
         topic:'Adipoli Sadhanam!!',
         image:'./Images/Comp12_2.jpg',
         comment:"Adipooooli!!😍",
-        name:'Sreejith'
+        name:'Sreejith',
+        date:'14/04/21'
       },
       {
         topic:'Mass!!',
         image:'./Images/Comp12_1.jpg',
         comment:"Suprr product!!",
-        name:'Murugan'
+        name:'Murugan',
+        date:'05/05/21'
       }     
-    ]
-    
+  ]
+  
+    //setting starting point for the comment items index
+  let ho34EssentialsArrCounter=3;
+  
+  for (let i = 0; i < ho34ReviewArr.length; i++){
+    ho34ReviewArr[i].image = fastrackData[ho34EssentialsArrCounter].pImageArray[0];    
+    ho34EssentialsArrCounter=(ho34EssentialsArrCounter+2)%(fastrackData.length)
+  }
     var ho32Pos=ho34ReviewArr.length-1;
 
 
@@ -555,8 +911,10 @@
     function ho32PopulateArray(arr,pos){
       // console.log(document.querySelectorAll('#ho33CommenBottom>div'))
       let ho35CommenBottom=document.querySelectorAll('#ho33CommenBottom>div');
-    
+      
+      
       for(let i=0;i<3;i++){                        
+        ho35CommenBottom[i].children[0].children[1].innerHTML ='&nbsp;&nbsp;'+arr[pos].date;
         ho35CommenBottom[i].children[1].textContent=arr[pos].topic;
         // .textContent=arr[pos].topic;
         ho35CommenBottom[i].children[2].children[0].src=arr[pos].image;
@@ -564,11 +922,11 @@
         ho35CommenBottom[i].children[2].children[0].style.height='100%'
 
         // .src=arr[pos].image;
-        ho35CommenBottom[i].children[2].children[1].innerHTML=`
+        ho35CommenBottom[i].children[2].children[1].innerHTML =`
         <p>
-          ${arr[pos].comment}
+        &nbsp;&nbsp;${arr[pos].comment}
           <br />
-          <span><strong>${arr[pos].name}</strong></span>
+          &nbsp;&nbsp;<span><strong>${arr[pos].name}</strong></span>
         </p>`
         pos=(pos+1)%arr.length;        
         // ho32Pos=pos;  

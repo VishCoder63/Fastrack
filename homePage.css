@@ -486,7 +486,8 @@
         margin-right: 5px;
       }
       #ho32CommenTop > div:nth-child(1) {
-        margin-right: 60%;
+        padding-left: 20px;
+        margin-right: 55%;
       }
       #ho33CommenBottom{
         display: flex;
