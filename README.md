@@ -46,6 +46,8 @@ So yeah that's it from my side. I'll attach all the requisite links below. Pleas
 
 **Blogpost link :  https://devsteps.hashnode.dev/fastrack-clone-unit-2-construct-week-project**
 
+**Youtube video link:  https://www.youtube.com/watch?v=o5dqTs38ETI**
+
 
 
 ### Screenshots :
