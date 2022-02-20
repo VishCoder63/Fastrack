@@ -161,128 +161,128 @@
       alert("search clicked");
     });
 
-    for (let i = 0; i < ho6Temp.length; i++) {
-      ho6Temp[i].addEventListener("mouseover", function (e) {
-        if (e.target.textContent == "WATCHES") {
-          let ho8Temp = document.createElement("div");
-          ho8Temp.setAttribute("class", "ho8Temp");
-          ho8Temp.innerHTML = `
-          <div id='ho10Temp'>
-      <div id="ho9Left">
-        <table>
-          <thead>
-            <tr>
-              <th>Shop For</th>
-              <th>Shop By Style</th>
-              <th>Shop Collectibles</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>              
-                <div>
-                  <img src="./Images/t2W1.PNG" alt="" width=35% height=35%>
-                  <div>Him</div>
-                </div>
-              </td>
-              <td>
-                <div>
-                <img src="./Images/t2W2.PNG" alt="" width=35% height=35%>
-                  <div>Casual</div>
-                </div>
-              </td>
-              <td>
-                <div>
-                <img src="./Images/t2W3.PNG" alt="" width=35% height=35%>
-                  <div>Coca Cola Edition</div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div>
-                <img src="./Images/t2W4.PNG" alt="" width=35% height=35%>
-                  <div>Her</div>
-                </div>              
-              </td>
-              <td>
-                <div>
-                <img src="./Images/t2W5.PNG" alt="" width=35% height=35%>
-                  <div>Fashion</div>
-                </div>
-              </td>
-              <td>
-                <div>
-                <img src="./Images/t2W6.PNG" alt="" width=35% height=35%>
-                  <div>Avengers</div>                
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div>
-                <img src="./Images/t2W7.PNG" alt="" width=35% height=35%>
-                  <div>Them</div>
-                </div>
-              </td>
-              <td>
-                <div>
-                <img src="./Images/t2W8.PNG" alt="" width=35% height=35%>
-                  <div>Sporty</div>
-                </div>
-              </td>
-              <td>
-                <div>
-                <img src="./Images/t2W9.PNG" alt="" width=35% height=35%>
-                  <div>Game Of Thrones</div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>
-                <div>
-                <img src="./Images/t2W10.PNG" alt="" width=35% height=35%>
-                  <div>Tees</div>
-                </div>
-              </td>
-              <td>
-                <div>
-                <img src="./Images/t2W11.PNG" alt="" width=35% height=35%>
-                  <div>Sunburn</div>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>     
-        <button>View All</button>                  
-      </div>
-      <div id="ho9Right">
-      <img src="./Images/t2W12.PNG" alt="" width=100% height=100%>
-        <h5>FLEX YOUR BEST GAME</h5>
-      </div> 
-  </div>
-          `;
-          if (e.path[4].children.length == 1) e.path[3].after(ho8Temp);
-        } else {
-          if (i == 0 && e.path[5].children.length == 2) {
-            e.path[5].children[1].remove();
-          } else if (e.path[4].children.length == 2) {
-            e.path[4].children[1].remove();
-          }
-        }
-      });
-      ho6Temp[i].addEventListener("mouseleave", function (e) {
-        if (e.target.textContent == "WATCHES") {
-          e.path[4].children[1].addEventListener(
-            "mouseleave",
-            function (event) {
-              event.path[0].remove();
-            }
-          );
-        }
-      });
-    }
+  //   for (let i = 0; i < ho6Temp.length; i++) {
+  //     ho6Temp[i].addEventListener("mouseover", function (e) {
+  //       if (e.target.textContent == "WATCHES") {
+  //         let ho8Temp = document.createElement("div");
+  //         ho8Temp.setAttribute("class", "ho8Temp");
+  //         ho8Temp.innerHTML = `
+  //         <div id='ho10Temp'>
+  //     <div id="ho9Left">
+  //       <table>
+  //         <thead>
+  //           <tr>
+  //             <th>Shop For</th>
+  //             <th>Shop By Style</th>
+  //             <th>Shop Collectibles</th>
+  //           </tr>
+  //         </thead>
+  //         <tbody>
+  //           <tr>
+  //             <td>              
+  //               <div>
+  //                 <img src="./Images/t2W1.PNG" alt="" width=35% height=35%>
+  //                 <div>Him</div>
+  //               </div>
+  //             </td>
+  //             <td>
+  //               <div>
+  //               <img src="./Images/t2W2.PNG" alt="" width=35% height=35%>
+  //                 <div>Casual</div>
+  //               </div>
+  //             </td>
+  //             <td>
+  //               <div>
+  //               <img src="./Images/t2W3.PNG" alt="" width=35% height=35%>
+  //                 <div>Coca Cola Edition</div>
+  //               </div>
+  //             </td>
+  //           </tr>
+  //           <tr>
+  //             <td>
+  //               <div>
+  //               <img src="./Images/t2W4.PNG" alt="" width=35% height=35%>
+  //                 <div>Her</div>
+  //               </div>              
+  //             </td>
+  //             <td>
+  //               <div>
+  //               <img src="./Images/t2W5.PNG" alt="" width=35% height=35%>
+  //                 <div>Fashion</div>
+  //               </div>
+  //             </td>
+  //             <td>
+  //               <div>
+  //               <img src="./Images/t2W6.PNG" alt="" width=35% height=35%>
+  //                 <div>Avengers</div>                
+  //               </div>
+  //             </td>
+  //           </tr>
+  //           <tr>
+  //             <td>
+  //               <div>
+  //               <img src="./Images/t2W7.PNG" alt="" width=35% height=35%>
+  //                 <div>Them</div>
+  //               </div>
+  //             </td>
+  //             <td>
+  //               <div>
+  //               <img src="./Images/t2W8.PNG" alt="" width=35% height=35%>
+  //                 <div>Sporty</div>
+  //               </div>
+  //             </td>
+  //             <td>
+  //               <div>
+  //               <img src="./Images/t2W9.PNG" alt="" width=35% height=35%>
+  //                 <div>Game Of Thrones</div>
+  //               </div>
+  //             </td>
+  //           </tr>
+  //           <tr>
+  //             <td></td>
+  //             <td>
+  //               <div>
+  //               <img src="./Images/t2W10.PNG" alt="" width=35% height=35%>
+  //                 <div>Tees</div>
+  //               </div>
+  //             </td>
+  //             <td>
+  //               <div>
+  //               <img src="./Images/t2W11.PNG" alt="" width=35% height=35%>
+  //                 <div>Sunburn</div>
+  //               </div>
+  //             </td>
+  //           </tr>
+  //         </tbody>
+  //       </table>     
+  //       <button>View All</button>                  
+  //     </div>
+  //     <div id="ho9Right">
+  //     <img src="./Images/t2W12.PNG" alt="" width=100% height=100%>
+  //       <h5>FLEX YOUR BEST GAME</h5>
+  //     </div> 
+  // </div>
+  //         `;
+  //         if (e.path[4].children.length == 1) e.path[3].after(ho8Temp);
+  //       } else {
+  //         if (i == 0 && e.path[5].children.length == 2) {
+  //           e.path[5].children[1].remove();
+  //         } else if (e.path[4].children.length == 2) {
+  //           e.path[4].children[1].remove();
+  //         }
+  //       }
+  //     });
+  //     ho6Temp[i].addEventListener("mouseleave", function (e) {
+  //       if (e.target.textContent == "WATCHES") {
+  //         e.path[4].children[1].addEventListener(
+  //           "mouseleave",
+  //           function (event) {
+  //             event.path[0].remove();
+  //           }
+  //         );
+  //       }
+  //     });
+  //   }
   }
   
 
