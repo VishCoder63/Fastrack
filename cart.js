@@ -127,7 +127,7 @@
     });
     ho6Temp[4].addEventListener("click", function () {
       // alert("image clicked");
-      window.location.href = 'homePage.html';
+      window.location.href = 'index.html';
     });
     ho6Temp[5].addEventListener("click", function () {
       alert("bag clicked");
@@ -537,7 +537,7 @@
       })
       
       document.querySelector('#caComp2e').addEventListener('click',function(){
-        window.location.href='homePage.html'
+        window.location.href='index.html'
       })
 
       let caComp2cTd=document.querySelectorAll('#caComp2c>table td')

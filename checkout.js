@@ -132,7 +132,7 @@
     });
     ho6Temp[4].addEventListener("click", function () {
       // alert("image clicked");
-      window.location.href = 'homePage.html';
+      window.location.href = 'index.html';
     });
     ho6Temp[5].addEventListener("click", function () {
       alert("bag clicked");
@@ -458,7 +458,7 @@ document.querySelector('#comp5PayTextArea>div:nth-child(2)>div:nth-child(1)').in
           else{
             alert('Order successfully placed!! 🎉🎉🎉')
             localStorage.removeItem('cartArr');
-            window.location.href='homePage.html';
+            window.location.href='index.html';
           }
           
           }

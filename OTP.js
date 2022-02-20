@@ -11,7 +11,7 @@ document.getElementById('si1form').addEventListener('submit',function(e){
     if (JSON.parse(localStorage.getItem('cartArr'))&&JSON.parse(localStorage.getItem('cartArr')).length>0)
       window.location.href = 'checkout.html'
     else      
-      window.location.href='homePage.html'
+      window.location.href='index.html'
   }else{
     alert('Incorrect OTP!!')
   }

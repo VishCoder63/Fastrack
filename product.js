@@ -131,7 +131,7 @@
     });
     ho6Temp[4].addEventListener("click", function () {
       // alert("image clicked");
-      window.location.href = 'homePage.html';
+      window.location.href = 'index.html';
     });
     ho6Temp[5].addEventListener("click", function () {
       alert("bag clicked");
