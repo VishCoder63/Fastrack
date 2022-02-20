@@ -477,7 +477,7 @@ let fastrackData = JSON.parse(localStorage.getItem("fastrackData"));
             <tr>
               <td>              
                 <div>
-                  <img src="./Images/t2W1.PNG" alt="" width=35% height=35%>
+                  <img src="./Images/t2W1.png" alt="" width=35% height=35%>
                   <div>Him</div>
                 </div>
               </td>
@@ -489,7 +489,7 @@ let fastrackData = JSON.parse(localStorage.getItem("fastrackData"));
               </td>
               <td>
                 <div>
-                <img src="./Images/t2W3.PNG" alt="" width=35% height=35%>
+                <img src="./Images/t2W3.png" alt="" width=35% height=35%>
                   <div>Coca Cola Edition</div>
                 </div>
               </td>
@@ -497,19 +497,19 @@ let fastrackData = JSON.parse(localStorage.getItem("fastrackData"));
             <tr>
               <td>
                 <div>
-                <img src="./Images/t2W4.PNG" alt="" width=35% height=35%>
+                <img src="./Images/t2W4.png" alt="" width=35% height=35%>
                   <div>Her</div>
                 </div>              
               </td>
               <td>
                 <div>
-                <img src="./Images/t2W5.PNG" alt="" width=35% height=35%>
+                <img src="./Images/t2W5.png" alt="" width=35% height=35%>
                   <div>Fashion</div>
                 </div>
               </td>
               <td>
                 <div>
-                <img src="./Images/t2W6.PNG" alt="" width=35% height=35%>
+                <img src="./Images/t2W6.png" alt="" width=35% height=35%>
                   <div>Avengers</div>                
                 </div>
               </td>
@@ -517,19 +517,19 @@ let fastrackData = JSON.parse(localStorage.getItem("fastrackData"));
             <tr>
               <td>
                 <div>
-                <img src="./Images/t2W7.PNG" alt="" width=35% height=35%>
+                <img src="./Images/t2W7.png" alt="" width=35% height=35%>
                   <div>Them</div>
                 </div>
               </td>
               <td>
                 <div>
-                <img src="./Images/t2W8.PNG" alt="" width=35% height=35%>
+                <img src="./Images/t2W8.png" alt="" width=35% height=35%>
                   <div>Sporty</div>
                 </div>
               </td>
               <td>
                 <div>
-                <img src="./Images/t2W9.PNG" alt="" width=35% height=35%>
+                <img src="./Images/t2W9.png" alt="" width=35% height=35%>
                   <div>Game Of Thrones</div>
                 </div>
               </td>
@@ -538,13 +538,13 @@ let fastrackData = JSON.parse(localStorage.getItem("fastrackData"));
               <td></td>
               <td>
                 <div>
-                <img src="./Images/t2W10.PNG" alt="" width=35% height=35%>
+                <img src="./Images/t2W10.png" alt="" width=35% height=35%>
                   <div>Tees</div>
                 </div>
               </td>
               <td>
                 <div>
-                <img src="./Images/t2W11.PNG" alt="" width=35% height=35%>
+                <img src="./Images/t2W11.png" alt="" width=35% height=35%>
                   <div>Sunburn</div>
                 </div>
               </td>
@@ -554,7 +554,7 @@ let fastrackData = JSON.parse(localStorage.getItem("fastrackData"));
         <button id='viewallBtn'>View All</button>                  
       </div>
       <div id="ho9Right">
-      <img src="./Images/t2W12.PNG" alt="" width=100% height=100%>
+      <img src="./Images/t2W12.png" alt="" width=100% height=100%>
         <h5>FLEX YOUR BEST GAME</h5>
       </div> 
   </div>
