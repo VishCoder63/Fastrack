@@ -477,7 +477,7 @@ let fastrackData = JSON.parse(localStorage.getItem("fastrackData"));
             <tr>
               <td>              
                 <div>
-                  <img src="./Images/t2W1.png" alt="" width=35% height=35%>
+                  <img src="../Images/t2W1.png" alt="" width=35% height=35%>
                   <div>Him</div>
                 </div>
               </td>
